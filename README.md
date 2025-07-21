@@ -1,6 +1,6 @@
 ![lope_logo](https://www.ceslopedevega.com/wp-content/uploads/2020/03/pruebalogo.svg_.png)
 
-# Programación de Servicios y Procesos - 2024/2025
+# Programación de Servicios y Procesos - 2025/2026
 
 Repositorio para el seguimiento y evaluación de la asignatura Programación de Servicios y Procesos.
 [CFGS Desarrollo de Aplicaciones Multiplaforma.](https://www.ceslopedevega.com/grado-superior-desarrollo-de-aplicaciones-multiplataforma/)
@@ -33,8 +33,8 @@ El desarrollo del módulo profesional se basará en el uso de tecnologías actua
 
 ## Recursos
 
-- [Canal SLACK](https://psp2024-2025.slack.com)
-- [Repositorio Asignatura](https://github.com/i12vecaj/psp-24-25/)
+- [Canal SLACK](https://psp2025-2026.slack.com)
+- [Repositorio Asignatura](https://github.com/i12vecaj/psp-25-26/)
 - [Presentación Asignatura](https://docs.google.com/presentation/d/16s6Jgh-rD-lL6UgUkmvZofCnC9W-I1fRze-kLdJzP-c/edit?usp=drive_link)
 - Programación Didáctica //TODO
 - [Real Decreto 450-2010 de 16 de abril](https://www.boe.es/buscar/doc.php?id=BOE-A-2010-8067)
