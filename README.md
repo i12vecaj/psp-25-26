@@ -1,4 +1,4 @@
-![lope_logo](https://www.ceslopedevega.com/wp-content/uploads/2020/03/pruebalogo.svg_.png)
+![lope_logo](https://ceslopedevega.com/wp-content/uploads/2024/12/Logo-horizontal-web.png)
 
 # Programación de Servicios y Procesos - 2025/2026
 
