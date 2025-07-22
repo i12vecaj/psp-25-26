@@ -2,7 +2,7 @@
 
 # INSTRUCCIONES ENTREGA
 
-En este documento se explica el procedimiento para realizar las entregas y las correcciones de ejercicios, prácticas y exámenes para la asignatura durante el cursos 2024/2025.
+En este documento se explica el procedimiento para realizar las entregas y las correcciones de ejercicios, prácticas y exámenes para la asignatura durante el curso 2025/2026.
 
 [CFGS Desarrollo de Aplicaciones Multiplaforma.](https://www.ceslopedevega.com/grado-superior-desarrollo-de-aplicaciones-multiplataforma/)
 [CES Lope de Vega](https://www.ceslopedevega.com/) en Córdoba (Andalucía, Spain).
@@ -20,7 +20,7 @@ Los pasos básicos a seguir son:
 
 1. **Registrar** un usuario en [GitHub](https://github.com/) y solicitar acceso al repositorio, en adelante USERNAME.
 2. Crear/Utilizar una [**rama**](https://es.wikipedia.org/wiki/Rama_(control_de_versiones)) con el nombre del usuario asociado al repositorio (dev_X).
-3. Por cada unidad, se creará una **carpeta** con el nombre del usuario (dev_X) en dicha rama del repositorio, dentro de la subcarpeta **tareas**.  Ver ejemplo para [dev_0](https://github.com/i12vecaj/psp-24-25/tree/main/UA1/tareas/dev_0) en la UA1.
+3. Por cada unidad, se creará una **carpeta** con el nombre del usuario (dev_X) en dicha rama del repositorio, dentro de la subcarpeta **tareas**.  Ver ejemplo para [dev_0](https://github.com/i12vecaj/psp-25-26/tree/main/UA1/tareas/dev_0) en la UA1.
 
 ![estructura_carpetas](https://res.cloudinary.com/dxhvgoq9r/image/upload/v1665049656/psp-22-23/estructura_carpetas_entregas_jlwxt9.png)
 
