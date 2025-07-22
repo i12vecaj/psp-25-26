@@ -1,4 +1,4 @@
-# 💬 Proyecto PSP 24/25 – Chat Seguro Multicliente
+# 💬 Proyecto PSP 25/26 – Chat Seguro Multicliente
 
 Este es el proyecto base para la asignatura **Programación de Servicios y Procesos** (2º DAM). A lo largo del curso, desarrollarás de forma incremental un sistema de mensajería cliente-servidor concurrente y seguro, alineado con cada Unidad de Aprendizaje.
 
