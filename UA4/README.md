@@ -62,7 +62,7 @@ Modifica el cliente FTP de ejemplo para que pueda conectarse a cualquier servido
 Haz que el usuario tenga que introducir el nombre del servidor FTP, el nombre de usuario y su clave, ya sea desde la línea de comandos o modificando la interfaz gráfica.
 La opción de la interfaz gráfica permitirá sacar el 10 en esta tarea, mientras que la opción por línea de comandos únicamente puntuará hasta 8 puntos.
 ```
-Fecha de Entrega: xx/xx/2025 - 14:45
+Fecha de Entrega: xx/xx/2026 - 14:45
 ```
 <!--
   Curso siguiente:
@@ -106,7 +106,7 @@ Referencias:
 
 
 ```
-Fecha de Entrega: xx/xx/2025 - 14:45
+Fecha de Entrega: xx/xx/2026 - 14:45
 ```
 
 #### NOTAS SOBRE LA CORRECCIÓN EN CLASE
@@ -192,7 +192,7 @@ La API es vuestra.  Vosotros sois los arquitectos, diseñadores y codificadores.
 Por supuesto, las dudas y comentarios que os vayan surgiendo (QUE OS SURGIRÁN) estos días, ya sabéis que tenemos disponible el canal de [SLACK](https://psp-2223.slack.com/) para irlas aclarando y aprendiendo entre todos.
 
 ```
-Fecha de Entrega: xx/03/2025
+Fecha de Entrega: xx/03/2026
 ```
 
 
