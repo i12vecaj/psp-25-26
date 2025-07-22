@@ -73,7 +73,7 @@ Por favor, leed el documento [INSTRUCCIONES_ENTREGAS.md](..\INSTRUCCIONES_ENTREG
 ### **T1 - Tarea 1 - Programación y sincronización de hilos en Java 1**
 ##### **Criterios a), b), c), d), e), f), g) y h)**
 ```
-Fecha de Entrega: 06/11/2024 - 20:00:00
+Fecha de Entrega: xx/xx/2025 - 20:00:00
 ```
 * FR1: Crea un programa en Java que lance 5 hilos. Cada hilo incrementará una variable contador de tipo entero en 1000 unidades. Esta variable estará compartida por todos los hilos. Comprueba el resultado final de la variable y reflexiona sobre el resultado. ¿Se obtiene el resultado esperado? - 3 puntos
 * FR2: Modifica el programa anterior para sincronizar el acceso a dicha varaible. Lanza primero los hilos mediante la clase Thread y después mediante el interfaz Runnable. Comprueba los resultados e indica las variaciones - 3 puntos
@@ -89,7 +89,7 @@ Fecha de Entrega: 06/11/2024 - 20:00:00
 ### **T2 - Tarea 2 - Programación y sincronización de hilos en Java 2**
 ##### **Criterios a), b), c), d), e), f), g) y h)**
 ```
-Fecha de Entrega: 13/11/2024 - 21:00:00
+Fecha de Entrega: xx/xx/2025 - 21:00:00
 ```
 * FR1: Crea una clase CuentaCorriente, con un atributo que indique el saldo de la cuenta, el constructor que le da un valor inicial al saldo y después los métodos setter y getter. En estos métodos deberás añadir un sleep() aleatorio, que duerma al hilo durante un número de milisegundos que oscile entre 250 y 2000 (0,25s y 2s respectivamente). Añade también otro método que reciba una cantidad y la añada al saldo, indicando por pantalla el estado previo del saldo, el estado final y quién realiza el ingreso. Deberás definir los parámetros que reciba este método y deberás definirlo como synchronized - 2 puntos.
 * FR2: Crea una clase que extienda de Thread, y desde el método run() usará el método de la clase CuentaCorriente que permite añadir saldo a la cuenta - 2 puntos.
@@ -104,7 +104,7 @@ Fecha de Entrega: 13/11/2024 - 21:00:00
 ### **T3 - Tarea 3 - Programación y sincronización de hilos en Java 3**
 ##### **Criterios a), b), c), d), e), f), g) y h)**
 ```
-Fecha de Entrega: 26/11/2024 - 23:59:00
+Fecha de Entrega: xx/xx/2025 - 23:59:00
 ```
 * FR1: Crea un programa que reciba a través de sus argumentos una lista de ficheros de texto (procura que sean de un cierto tamaño, por ejemplo [El Quijote.txt](https://gist.githubusercontent.com/jsdario/6d6c69398cb0c73111e49f1218960f79/raw/8d4fc4548d437e2a7203a5aeeace5477f598827d/el_quijote.txt)) y cuente el número de caracteres que hay en cada fichero (ejecución secuencial).  Ayuda en este [enlace](https://javiergarciaescobedo.es/programacion-en-java/15-ficheros/42-leer-un-fichero-caracter-a-caracter) - 2 puntos.
 * FR2: Modifica el programa para que cree un hilo para cada fichero (ejecución concurrente)  - 2 puntos.
@@ -127,13 +127,13 @@ long t_total = t_fin - t_comienzo;
 ### **EX2 - Examen UA2 - Programación Multihilo**
 ##### **Criterios a), b), c), d), e), f), g) y h)**
 ```
-Fecha de Examen: xx/12/2024 - xx:xx:00
+Fecha de Examen: xx/xx/2025 - xx:xx:00
 ```
 
 ## Recursos
 
-- [Canal SLACK](https://psp-2024-2025.slack.com/)
-- [Repositorio Asignatura](https://github.com/i12vecaj/psp-24-25/)
+- [Canal SLACK](https://psp-2025-2026.slack.com/)
+- [Repositorio Asignatura](https://github.com/i12vecaj/psp-25-26/)
 - Apuntes del Profesorado //TODO
 - Bibliografía Recomendada
   - **Programación de servicios y procesos - Técnico Superior en DAM.** *Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7.*
