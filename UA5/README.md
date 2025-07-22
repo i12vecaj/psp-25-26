@@ -99,7 +99,7 @@ Utilizando el *framework* creado con las prácticas de la UA4 (API), añade la f
 }
 ```
 ```
-Fecha de Entrega: 10/03/2023
+Fecha de Entrega: xx/xx/2026
 ```
 
 
@@ -110,7 +110,7 @@ Esta práctica es sencilla, basta con ejecutar el pequeño [MANUAL](https://ryct
 Estas claves generadas y guardadas pueden utilizarse en los ejemplos.
 
 ```
-Fecha de Entrega: 10/03/2023
+Fecha de Entrega: xx/xx/2026
 ```
 
 
@@ -126,12 +126,12 @@ Para ello, modificaremos nuestra API, para que por argumentos en la línea de co
 - [Stack overflow: Simple Java HTTPS server](https://stackoverflow.com/questions/2308479/simple-java-https-server)
 
 ```
-Fecha de Entrega: 10/03/2023
+Fecha de Entrega: xx/xx/2026
 ```
 
 ## Recursos
 
-- [Repositorio Asignatura](https://github.com/daniteleco/psp-22-23)
+- [Repositorio Asignatura](https://github.com/i12vecaj/psp-25-26)
 - Apuntes del Profesorado //TODO
 - Bibliografía Recomendada
   - **Programación de servicios y procesos - Técnico Superior en DAM.** *Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7.*
@@ -139,7 +139,7 @@ Fecha de Entrega: 10/03/2023
 
 ## Autor
 
-Creado por [Daniel Pérez Rodríguez](https://twitter.com/daniteleco) e inspirado en el trabajo de [José Luis González Sánchez](https://github.com/joseluisgs/ProgServiciosProcesos-00-2021-2022)
+Creado por José David Vela Castro, e inspirado en [Daniel Pérez Rodríguez](https://twitter.com/daniteleco) y de [José Luis González Sánchez](https://github.com/joseluisgs/ProgServiciosProcesos-00-2021-2022)
 
 ## Contacto
-- Email: [dperez@ceslopedevega.com](mailto:dperez@ceslopedevega.com)
+- Email: [jdvela@ceslopedevega.com](mailto:jdvela@ceslopedevega.com)
