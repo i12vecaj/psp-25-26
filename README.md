@@ -29,7 +29,7 @@ El desarrollo del módulo profesional se basará en el uso de tecnologías actua
   - CodeBlocks
 - [Git](https://git-scm.com/)
 - Unit Testing - [Junit](https://junit.org/junit5/)
-- [Instrucciones de Entrega](https://github.com/i12vecaj/psp-24-25/blob/main/INSTRUCCIONES_ENTREGAS.md)
+- [Instrucciones de Entrega](https://github.com/i12vecaj/psp-25-26/blob/main/INSTRUCCIONES_ENTREGAS.md)
 
 ## Recursos
 
