@@ -3,13 +3,13 @@ FECHA:
 
 PARTE TEÓRICA
 
-a) Definición de proceso. 1 punto.  
+a) Definición de xxx. 1 punto.  
 
-b) Utilizando tus propias palabras, indica la relación entre hilos y procesos. 3 puntos.
+b) Utilizando tus propias palabras, indica xxx. 3 puntos.
 
-c) Utilizando tus propias palabras, indica las características de la programación concurrente y sus ámbitos de aplicación. 3 puntos.
+c) Utilizando tus propias palabras, indica las xxx. 3 puntos.
 
-d) Utilizando tus propias palabras, indica las diferencias entre programación paralela y programación distribuida, sus ventajas e inconvenientes. 3 puntos.
+d) Utilizando tus propias palabras, indica las xxx. 3 puntos.
 
 Notas:
 
