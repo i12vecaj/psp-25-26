@@ -67,7 +67,7 @@ La evaluación de esta unidad didáctica estará basada en la entrega de las tar
 ### **T1 - Tarea 1 - Programación de Procesos en C**
 ##### **Criterios a), e), f), g), h)**
 ```
-Fecha de Entrega: 01/10/2024 - 14:00:00
+AMPLIADO! Fecha de Entrega: 12/10/2022 - 14:00:00
 ```
 PROCESOS. Crea un único programa en C que implemente las siguientes Funcionalidades Requeridas (FRs):
 * FR1: cree un proceso (existirán en realidad dos procesos, uno padre y el otro hijo) - 1 punto
@@ -84,7 +84,7 @@ Y ahora ... ¿Entiendes lo que está pasando? ¿De verdad?
 ### **T2 - Tarea 2 - Programación de procesos en Java (I)**
 ##### **Criterios a), e), f), g), h)**
 ```
-Fecha de Entrega: 09/10/2024 - 14:00:00
+Fecha de Entrega: 19/10/2022 - 14:00:00
 ```
 PROCESOS. Crea un programa Java que implemente las siguientes Funcionalidades Requeridas (FRs):
 
@@ -98,7 +98,7 @@ PROCESOS. Crea un programa Java que implemente las siguientes Funcionalidades Re
 ### **T3 - Tarea 3 - Programación de procesos en Java (II)**
 ##### **Criterios a), e), f), g), h)**
 ```
-Fecha de Entrega: 16/10/2024 - 14:00:00
+Fecha de Entrega: 26/10/2022 - 14:00:00
 ```
 PROCESOS. Crea un programa en Java que admita argumentos desde main() y devuelva con System.exit() los siguientes valores:
 
@@ -125,7 +125,7 @@ Crea un programa Java que implemente las siguientes Funcionalidades Requeridas (
 ### **EX1 - Examen UA1 - Programación Multiproceso**
 ##### **Criterios a), b), c), d), e) f), g) y h)**
 ```
-Fecha de Examen: 16/10/2024 - 16:45:00
+Fecha de Examen: 26/10/2022 - 17:45:00
 ```
 El examen constará de dos partes:
 * Una primera parte de teoría, centrada sobre todo en los criterios de evaluación b), c) y d).  Serán unas preguntas cortas, donde deberéis responder utilizando vuestras propias palabras.  Para esta parte de teoría daremos un tiempo fijo y no permitiré el acceso a internet salvo para subir el resultado al repositorio.
@@ -134,7 +134,7 @@ Os recuerdo que los "problemas técnicos" para compilar y comprobar el funcionam
 
 ## Recursos
 
-- [Repositorio Asignatura](https://github.com/i12vecaj/psp-24-25)
+- [Repositorio Asignatura](https://github.com/daniteleco/psp-22-23)
 - Apuntes del Profesorado //TODO
 - Bibliografía Recomendada
   - **Programación de servicios y procesos - Técnico Superior en DAM.** *Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7.*
@@ -142,7 +142,7 @@ Os recuerdo que los "problemas técnicos" para compilar y comprobar el funcionam
 
 ## Autor
 
-Creado por José David Vela Castro e inspirado en el trabajo de Dani Pérez y [José Luis González Sánchez](https://github.com/joseluisgs/ProgServiciosProcesos-00-2021-2022)
+Creado por [Daniel Pérez Rodríguez](https://twitter.com/daniteleco) e inspirado en el trabajo de [José Luis González Sánchez](https://github.com/joseluisgs/ProgServiciosProcesos-00-2021-2022)
 
 ## Contacto
-- Email: [jdvelaceslopedevega.com](mailto:jdvela@ceslopedevega.com)
+- Email: [dperez@ceslopedevega.com](mailto:dperez@ceslopedevega.com)
