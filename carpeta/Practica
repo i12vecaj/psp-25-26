@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Practica {
+	 
+	public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
+	    System.out.print("Introduce tu edad: ");
+	    int edad = scanner.nextInt();
+	    int falta = 100 - edad;
+	    System.out.println("Te faltan " + falta + " años para llegar a 100.");
+	    scanner.close();
+	}
+
+}
