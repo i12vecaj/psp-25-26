@@ -8,8 +8,6 @@ Este ejercicio sirve como primer contacto con la asignatura, para repasar concep
 ## Instrucciones
 
 1. Clona el repositorio de la asignatura en tu equipo:
-   ```bash
-   git clone https://github.com/i12vecaj/psp-25-26.git
 
 2. Dentro de tu rama, crea un paquete con tu nombre (ejemplo: dev_0), y en él un fichero Java llamado EjercicioRepaso.java.
 
