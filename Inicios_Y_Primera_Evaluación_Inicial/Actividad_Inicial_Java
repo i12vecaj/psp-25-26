@@ -1,0 +1,8 @@
+public void Main(){
+
+    int edadUsuario=0
+    String nombreUsuario="Nombre"
+print('Introduce tu nombre')
+print('Introduce tu edad')
+// No recuerdo como era la sintaxis en Java mil perdones
+}
