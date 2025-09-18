@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class EjercicioRepaso {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Pedir datos al usuario
+        System.out.print("Introduce tu nombre: ");
+        String nombre = sc.nextLine();
+
+        System.out.print("Introduce tu edad: ");
+        int edad = sc.nextInt();
+
+        // Calcular año en el que cumple 100 años
+        int anioActual = java.time.Year.now().getValue();
+        int anioCien = anioActual + (100 - edad);
+
+        // Mostrar mensaje
+        System.out.println("Hola " + nombre + ", cumplirás 100 años en el año " + anioCien + ".");
+
+        sc.close();
+    }
+}
