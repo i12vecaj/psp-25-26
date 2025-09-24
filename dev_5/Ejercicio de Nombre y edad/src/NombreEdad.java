@@ -34,6 +34,7 @@ public class NombreEdad {
 		System.out.println("Introduzca su nombre: ");
 		String Nomb = s.nextLine();
 		nuevo.setNombre(Nomb);
+		int ed;
 		while(true) {
 		System.out.println("Introduzca su edad: ");
 		if (s.hasNextInt()) {
