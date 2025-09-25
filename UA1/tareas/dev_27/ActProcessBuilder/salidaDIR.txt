@@ -1,0 +1,16 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n�mero de serie del volumen es: 3C79-2A56
+
+ Directorio de C:\Users\tirio\eclipse-workspace\ActProcessBuilder
+
+24/09/2025  20:32    <DIR>          .
+24/09/2025  20:32    <DIR>          ..
+24/09/2025  19:31               396 .classpath
+24/09/2025  19:31               393 .project
+24/09/2025  19:31    <DIR>          .settings
+24/09/2025  19:32    <DIR>          bin
+24/09/2025  20:23               540 salida.txt
+25/09/2025  11:56               667 salidaDIR.txt
+24/09/2025  19:32    <DIR>          src
+               4 archivos          1.996 bytes
+               5 dirs  605.239.881.728 bytes libres
