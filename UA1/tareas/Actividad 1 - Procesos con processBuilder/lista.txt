@@ -1,0 +1,12 @@
+ El volumen de la unidad C es Windows
+ El n£mero de serie del volumen es: 3AE5-4B6C
+
+ Directorio de C:\Users\danie\Desktop\psp-25-26\UA1\tareas\Actividad 1 - Procesos con processBuilder
+
+26/09/2025  18:35    <DIR>          .
+24/09/2025  19:31    <DIR>          ..
+26/09/2025  18:35             2.763 EjecutaComando.java
+26/09/2025  18:35                 0 lista.txt
+26/09/2025  18:35               558 salida.txt
+               3 archivos          3.321 bytes
+               2 dirs  260.046.598.144 bytes libres

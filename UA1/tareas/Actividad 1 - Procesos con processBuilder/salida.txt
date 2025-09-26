@@ -1,0 +1,12 @@
+
+Haciendo ping a www.google.com [172.217.168.164] con 32 bytes de datos:
+Respuesta desde 172.217.168.164: bytes=32 tiempo=19ms TTL=116
+Respuesta desde 172.217.168.164: bytes=32 tiempo=17ms TTL=116
+Respuesta desde 172.217.168.164: bytes=32 tiempo=17ms TTL=116
+Respuesta desde 172.217.168.164: bytes=32 tiempo=17ms TTL=116
+
+Estad�sticas de ping para 172.217.168.164:
+    Paquetes: enviados = 4, recibidos = 4, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M�nimo = 17ms, M�ximo = 19ms, Media = 17ms
