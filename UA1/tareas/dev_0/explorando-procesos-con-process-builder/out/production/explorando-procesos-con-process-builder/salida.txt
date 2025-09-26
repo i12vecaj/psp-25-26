@@ -1,0 +1,9 @@
+total 28
+-rw-r--r-- 1 elena elena  437 Sep 25 12:31 explorando-procesos-con-process-builder.iml
+drwxr-xr-x 3 elena elena 4096 Sep 26 22:23 out
+drwxr-xr-x 2 elena elena 4096 Sep 26 22:33 parte_1
+drwxr-xr-x 2 elena elena 4096 Sep 26 22:24 parte_2
+drwxr-xr-x 2 elena elena 4096 Sep 26 22:25 parte_3
+drwxr-xr-x 2 elena elena 4096 Sep 26 22:25 parte_4
+drwxr-xr-x 2 elena elena 4096 Sep 26 22:26 parte_5
+-rw-r--r-- 1 elena elena    0 Sep 26 22:47 salida.txt
