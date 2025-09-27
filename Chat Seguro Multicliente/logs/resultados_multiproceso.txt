@@ -1,0 +1,7 @@
+=== EJECUCIÓN EN PARALELO ===
+Tiempo total en paralelo: 138 ms
+
+=== EJECUCIÓN SECUENCIAL ===
+Tiempo total en secuencial: 237 ms
+
+Diferencia de tiempo (secuencial - paralelo): 99 ms
