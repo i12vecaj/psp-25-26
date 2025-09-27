@@ -20,4 +20,6 @@ psp-chat-seguro-base/
 ├── logs/               # Archivos de log generados
 ├── README.md           # Este archivo
 ├── SEGURIDAD.md        # Documentación de medidas de seguridad (Sprint 5)
-└── .github/            # Workflows y plantillas de tareas
+├── .github/            # Workflows y plantillas de tareas
+└── .issues/            # Carpeta nueva para organización de Sprints (añadida por Elena)
+```
