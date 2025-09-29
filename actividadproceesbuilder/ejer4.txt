@@ -1,0 +1,48 @@
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        File archivo = new File("E:\\Angel\\2DAM\\psp\\prueba.txt"); // Reemplaza con la ruta deseada
+        Process p = new ProcessBuilder("CMD", "/C", "dir").start();
+        boolean salida = false;
+        StringBuilder texto = new StringBuilder();
+
+        try {
+
+            InputStream is = p.getInputStream();
+
+            // mostramos en pantalla caracter a caracter
+
+            int c;
+            while ((c = is.read()) != -1)
+                texto.append((char) c);
+            is.close();
+            System.out.println("Se ha escrito en el archivo correctamente.");
+            salida=true;
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Si se ha ejecutado lo anterior lo pasamos a un fichero, sino nos da error
+        int exitVal;
+        try {
+            exitVal = p.waitFor();
+            System.out.println("Valor de Salida: " + exitVal);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        if (salida)
+            try (FileWriter fw = new FileWriter(archivo, true); // 'true' para añadir al archivo si existe
+                 BufferedWriter bw = new BufferedWriter(fw)) {
+                bw.write(texto.toString());
+            }
+            catch (IOException e) {
+                System.err.println("Error al escribir en el archivo: " + e.getMessage());
+            }
+
+    }
+
+}
