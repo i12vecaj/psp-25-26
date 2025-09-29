@@ -1,0 +1,11 @@
+
+Haciendo ping a google.com [2a00:1450:4003:80d::200e] con 32 bytes de datos:
+Respuesta desde 2a00:1450:4003:80d::200e: tiempo=14ms 
+Respuesta desde 2a00:1450:4003:80d::200e: tiempo=7ms 
+Respuesta desde 2a00:1450:4003:80d::200e: tiempo=8ms 
+
+Estad¡sticas de ping para 2a00:1450:4003:80d::200e:
+    Paquetes: enviados = 3, recibidos = 3, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M¡nimo = 7ms, M ximo = 14ms, Media = 9ms
