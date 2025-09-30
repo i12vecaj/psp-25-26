@@ -1,0 +1,14 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: BAE7-366C
+
+ Directorio de C:\Users\ManuC\Desktop\gradoDam\2ano\psp\Java
+
+30/09/2025  12:05    <DIR>          .
+24/09/2025  19:09    <DIR>          ..
+30/09/2025  12:15             3.000 EjecutaComando.java
+24/09/2025  19:22               275 Ejemplo1.java
+24/09/2025  19:27               665 ejemplo2.java
+30/09/2025  12:16                 0 listado.txt
+30/09/2025  12:16               512 salida.txt
+               5 archivos          4.452 bytes
+               2 dirs  435.446.693.888 bytes libres
