@@ -1,5 +1,5 @@
  El volumen de la unidad C no tiene etiqueta.
- El n£mero de serie del volumen es: BAE7-366C
+ El nÂ£mero de serie del volumen es: BAE7-366C
 
  Directorio de C:\Users\ManuC\Desktop\gradoDam\2ano\psp\Java
 
