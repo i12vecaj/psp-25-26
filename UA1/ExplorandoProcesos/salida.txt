@@ -1,0 +1,10 @@
+
+Haciendo ping a google.com [142.250.201.78] con 32 bytes de datos:
+Respuesta desde 142.250.201.78: bytes=32 tiempo=8ms TTL=120
+Respuesta desde 142.250.201.78: bytes=32 tiempo=9ms TTL=120
+
+Estad¡sticas de ping para 142.250.201.78:
+    Paquetes: enviados = 2, recibidos = 2, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M¡nimo = 8ms, M ximo = 9ms, Media = 8ms
