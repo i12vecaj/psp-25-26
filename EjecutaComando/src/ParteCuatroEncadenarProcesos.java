@@ -16,7 +16,7 @@ public class ParteCuatroEncadenarProcesos {
             "dir" lista los archivos del directorio actual.
              */
 
-            
+
             File salidaLista = new File("lista.txt");
             pb4a.redirectOutput(salidaLista);
             Process p4a = pb4a.start();
