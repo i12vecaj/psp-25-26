@@ -1,0 +1,16 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: B049-ECB4
+
+ Directorio de C:\Users\maris\Desktop\DAM\2DAM\Programacion de servicios\psp 25-26\psp-25-26\EjecutaComando
+
+30/09/2025  10:28    <DIR>          .
+30/09/2025  10:28    <DIR>          ..
+24/09/2025  19:31               344 .gitignore
+30/09/2025  10:28    <DIR>          .idea
+24/09/2025  19:31               433 EjecutaComando.iml
+30/09/2025  10:28                 0 lista.txt
+24/09/2025  19:35    <DIR>          out
+25/09/2025  11:42               478 salida.txt
+30/09/2025  10:26    <DIR>          src
+               4 archivos          1.255 bytes
+               5 dirs  89.240.522.752 bytes libres
