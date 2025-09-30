@@ -5,8 +5,8 @@ Respuesta desde 142.250.184.3: bytes=32 tiempo=11ms TTL=117
 Tiempo de espera agotado para esta solicitud.
 Tiempo de espera agotado para esta solicitud.
 
-Estad¡sticas de ping para 142.250.184.3:
+EstadÂ¡sticas de ping para 142.250.184.3:
     Paquetes: enviados = 4, recibidos = 2, perdidos = 2
     (50% perdidos),
 Tiempos aproximados de ida y vuelta en milisegundos:
-    M¡nimo = 11ms, M ximo = 11ms, Media = 11ms
+    MÂ¡nimo = 11ms, MÂ ximo = 11ms, Media = 11ms
