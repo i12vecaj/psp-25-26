@@ -8,7 +8,7 @@
  * pegaría el archivito en algun lado
  * git add .
  * git commit -m "Actividad clase" 
- * git push upstream o git push origin
+ * git push -u upstream dev_X o git push -u origin dev_X
  * ya debería estar 
  */
 
