@@ -4,7 +4,7 @@ import java.io.InputStream;
 public class EjecutaComando {
     public static void main(String[] args) throws IOException{
 
-     Process p = new ProcessBuilder("cmd.exe", "/c", "ping -n 2 google.com.test").start();
+     Process p = new ProcessBuilder("cmd.exe", "/c", "ping -n 2 google.com").start();
 		
         try {
 
