@@ -1,0 +1,16 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: 66BB-8667
+
+ Directorio de C:\Users\sellm\IdeaProjects\pocesos
+
+01/10/2025  13:06    <DIR>          .
+01/10/2025  12:20    <DIR>          ..
+01/10/2025  12:20               352 .gitignore
+01/10/2025  13:06    <DIR>          .idea
+01/10/2025  12:23    <DIR>          out
+01/10/2025  12:23               433 pocesos.iml
+01/10/2025  12:36               600 salida.txt
+01/10/2025  13:06                 0 salida2.txt
+01/10/2025  13:06    <DIR>          src
+               4 archivos          1.385 bytes
+               5 dirs  270.237.245.440 bytes libres
