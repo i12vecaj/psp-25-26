@@ -1,1 +1,22 @@
+# Simulación Multiproceso en Java
+
+Este sprint simula la ejecución de procesos con `ProcessBuilder`.
+
+## Diferencias entre proceso e hilo
+
+- **Proceso**:
+  - Programa en ejecución independiente.
+  - Tiene su propio espacio de memoria.
+  - Comunicación entre procesos requiere mecanismos especiales (pipes, sockets).
+  - Ejemplo: lanzar `java multiproceso.Script1`.
+
+- **Hilo**:
+  - Unidad de ejecución dentro de un proceso.
+  - Comparte memoria con otros hilos del mismo proceso.
+  - Comunicación más rápida pero requiere sincronización.
+  - Ejemplo: usar `Thread` dentro de un programa Java.
+
+En este proyecto:
+- **Secuencial**: los procesos se ejecutan uno tras otro → más tiempo total.
+- **Simultáneo**: los procesos se lanzan en paralelo → menor tiempo total.
 
