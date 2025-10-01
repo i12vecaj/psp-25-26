@@ -1,0 +1,13 @@
+
+Haciendo ping a GOOGLE.ES [142.250.184.3] con 32 bytes de datos:
+Respuesta desde 142.250.184.3: bytes=32 tiempo=15ms TTL=115
+Respuesta desde 142.250.184.3: bytes=32 tiempo=15ms TTL=115
+Respuesta desde 142.250.184.3: bytes=32 tiempo=16ms TTL=115
+Respuesta desde 142.250.184.3: bytes=32 tiempo=16ms TTL=115
+
+Estad¡sticas de ping para 142.250.184.3:
+    Paquetes: enviados = 4, recibidos = 4, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M¡nimo = 15ms, M ximo = 16ms, Media = 15ms
+
