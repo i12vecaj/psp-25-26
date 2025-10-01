@@ -1,3 +1,7 @@
+/*git add .
+  git commit -m "Actividad clase" 
+  git push -u upstream dev_X o git push -u origin dev_X*/
+
 import java.io.*;
 import java.util.List;
 
@@ -77,4 +81,5 @@ try {
        }
    }
 }
+
 
