@@ -1,11 +1,17 @@
-¿Qué hace ProcessSimulator?
+¿QUÉ HACE PROCESS SIMULATOR?
+
+
 Lanza 3 scripts Java (Script1, Script2, Script3).
 
 Mide el tiempo de ejecución de forma:
-Secuencial → un proceso tras otro.
-Paralela → todos los procesos a la vez.
-Guardamos resultados en un log.
 
+    Secuencial → un proceso tras otro.
+
+    Paralela → todos los procesos a la vez.
+
+    Guardamos resultados en un log.
+
+```mermaid
 flowchart TD
     A["Proceso Principal"] -- Secuencial --> B1["Script1"]
     B1 --> B2["Script2"]
@@ -15,11 +21,13 @@ flowchart TD
 
     P@{ shape: f-circ}
 
-==============================================================
-         DIFERENCIAS ENTRE PROCESO E HILO 
-==============================================================
+```
 
-Característica        | Proceso (🖥️)                     | Hilo (🧵)
+
+DIFERENCIAS ENTRE PROCESO E HILO 
+
+
+Característica         | Proceso                           | Hilo 
 -----------------------|-----------------------------------|-----------------------------------
 Unidad de ejecución    | Programa independiente            | Subtarea dentro de un proceso
 Memoria                | Propia y aislada                  | Comparte memoria con otros hilos
