@@ -1,0 +1,16 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: B89B-0650
+
+ Directorio de C:\Users\danix\Desktop\2DAM\PSP\EjecutaComando
+
+24/09/2025  20:37    <DIR>          .
+24/09/2025  19:32    <DIR>          ..
+24/09/2025  19:32               344 .gitignore
+01/10/2025  11:08    <DIR>          .idea
+24/09/2025  19:39               433 EjecutaComando.iml
+01/10/2025  11:09                 0 lista.txt
+24/09/2025  19:39    <DIR>          out
+24/09/2025  20:16               542 salida.txt
+01/10/2025  11:08    <DIR>          src
+               4 archivos          1.319 bytes
+               5 dirs  325.913.075.712 bytes libres
