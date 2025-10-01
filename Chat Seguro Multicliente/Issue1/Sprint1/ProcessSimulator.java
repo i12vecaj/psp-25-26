@@ -1,0 +1,68 @@
+package Sprint1;
+
+import java.io.*;
+import java.util.*;
+
+public class ProcessSimulator {
+    public static void main(String[] args) {
+        // Lista de clases a ejecutar
+        List<String> scripts = Arrays.asList(
+            "Sprint1.Script1",
+            "Sprint1.Script2",
+            "Sprint1.Script3"
+        );
+
+        File logDir = new File("multiproceso/logs");
+        if (!logDir.exists()) logDir.mkdirs();
+        File logFile = new File(logDir, "resultados_multiproceso.txt");
+
+        try (PrintWriter log = new PrintWriter(new FileWriter(logFile, true))) {
+
+            // ================================
+            // EJECUCIÓN SECUENCIAL
+            // ================================
+            long inicioSecuencial = System.currentTimeMillis();
+            for (String script : scripts) {
+                ProcessBuilder pb = new ProcessBuilder("java", "-cp", "bin", script);
+                pb.inheritIO();
+                Process p = pb.start();
+                p.waitFor();
+            }
+            long finSecuencial = System.currentTimeMillis();
+            long tiempoSecuencial = finSecuencial - inicioSecuencial;
+
+            log.println("Tiempo total SECUENCIAL: " + tiempoSecuencial + " ms");
+            System.out.println("Tiempo total SECUENCIAL: " + tiempoSecuencial + " ms");
+
+            // ================================
+            // EJECUCIÓN SIMULTÁNEA
+            // ================================
+            long inicioParalelo = System.currentTimeMillis();
+            List<Process> procesos = new ArrayList<>();
+
+            for (String script : scripts) {
+                ProcessBuilder pb = new ProcessBuilder("java", "-cp", "bin", script);
+                pb.inheritIO();
+                procesos.add(pb.start());
+            }
+
+            for (Process p : procesos) {
+                p.waitFor();
+            }
+            long finParalelo = System.currentTimeMillis();
+            long tiempoParalelo = finParalelo - inicioParalelo;
+
+            log.println("Tiempo total SIMULTÁNEO: " + tiempoParalelo + " ms");
+            System.out.println("Tiempo total SIMULTÁNEO: " + tiempoParalelo + " ms");
+
+            log.println("Diferencia: " + (tiempoSecuencial - tiempoParalelo) + " ms");
+            log.println("===============================================");
+            log.flush();
+
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
