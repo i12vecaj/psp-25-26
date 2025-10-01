@@ -16,6 +16,6 @@ public class ejercicio4 {
             System.out.println(linea);
         }
 
-        //Para controlarlo usaría un condicional que revise cual ha sido la salida del pir
+        //Para controlarlo usaría un condicional que revise cual ha sido la salida del primero
     }
 }
