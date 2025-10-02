@@ -1,0 +1,16 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: 188C-A006
+
+ Directorio de C:\Users\bcube\psp-25-26\UA1\tareas\dev_0\Ejercicio1
+
+02/10/2025  11:51    <DIR>          .
+29/09/2025  18:48    <DIR>          ..
+24/09/2025  19:34               344 .gitignore
+02/10/2025  11:48    <DIR>          .idea
+24/09/2025  19:36               433 EjecutacComando.iml
+02/10/2025  11:52               549 error.txt
+02/10/2025  11:52                 0 lista.txt
+24/09/2025  19:41    <DIR>          out
+02/10/2025  11:52    <DIR>          src
+               4 archivos          1.326 bytes
+               5 dirs  858.768.601.088 bytes libres
