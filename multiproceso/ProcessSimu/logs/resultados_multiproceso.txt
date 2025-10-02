@@ -1,0 +1,5 @@
+=== Sprint 1 – Ejecución ===
+Tiempo SECUENCIAL: 6161 ms
+Tiempo PARALELO  : 3077 ms
+Diferencia       : 3084 ms
+
