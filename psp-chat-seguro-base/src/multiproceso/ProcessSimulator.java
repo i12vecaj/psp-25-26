@@ -6,9 +6,9 @@ import java.time.*;
 public class ProcessSimulator {
     public static void main(String[] args) throws IOException, InterruptedException {
         String[] commands = {
-                "java Script1",
-                "java Script2",
-                "java Script3"
+                "java script1.java",
+                "java script2.java",
+                "java script3.java"
         };
 
         // Ejecución secuencial
