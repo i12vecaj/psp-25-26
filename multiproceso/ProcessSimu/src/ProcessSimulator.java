@@ -8,7 +8,7 @@ public class ProcessSimulator {
     ProcessBuilder pb3 = new ProcessBuilder("PING", "google.es");
 
 
-    public ProcessSimulator() throws IOException { // Creo una función donde agrpar
+    public ProcessSimulator() throws IOException { // Creo una función donde agrupar
 
         Process p1 = pb1.inheritIO().start();
         Process p2 = pb2.inheritIO().start();
