@@ -15,3 +15,9 @@ Simular la ejecución de varios procesos independientes usando la clase `Process
 - Actualización del README con explicación técnica.
 
 ### 📅 Fecha de entrega: 2025
+
+== EXPLICACIÓN TÉCNICA DE LA DIFERENCIA ENTRE PROCESO E HILO ==
+Proceso: Programa en ejecución con su propio espacio de memoria
+Hilo: Unidad de ejecución dentro de un proceso que comparte memoria
+ProcessBuilder: Crea procesos del SO, no hilos de Java
+
