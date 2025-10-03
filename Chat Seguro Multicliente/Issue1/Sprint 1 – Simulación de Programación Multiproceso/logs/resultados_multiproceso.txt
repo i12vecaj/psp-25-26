@@ -1,0 +1,7 @@
+Proceso 1 iniciado
+Proceso 1 terminado
+Proceso 2 iniciado
+Proceso 2 terminado
+Proceso 3 iniciado
+Proceso 3 terminado
+Tiempo total de ejecución: 3082 ms

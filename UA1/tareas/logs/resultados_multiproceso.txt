@@ -1,0 +1,7 @@
+Error: Could not find or load main class Proceso1
+Caused by: java.lang.ClassNotFoundException: Proceso1
+Error: Could not find or load main class Proceso2
+Caused by: java.lang.ClassNotFoundException: Proceso2
+Error: Could not find or load main class Proceso3
+Caused by: java.lang.ClassNotFoundException: Proceso3
+Tiempo total de ejecución: 89 ms
