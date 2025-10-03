@@ -1,0 +1,11 @@
+=== RESULTADOS SIMULACIÓN MULTIPROCESO ===
+Fecha: Fri Oct 03 16:49:54 CEST 2025
+Tiempo ejecución paralela: 251 ms
+Tiempo ejecución secuencial: 573 ms
+Diferencia: 322 ms
+Mejora: 2,28x más rápido
+
+=== EXPLICACIÓN TÉCNICA ===
+Proceso: Programa en ejecución con su propio espacio de memoria
+Hilo: Unidad de ejecución dentro de un proceso que comparte memoria
+ProcessBuilder: Crea procesos del SO, no hilos de Java
