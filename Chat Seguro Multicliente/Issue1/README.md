@@ -15,3 +15,8 @@ Simular la ejecución de varios procesos independientes usando la clase `Process
 - Actualización del README con explicación técnica.
 
 ### 📅 Fecha de entrega: 2025
+
+### Diferencias entre Proceso e Hilo
+- Un proceso es un programa en ejecución con su propio espacio de memoria y recursos. Ejecutarlo es más pesado porque el sistema crea un entorno separado.
+Por ejemplo, abrir tu navegador web es un proceso independiente.
+- Un hilo es una unidad de ejecución dentro de un proceso. Comparte la memoria y los recursos del proceso al que pertenece, por lo que es más ligero y rápido. Por ejemplo, en el navegador, cada pestaña puede tener varios hilos trabajando dentro del mismo proceso.
