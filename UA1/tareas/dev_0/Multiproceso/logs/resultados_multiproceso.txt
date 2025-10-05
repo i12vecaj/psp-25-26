@@ -1,0 +1,42 @@
+===== RESULTADOS DE EJECUCIÓN =====
+Fecha: Sun Oct 05 10:57:41 CEST 2025
+------------------------------------
+Ejecución secuencial: 283 ms
+Ejecución paralela:   108 ms
+------------------------------------
+===== RESULTADOS DE EJECUCIÓN =====
+Fecha: Sun Oct 05 11:00:03 CEST 2025
+------------------------------------
+Ejecución secuencial: 287 ms
+Ejecución paralela:   122 ms
+------------------------------------
+===== RESULTADOS DE EJECUCIÓN =====
+Fecha: Sun Oct 05 11:06:16 CEST 2025
+------------------------------------
+Ejecución secuencial: 309 ms
+Ejecución paralela:   129 ms
+------------------------------------
+===== RESULTADOS DE EJECUCIÓN =====
+Fecha: Sun Oct 05 11:14:39 CEST 2025
+------------------------------------
+Ejecución secuencial: 309 ms
+Ejecución paralela:   108 ms
+------------------------------------
+===== RESULTADOS DE EJECUCIÓN =====
+Fecha: Sun Oct 05 11:15:04 CEST 2025
+------------------------------------
+Ejecución secuencial: 289 ms
+Ejecución paralela:   108 ms
+------------------------------------
+===== RESULTADOS DE EJECUCIÓN =====
+Fecha: Sun Oct 05 11:17:25 CEST 2025
+------------------------------------
+Ejecución secuencial: 3686 ms
+Ejecución paralela:   3460 ms
+------------------------------------
+===== RESULTADOS DE EJECUCIÓN =====
+Fecha: Sun Oct 05 11:17:42 CEST 2025
+------------------------------------
+Ejecución secuencial: 13410 ms
+Ejecución paralela:   5555 ms
+------------------------------------
