@@ -5,14 +5,13 @@ Este proyecto contiene dos clases principales en Java:
 
 ---
 
-## Estructura 
+```
 TAREA2/
-│── src/
-│ ├── App.java
-│ └── Launcher.java
-│── bin/ (salida de compilación .class)
-│── README.md
-
+├── src/
+│   ├── App.java
+│   └── Launcher.java
+└── README.md
+```
 ---
 
 ## Funcionamiento
@@ -32,9 +31,8 @@ TAREA2/
 
 
 ```mermaid
-Copiar código
-flowchart TD
-    A[Launcher.java] -->|ProcessBuilder| B[Ejecuta App.java]
+      flowchart TD
+   A[Launcher.java] -->|ProcessBuilder| B[Ejecuta App.java]
     B --> C[Usuario escribe texto]
     C --> D{¿Caracter = * ?}
     D -- Sí --> E[Finaliza entrada]
