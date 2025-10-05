@@ -1,0 +1,7 @@
+--- Resultados de Ejecución Multi-Proceso ---
+Tareas Ejecutadas:
+ - Script1: Carga Alta (5B iteraciones)
+ - Script2: Carga Media (3B iteraciones)
+ - Script3: Carga Media-Alta (4B iteraciones)
+Tiempo total de ejecución SECUENCIAL: 27,23 segundos)
+Tiempo total de ejecución PARALELA: 11,70 segundos

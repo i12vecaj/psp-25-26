@@ -10,7 +10,7 @@ public class EjecutorProceso {
         System.out.println("--- Ejecutor de Proceso (Programa 2) ---");
 
 
-        String classpath = "out/production/Tarea2";
+        String classpath = System.getProperty("java.class.path");
 
         String[] comando = {"java", "-cp", classpath, "LectorCadena"};
 
