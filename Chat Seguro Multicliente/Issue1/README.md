@@ -19,4 +19,5 @@ Simular la ejecución de varios procesos independientes usando la clase `Process
 DIFERENCIA ENTRE PROCESOS E HILOS 
 - Proceso: es un programa que se está ejecutando en la computadora y tiene su propia memoria y variables. Es independiente de otros procesos, por lo que si uno falla, los demás no se ven afectados. Crear un proceso consume más recursos, y cada programa abierto (como Chrome o Word) es un ejemplo de proceso.
 - Hilo: es una “mini-tarea” dentro de un proceso que comparte la memoria y los recursos de ese proceso. Son más ligeros y rápidos de crear que los procesos, y permiten hacer varias cosas al mismo tiempo dentro de un mismo programa. Por ejemplo, en un navegador, cada pestaña podría ser un hilo que comparte recursos con el resto.
-Los procesos son independientes y pesados, mientras que los hilos son más ligeros y permiten paralelismo dentro de un mismo programa.
+- Los procesos son independientes y pesados, mientras que los hilos son más ligeros y permiten paralelismo dentro de un mismo programa.
+
