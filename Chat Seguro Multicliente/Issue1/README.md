@@ -24,17 +24,12 @@ Simular la ejecución de varios procesos independientes usando la clase `Process
 
 ### Explicación paso a paso
 
-1 Definición de los procesos
-Primero, tenemos tres programas Java separados: Script1, Script2 y Script3. Cada uno simula una tarea que tarda un tiempo determinado usando Thread.sleep(). Técnicamente, cada script es un proceso independiente, con su propia memoria y variables, que se ejecuta por separado del resto.
+1 Primero, tenemos tres programas Java separados: Script1, Script2 y Script3. Cada uno simula una tarea que tarda un tiempo determinado usando Thread.sleep(). Técnicamente, cada script es un proceso independiente, con su propia memoria y variables, que se ejecuta por separado del resto.
 
-2 Preparación del entorno
-En el programa principal ProcessSimulator, verificamos que exista la carpeta logs donde guardaremos los resultados. Si no existe, la creamos usando mkdirs(). Esto evita errores al intentar escribir el archivo de log.
+2 En el programa principal ProcessSimulator, verificamos que exista la carpeta logs donde guardaremos los resultados. Si no existe, la creamos usando mkdirs(). Esto evita errores al intentar escribir el archivo de log.
 
-3️ Ejecución secuencial de procesos
-En vez de usar hilos, recorremos los tres scripts uno por uno dentro de un bucle for. Para cada script, usamos Runtime.getRuntime().exec(comando) para lanzar el proceso y waitFor() para esperar a que termine antes de pasar al siguiente. De esta manera, los procesos se ejecutan de manera estrictamente secuencial, sin paralelismo.
+3️ Recorremos los tres scripts uno por uno dentro de un bucle for. Para cada script, usamos Runtime.getRuntime().exec(comando) para lanzar el proceso y waitFor() para esperar a que termine antes de pasar al siguiente. De esta manera, los procesos se ejecutan de manera estrictamente secuencial, sin paralelismo.
 
-4️ Medición del tiempo
-Usamos System.currentTimeMillis() antes de iniciar el bucle y después de que termina el último proceso. La diferencia entre ambos tiempos nos da el tiempo total de ejecución secuencial.
+4️ Usamos System.currentTimeMillis() antes de iniciar el bucle y después de que termina el último proceso. La diferencia entre ambos tiempos nos da el tiempo total de ejecución secuencial.
 
-5️ Guardado de resultados
-Finalmente, abrimos un FileWriter para escribir en logs/resultados_multiproceso.txt y guardamos el tiempo total medido. Así podemos comparar posteriormente este tiempo con una versión que sí use ejecución paralela o hilos.
+5️ Finalmente, abrimos un FileWriter para escribir en logs/resultados_multiproceso.txt y guardamos el tiempo total medido. Así podemos comparar posteriormente este tiempo con una versión que sí use ejecución paralela o hilos.
