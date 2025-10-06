@@ -1,0 +1,6 @@
+=== Simulación de Procesos ===
+
+Tiempo secuencial: 247 ms
+Tiempo paralelo: 120 ms
+
+Diferencia: 127 ms menos con paralelismo.
