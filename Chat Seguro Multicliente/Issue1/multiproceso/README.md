@@ -1,0 +1,7 @@
+## Diferencias entre proceso e hilo
+
+Un proceso es una instancia independiente de un programa en ejecución. Cada proceso tiene su propio espacio de memoria, sus recursos asignados por el sistema operativo y su propio flujo de ejecución. Esto significa que los procesos no comparten directamente la memoria entre sí; si necesitan comunicarse, deben hacerlo mediante mecanismos específicos como tuberías, archivos o sockets. La ejecución de un proceso no depende de otros, por lo que un fallo en uno no afecta directamente al resto.
+
+Un hilo, en cambio, es una unidad más pequeña de ejecución dentro de un proceso. Todos los hilos de un mismo proceso comparten el mismo espacio de memoria y los mismos recursos. Esto permite una comunicación más rápida y sencilla entre hilos, ya que pueden acceder a las mismas variables y estructuras de datos. Sin embargo, también implica que un error en un hilo puede comprometer la estabilidad del proceso completo.
+
+En términos de rendimiento, los hilos suelen ser más ligeros y eficientes para tareas que deben compartir información o ejecutarse de manera concurrente dentro del mismo programa. Los procesos, por su parte, son más seguros y aislados, siendo adecuados para ejecutar programas completamente independientes o cuando se necesita una separación clara entre tareas. En resumen, los procesos ofrecen aislamiento y seguridad, mientras que los hilos proporcionan mayor eficiencia y facilidad de comunicación.

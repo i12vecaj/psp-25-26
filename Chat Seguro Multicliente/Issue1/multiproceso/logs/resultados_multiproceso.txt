@@ -1,0 +1,4 @@
+Tiempo total SECUENCIAL: 293 ms
+Tiempo total PARALELO: 139 ms
+
+Diferencia: 154 ms
