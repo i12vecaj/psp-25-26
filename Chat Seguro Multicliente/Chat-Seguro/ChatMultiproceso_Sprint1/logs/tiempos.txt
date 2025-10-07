@@ -1,0 +1,2 @@
+Secuencial: 294 ms
+Paralelo: 122 ms
