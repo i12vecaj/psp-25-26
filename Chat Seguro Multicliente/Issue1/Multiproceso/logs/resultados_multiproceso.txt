@@ -1,0 +1,5 @@
+===== RESULTADOS DE EJECUCIÓN =====
+Tiempo total secuencial: 250 ms
+Tiempo total paralelo:   98 ms
+Ahorro aproximado:       152 ms
+-------------------------------------
