@@ -1,0 +1,17 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: 7AD2-B7B7
+
+ Directorio de C:\Users\david\Documents\GitHub\psp-25-26\UA1\tareas\dev_09\ProcessBuilder
+
+07/10/2025  23:31    <DIR>          .
+07/10/2025  18:01    <DIR>          ..
+01/10/2025  20:41               352 .gitignore
+07/10/2025  23:30    <DIR>          .idea
+01/10/2025  20:46    <DIR>          log
+07/10/2025  23:30    <DIR>          out
+01/10/2025  20:41               433 ProcessBuilder.iml
+07/10/2025  23:33               485 resultado.txt
+07/10/2025  23:33                 0 salida.txt
+07/10/2025  16:40    <DIR>          src
+               4 archivos          1.270 bytes
+               6 dirs  795.400.282.112 bytes libres
