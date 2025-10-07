@@ -1,0 +1,11 @@
+
+Haciendo ping a google.com [142.250.184.174] con 32 bytes de datos:
+Respuesta desde 142.250.184.174: bytes=32 tiempo=20ms TTL=115
+Respuesta desde 142.250.184.174: bytes=32 tiempo=17ms TTL=115
+Respuesta desde 142.250.184.174: bytes=32 tiempo=17ms TTL=115
+
+Estad¡sticas de ping para 142.250.184.174:
+    Paquetes: enviados = 3, recibidos = 3, perdidos = 0
+    (0% perdidos),
+Tiempos aproximados de ida y vuelta en milisegundos:
+    M¡nimo = 17ms, M ximo = 20ms, Media = 18ms
