@@ -1,0 +1,2 @@
+Tiempo secuencial: 6183 ms
+Tiempo paralelo: 3051 ms
