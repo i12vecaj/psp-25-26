@@ -1,0 +1,3 @@
+¿Entiendes lo que está pasando? ¿De verdad?
+
+Sí. Tras fork() el proceso se duplica: dos procesos independientes comparten el mismo código pero cada uno tiene su propia copia de las variables. Por eso cuando el hijo suma 4 y el padre resta 5, ambos ven resultados distintos y esos cambios no se "mezclan" a menos que utilices comunicación entre procesos (pipes, memoria compartida, sockets, etc.). En este ejercicio no buscamos comunicación — solo que cada proceso modifique su propia copia y muestre su resultado.
