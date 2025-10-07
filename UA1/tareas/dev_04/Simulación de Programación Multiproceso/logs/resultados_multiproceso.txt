@@ -1,0 +1,16 @@
+---- Resultados Multiproceso ----
+Ejecución secuencial: 208 ms
+Ejecución paralela: 77 ms
+-------------------------------
+---- Resultados Multiproceso ----
+Ejecución secuencial: 207 ms
+Ejecución paralela: 75 ms
+-------------------------------
+---- Resultados Multiproceso ----
+Ejecución secuencial: 214 ms
+Ejecución paralela: 76 ms
+-------------------------------
+---- Resultados Multiproceso ----
+Ejecución secuencial: 204 ms
+Ejecución paralela: 75 ms
+-------------------------------
