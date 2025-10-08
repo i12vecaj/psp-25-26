@@ -1,0 +1,12 @@
+Ejecución secuencial:
+[Script1] Inicio Script 1
+[Script1] Fin Script 1
+[Script2] Inicio Script 2
+[Script2] Fin Script 2
+[Script3] Inicio Script 3
+[Script3] Fin Script 3
+Tiempo total secuencial: 9354 ms
+
+Ejecución paralela:
+Tiempo total paralelo: 4123 ms
+
