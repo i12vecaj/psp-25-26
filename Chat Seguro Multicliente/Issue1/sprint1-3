@@ -1,0 +1,15 @@
+package Sprint1;
+
+
+public class Script2 {
+    public static void main(String[] args) {
+        try {
+            System.out.println("Script2 iniciado...");
+            Thread.sleep(3000); // Simula trabajo
+            System.out.println("Script2 terminado.");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
