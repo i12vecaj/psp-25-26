@@ -1,13 +1,31 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.io.*;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+//Programa que lee una cadena por teclado hasta recibir el carácter '*'
+
+public class LeeCadena {
+    public static void main(String[] args) {
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            StringBuilder texto = new StringBuilder();
+            String linea;
+            System.out.println("Introduce texto (termina con *):");
+
+            //Leer caracteres hasta '*'
+            while ((linea = br.readLine()) != null) {
+                if (linea.contains("*")) {
+                    texto.append(linea.substring(0, linea.indexOf('*')));
+                    break;
+                } else {
+                    texto.append(linea).append("\n");
+                }
+            }
+
+            //Mostrar la información leída
+            System.out.println("\nContenido introducido:");
+            System.out.println(texto.toString());
+
+        } catch (IOException e) {
+            System.err.println("Error al leer datos: " + e.getMessage());
+        }
     }
 }
