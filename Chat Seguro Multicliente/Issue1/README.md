@@ -15,3 +15,18 @@ Simular la ejecución de varios procesos independientes usando la clase `Process
 - Actualización del README con explicación técnica.
 
 ### 📅 Fecha de entrega: 2025
+
+
+=== SIMULADOR DE MULTIPROCESO ===
+
+>> Ejecutando procesos EN PARALELO...
+
+[PROCESO 1] Iniciado
+[PROCESO 2] Iniciado
+[PROCESO 3] Iniciado
+...
+
+=== RESULTADOS ===
+Tiempo en paralelo: 2456 ms
+Tiempo secuencial: 5389 ms
+Diferencia: 2933 ms
