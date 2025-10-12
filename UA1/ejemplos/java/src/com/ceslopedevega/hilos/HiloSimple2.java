@@ -10,21 +10,14 @@ public class HiloSimple2 implements Runnable {
 		this.iter = iter;
 	}
 	
-	public void run()
-	{
-		for (int i = 0; i < iter; i++)
-		{
-			System.out.println("Iteración " + i + " dentro del hilo " + id);
-			try 
-			{
-				Thread.sleep(1000);
-			} 
-			catch (InterruptedException e) 
-			{
-				e.printStackTrace();
-			}
-		}
-		
-		System.out.println("El hilo " + id + " ha terminado su ejecución");
-	}
+	public void run(){
+
+        System.out.println("EL HILO NUMERO: " + id + "º" + "\nNUMERO DE INTERACIONES: " + iter);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

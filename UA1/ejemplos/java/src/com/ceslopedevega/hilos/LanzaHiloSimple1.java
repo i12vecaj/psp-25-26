@@ -1,6 +1,6 @@
 package com.ceslopedevega.hilos;
 
-public class LanzaHiloSimple1 {
+public class  LanzaHiloSimple1{
 	public static void main (String[] args)
 	{
 		HiloSimple1 hilo1 = new HiloSimple1(1, 10);
