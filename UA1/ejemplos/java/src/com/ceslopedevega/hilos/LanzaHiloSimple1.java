@@ -1,4 +1,3 @@
-package com.ceslopedevega.hilos;
 
 public class LanzaHiloSimple1 {
 	public static void main (String[] args)
