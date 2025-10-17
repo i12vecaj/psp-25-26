@@ -50,14 +50,16 @@ flowchart TD
    A[Lanzador.java] -->|ProcessBuilder| B[Ejecuta Principal.java]
    B --> C[Analiza argumentos]
    C --> D{¿Hay argumentos?}
-   D -- No --> E[System.exit(1)]
-   D -- Sí --> F{¿Es número entero?}
-   F -- No --> G[System.exit(2)]
-   F -- Sí --> H{¿Es negativo?}]
-   H -- Sí --> I[System.exit(3)]
-   H -- No --> J[System.exit(0)]    
-   J --> K[Devuelve código de salida]
+   D -- No --> E[System.exit 1]
+   D -- Si --> F{Es numero entero?}
+   F -- No --> G[System.exit 2]
+   F -- Si --> H{Es negativo?}
+   H -- Si --> I[System.exit 3]
+   H -- No --> J[System.exit 0]
+   J --> K[Devuelve codigo de salida]
    K --> L[Lanzador interpreta y muestra el resultado]
+
+
 
 ```
 
