@@ -15,3 +15,7 @@ Simular la ejecución de varios procesos independientes usando la clase `Process
 - Actualización del README con explicación técnica.
 
 ### 📅 Fecha de entrega: 2025
+
+Antes de nada, me gustaría añadir que al principio si que hacía ping, pero tras hacerle algunos cambios dejó de hacer ping a los 2 últimos y no entiendo el porqué.
+
+La diferencia principal entre proceso e hilo, es que los hilos se ejecutan de manera paralela mientras que los procesos se ejecutan de manera secuencial y estos, compiten por los recursos a los cuales tienen que acceder.
