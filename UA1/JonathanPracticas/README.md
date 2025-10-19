@@ -9,5 +9,4 @@ Todo bien
 
 ## Chat Seguro Multicliente
 
-Sprint 1 / Issue 1
-PENDIENTE
+Todo bien
