@@ -1,0 +1,7 @@
+=== SIMULACIÓN DE PROCESOS ===
+Fecha: Mon Oct 20 16:25:03 CEST 2025
+---------------------------------------
+Tiempo total SECUENCIAL: 9017 ms
+Tiempo total PARALELO: 134 ms
+---------------------------------------
+Mejora aproximada: 98,51%Fin de simulación.
