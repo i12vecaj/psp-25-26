@@ -1,0 +1,5 @@
+===== RESULTADOS DE SIMULACIÓN =====
+Tiempo secuencial: 6815 ms
+Tiempo paralelo:   3114 ms
+Diferencia:        3701 ms (2,19x más rápido)
+=====================================
