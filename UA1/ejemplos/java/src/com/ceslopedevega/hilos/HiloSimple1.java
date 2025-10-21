@@ -14,7 +14,7 @@ public class HiloSimple1 extends Thread {
 	{
 		for (int i = 0; i < iter; i++)
 		{
-			System.out.println("Iteración " + i + " dentro del hilo " + id);
+			System.out.println("Iteraciï¿½n " + i + " dentro del hilo " + id);
 			try 
 			{
 				Thread.sleep(1000);
@@ -25,6 +25,6 @@ public class HiloSimple1 extends Thread {
 			}
 		}
 		
-		System.out.println("El hilo " + id + " ha terminado su ejecución");
+		System.out.println("El hilo " + id + " ha terminado su ejecucion");
 	}
 }
