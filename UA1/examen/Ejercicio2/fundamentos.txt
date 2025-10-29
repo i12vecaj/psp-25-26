@@ -1,0 +1,60 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+
+a.1) Aquí entra el concepto de competitividad, al estar ambos programas intentando acceder al mismo bloque de memoria se pueden producir (problemas de concurrencia) errores, bloqueos, corrupción. Imagina tener una base de datos y que dos usuarios modifiquen un valor a la vez, no sabes cuál será el final y no sabes cuál acabará devolviendo.
+
+a.2) Esto se soluciona implementando sincronización en java o un bloqueo donde hasta que el procesoX no termine su función, otro proceso no puede acceder al bloque de memoria.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+b.1) Un hilo daemon es un hilo que se ejecuta en segundo plano. Son útiles para tareas que no son urgentes y pueden estar trabajanado de fondo como por ejemplo un análisis de cambios en el sistema o recolección de basura o simplemente un hilo que esté en conexión constante a una web recolectado datos (como una API). Este tipo de procesos/hilos es muy común verlos en Linux.
+
+b.2) Si el hilo principal termina antes que el hilo daemon lo normal es que estos se cierren también.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+(3 puntos)
+
+c.1) Aparecerían problemas de concurrencia ya que los tres hilos estarían intentando acceder o modificar la misma variable 
+entonces no sabes seguro cuál será su valor al final. 
+
+c.2) Como dije en el apartado a) esto se puede solucionar implementando el término "Syncronized" en la creación de un método, no es la solución más eficiente pero si es una inmediata que Java nos permite utilizar. También como he dicho se pueden crear soluciones manuales que bloqueen el acceso a dicha variable hasta que el acceso esté liberado.
+
+c.3) La alternativa más eficiente tal vez sería usar una base de datos, casi todas ya tienen este tipo de sistemas de protección integrados.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+(3 puntos)
+
+- La ejecución concurrente permite que varios procesos o hilos se ejecuten a la vez pero no al mismo tiempo real.
+        Ejemplo típico: servidor web que maneja múltiples solicitudes de clientes.
+        Solamente necesita un procesador
+        Ventajas: Mejora la utilización del CPU y la capacidad de respuesta del sistema.
+        Inconvenientes: Problemas de sincronización.
+
+
+- La ejecución paralela consiste en la ejecución simultánea de múltiples procesos o hilos en múltiples núcleos de la CPU lo
+que acelera la velocidad en la que se completarán las tareas.
+        Ejemplo típico: cálculos científicos (data science) / procesamiento de alto volumen de datos.
+        Necesita un procesador multinucleo con varios hilos y un sistema operativo que soporte multitarea.
+        Ventajas: Rendimiento mejorado, reducción del tiempo de ejecución (más velocidad).
+        Inconvenientes: Complejo de implementar
+
+- La ejecución distribuida consiste en varios ordenadores independientes conectados a través de una red que trabajan
+juntos para completar una tarea común. 
+        Ejemplo típico: renderizado de películas, supercomputación.
+        Necesita múltiples ordenadores conectados entre sí y un entorno que permite la utilización de recursos distribuidos.
+        Ventajas: Escalabilidad infinita, tolerancia a fallos, amplios recursos para utilizar.
+        Inconvenientes: Diseño muy complejo, latencia de red, velocidad, sincronización entre nodos (ordenadores), costoso en términos de recursos.
