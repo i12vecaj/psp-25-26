@@ -1,0 +1,31 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+
+-Pues cuando se ejecutan dos procesos para el mismo archivo el sistema lo controla y cuando uno accede a un archivo pues como que digamos que informaría al otro de que ya ha accedido para que no accedan los dos a la vez.
+-Por ejemplo de esta forma podemos tener archivos corruptos
+
+b) Define qué es un hilo Daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos Daemon.
+
+-
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+-Pues que cuando comparten la misma variable por ejemplo una de un numero entero 1 y esto se ejecuta pa incrementar 1 1 y 1 al final solo se muestra el 2 porque digamos que se han colapsao los hilos.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+La mejor opción supongo que es que no compartan variable, sinceramente desconozco como se podrían sincronizar.
+Si existe alguna alternativa más eficiente en ciertos casos.
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+-concurrente: por ejemplo lo voy a explicar con ejemplo de un bar del dia a dia, el camarero apunta a la mesa 1, sirve a la mesa 2 y por ultimo va a la mesa 3, no ha hecho nada a la vez pero no ha dejado nada sin atender, pues eso hace la programación concurrente va ejecutando todos los procesos para no dejar ninguno sin ejecutar pero no ejecuta todos a la vez.
+-paralela: pues con el mismo ejemplo, pero en este caso habría tres camareros y cada uno se encarga de atender y servir a cada mesa y asi se ejecutan todos los procesos a la vez.
+-distribuida: siguiendo el mismo ejemplo un camarero apunta a todas las mesas pero la comanda que ha recogido en la pda cada una llega a una cocina distinta dentro del mismo bar digamos, pues esto igual, se ejecutan los procesos todos a la vez pero cada uno de forma distribuida.
+
+Qué tipo de hardware o entorno necesita cada modelo.
+
+
+
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+
