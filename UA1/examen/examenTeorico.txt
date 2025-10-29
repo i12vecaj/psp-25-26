@@ -1,0 +1,76 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+
+	Tendría un problema de exclusión mutua ya que no se podría acceder al mismo archivo, habría que controlar la sincronización de procesos para que si ese archivo esta ocupado no pueda acceder otro hasta que no termine el primero
+
+(2 puntos)
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+ 
+  (No esta en el repo, ni en la fichas)  
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+
+Explica:
+
+Qué tipo de problemas podrían aparecer.
+
+Si actúan a la vez podrían bloquear la variable si la modifican, ya que un hilo podría estar escribiendo esa variable, y las otros hilos haciendo cálculos para en ella
+
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+
+Haciendo una sincronización mas efectiva de como acceden a a la variable, 
+
+Si existe alguna alternativa más eficiente en ciertos casos.
+
+Usar las Condiciones Bernastein para que puedan trabajar simultáneamente donde tienen instrucciones de lectura y escritura 
+
+(3 puntos)
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+
+Programación Concurrente intercala las instrucciones
+
+Programación Paralela: divide el problema en varios procesadores para resolver el problema.
+
+
+Para aclarar todo programa paralelo es con concurrente y pero no viceversa
+
+
+La programación distribuida divide entre varios equipos que no están dentro de la misma red ya que puede estar en localizaciones diferentes
+
+Un ejemplo típico de aplicación en cada caso.
+
+Concurrente: Base de datos
+
+Paralela Cálculos Matemáticos complejos
+
+Distribuida: Cloud Computing
+
+
+Qué tipo de hardware o entorno necesita cada modelo.
+
+Distribuida: Necesita la cooperación de varios equipos que no están dentro de la red
+
+Concurrente: Funciona dentro del mismo equipo aprovechando los hilos que tienen a sus disposición
+
+Paralela: Usa los distintos tipos Procesadores que hay dentro de la CPU
+
+
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+La ventaja de la concurrente que intercala los procesos puede optimizar mejor el rendimiento
+
+Inconveniente es que si no hay una buena sincronización puede producir bloqueos y perdida de rendimiento
+
+La ventaja de la Paralela que puede aprovechar mejor el rendimiento de la CPU para cálculos complejos.
+
+Inconveniente Consume mucha mas energía y la comunicación y sincronización es mas compleja.
+
+La ventaja de la Distribuida es que tiene mas disponibilidad a no tener que estar en un mismo sitio y estar en la nube
+
+Inconveniente: Requiere mas complejidad técnica a la hora de implementar soluciones y problemas de seguridad 
+
+
+(3 puntos)
