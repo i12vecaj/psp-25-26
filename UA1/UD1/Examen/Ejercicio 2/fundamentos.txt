@@ -1,0 +1,84 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+
+
+Este es un problema muy común, pues para que los procesos no tengan dificultades en cuanto a la competición de los recursos como hardware o datos en una base de datos, se emplean sistemas que permiten la comunicación entre procesos por ejemplo, usando pipes y herramientas del sistema operativo que crean sincronización entre estos y evitar que mientras unos escriben, otros lean datos incompletos.
+
+
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+NO LO DAMOS EN CLASE
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+
+Explica:
+
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+(3 puntos)
+
+Para resolver este problema, escribiría una clase que implementa runnable y una función run, desde main creo objetos y les paso la información como nombre de hilo, id, etc... de manera que cada hilo tiene sus propias variables
+
+
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+Concurrente:
+Necesitan el hardware del equipo, estos tienen acceso al procesador para ejecutarse y en algunas ocasiones requieren de que otro proceso
+termine
+
+Ventajas:
+
+Es el modelo más fácil de sincronizar
+Los procesos pueden lanzar otros procesos desde el proceso padre
+
+Desventajas:
+
+Es el modelo más lento
+Pueden generar ambigüedad al intentar acceder a los mismos recursos que otros procesos necesitan
+
+
+Distribuida:
+En este caso, los procesos se lanzan desde diferentes máquinas.
+
+Ventajas:
+
+En este caso una de las principales ventajas es su escalabilidad, al depender de otras máquinas puedes añadir más y aumentar la eficiencia.
+Permite que los procesos compartan los recursos
+
+Desventajas:
+
+Es el modelo más difícil de sincronizar
+Es el modelo más complejo a la hora de crear sus procesos
+Pueden ocurrir ataques DDOS es decir, si el servicio cae puede generar daños críticos
+
+Paralela:
+En este modelo utilizamos hilos el modelo a de acceder a los núcleos del procesador para ejecutarse
+
+Ventajas:
+
+Requiere de un menor tiempo de ejecución, no es necesario esperar a otros procesos pues estos, trabajan de manera independiente
+Gracias a la anterior ventaja y la eficiencia, es posible abordar problemas más complejos
+
+Desventajas: 
+
+Aunque muestra esta independencia, una de sus mayores desventajas es que es mucho más difícil sincronizarlos
+Es un modelo muy eficiente pero que requiere de un mayor consumo para que mantenga dicha eficiencia
+Los programas son más difíciles de escribir, cada proceso trabajaría con hilos los cuales ejecutan a la vez trabajos complejos y complicados
+
+
+(3 puntos)
+
+
+
+
+
+
+
+
