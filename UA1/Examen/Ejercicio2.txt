@@ -1,0 +1,50 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+
+- Al tratar de ejecutar dos procesos que acceden a un mismo archivo el sistema dará error por exclusión mutua.
+
+- Por ejemplo, si dos o más procesos accediesen a un mismo archivo a la vez, uno podría estar modificándolo mientras que el otro intenta leerlo. Para arreglarlo, se podría forzar 
+  a que cada proceso que quiera acceder al archivo tenga que esperar a que el que ya haya accedido termine de ejecutarse.
+
+
+
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon.
+
+- Esto no puedo responderlo porque no lo hemos visto en clase.
+
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global. Explica:
+
+Qué tipo de problemas podrían aparecer.
+- Problemas al hacer que cada hilo tenga una función diferente.
+
+
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+- 
+
+
+Si existe alguna alternativa más eficiente en ciertos casos.
+- Usar un switch para que cada hilo tenga una función en concreto.
+
+
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+
+Un ejemplo típico de aplicación en cada caso.
+- Concurrente: Gestión de BBDD.
+- Paralela: Uso de máquinas virtuales.
+- Distribuida: Trabajo en la nube.
+
+
+Qué tipo de hardware o entorno necesita cada modelo.
+- Concurrente: Un equipo.
+- Paralela: Un equipo con múltiples procesadores.
+- Distribuida: Un servidor.
+
+
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+- Concurrente: Errores al interactuar variaos procesos con un mismo archivo, incremento de velocidad de ejecución.
+- Paralela: Mayor consumo de energía, disminuye el tiempo de ejecución.
+- Distribuida: Precio elevado, alta disponibilidad.
