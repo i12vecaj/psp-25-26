@@ -1,0 +1,68 @@
+        a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+        (2 puntos)
+
+        Al querer dos procesos acceder al mismo recurso el sistema operativo utilizaría un mecanismo de sincronización.
+        En este caso el sistema operativo implementaría un mecanismo pensado para cuando dos o más procesos compitan por el mismo recurso.
+        En este caso el sistema operativo le daría el recurso al primer proceso que lo solicitó y después a segundo que lo solicitó.
+        Si es un archivo muy pesado y el acceso puede ralentizar el sistema hay sistemas que controlan cuantos procesos pueden acceder al mismo recurso
+        controlando tiempo, espacio del archivo, acciones...
+        Al querer dos procesos acceder al mismo recurso estaríamos antes una exclusión mutua, por lo que los problemas que podemos tener es que un proceso quiera cambiar
+        algo del archivo a la vez del otro proceso, es decir, que compitan por la modificación de un dato.
+        También dependiendo del archivo se podría dar una condición de sincronización, donde por ejemplo el segundo proceso que quiere el archivo
+        tenga que esperar a que el primer proceso acabe de usarlo para poder acceder.
+
+
+        b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+        Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+        Creo que no he escuchado hablar de esto, pero me suena esto:
+        Es un hilo que controla el resto de hilos.
+        Ocurriría que al haber terminado el hilo principal los hilos daemon se quedan sin nada que controlar.
+
+
+         c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+        Explica:
+        Qué tipo de problemas podrían aparecer.
+        Cómo podrías solucionarlos empleando mecanismos de sincronización.
+        Si existe alguna alternativa más eficiente en ciertos casos.
+        (3 puntos)
+
+
+        Los problemas podrían ser que al usar los tres la misma variable los tres procesos quieran modificarla a la vez.
+        Utilizaría un sistema que verifiqué cuál fue el primer proceso en utilizar la variable y enviar al resto de procesos a en espera
+        hasta que la variable se quede libre y el siguiente proceso use la misma variable.
+        Tambieñn
+        Una alternativa más eficiente sería no usar la misma variable global para los tres.
+        Yo por ejemplo si la variable global es por ejemplo "cantidad", al ser solo tres hilos, usaría una variable cantidad para cada
+        uno de los hilos, y después si la cantidad de la variable global era por ejemplo 100, en el constructor le daría 100 a cada uno
+        entonces ya los 3 usan el mismo dato pero no tienen que competir por él.
+        Usaría esta solución es este caso porque son solo 3 hilos y una variable por hilo ocuparía muy poco espacio.
+
+        d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+        Un ejemplo típico de aplicación en cada caso.
+        Qué tipo de hardware o entorno necesita cada modelo.
+        Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+        (3 puntos)
+
+        Ejecución concurrente: las instrucciones se intercalan
+        Ejemplo típico de aplicación: videojuego
+        Tipo de hardware o entorno: Ordenador
+        Ventajas: aprovechas más los recuros del procesador, mayor velocidad de ejecucción
+
+        Ejecución concurrente: el problema se divide en partes, en varias CPU
+        Ejemplo típico de aplicación: Un reverse proxy que necesite varios procesadores para hacer un forwarding correcto
+        Tipo de hardware o entorno: Servidor
+        Ventajas: Ejecución simultánea, menor tiempo de ejecución
+
+        Ejecución distribuida: el problema se divide en partes, en varias CPU
+        Ejemplo típico de aplicación: Una infraestructura en AWS
+        Tipo de hardware o entorno: Varios ordenadores
+        Ventajas: Se pueden compartir recursos y datos entre los dispositivos, escalabilidad, mayor flexibilidad.
+
+
+
+
+
+
+
+
