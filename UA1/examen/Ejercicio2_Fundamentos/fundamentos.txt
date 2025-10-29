@@ -1,0 +1,44 @@
+a) Explica cómo se comportaría un sistema operativo 
+al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. 
+Indica qué problemas podrían surgir y cómo podrían evitarse.
+
+La reacción que tendria el sistema operativo, seria que un proceso, el segundo en este caso
+accedería al mismo archivo que el primero sin haber visto los cambios que el primero haya hecho en el 
+, esto puede ser beneficioso siempre y cuando se quiera trabajar con un archivo meramente informativo, pero si 
+vemos como hicimos en el ejemplo del banco, que dos clientes tienen acceso a la misma cuenta y los dos quieren 
+sacar dinero, vemos como el segundo aun despues de que el primero haya extraido una cantidad, el ve la cantidad inicial, lo que 
+se podria hacer es usar algun metodo que sincronice ese acceso, al igual que en los hilos
+También esos dos procesos estarían compitiendo por los recursos del sistema
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon
+
+este concepto no lo hemos visto en clase
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+
+Como he explicado al principio en el ejercicio a, lo que podría suceder es que se pisaran los hilos, y uno 
+no viese las acciones del otro y aun asi actuara de la misma manera, como en el ejemplo del banco, uno entra viendo el saldo inicial de 100, saca 50
+y el otro al entrar saca 50 y le deja pq quedan 50, pero el sigue viendo 100, entonces es un problemas
+
+Para poder arreglar eso, existe una funcionalidad en java para tratar esos casos que es el synchronized
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+Concurrente: Se basa en el multiproceso simultáneo, diciendolo de una forma muy culta, es un tipo de programación que te permite realizar varias
+tareas al mismo tiempo
+Ejemplo: un programa de una cadena de pasteleria, mientras uno dicta los ingredientes, otro las cantidades y otro calienta el horno 
+
+Paralela: Es un tipo de trabajo que se divide como en varias partes, que se ejecutan al mismo tiempo en distintos núcleos del procesador, muchas veces
+se puede confundir con la concurrente al parecer lo mismo
+
+Distribuida: Es un tipo de programación, que ejecuta distintas partes del programa, pero en diferentes ordenadores conectados por red
+Ejemplo: un programa de traduccion , en el que cada ordenador ejecuta la parte del programa teniendo en cuenta el idioma seleccionado por el usuario
