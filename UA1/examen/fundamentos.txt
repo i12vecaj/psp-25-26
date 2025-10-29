@@ -1,0 +1,42 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+Si dos procesos acceden al mismo archivo simultáneamente, el sistema operativo debe coordinar su uso.
+Pueden surgir problemas si ambos escriben o leen a la vez como que no responda (puede quedar en estado "zombie").
+Para evitarlo, se usan bloqueos de archivo o se establece un acceso secuencial donde un proceso termina antes de que empiece el otro.
+
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+No lo hemos dado en clase, pero lo que se sobre ellos es lo siguiente:
+Un hilo daemon es un hilo ejecutado en segundo plano que da soporte a los hilos principales. Por ejemplo, se suele usar para registrar logs o limpiar recursos.
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+(3 puntos)
+
+Si varios hilos comparten una variable global, pueden producirse condiciones de carrera o datos incoherentes.
+Se soluciona usando sincronización (synchronized, Lock o semáforos).
+En algunos casos, es más eficiente usar estructuras concurrentes que gestionan la sincronización internamente.
+
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+(3 puntos)
+
+La concurrencia permite que varias tareas avancen a la vez en un mismo equipo. Por ejemplo: servidor con varios hilos.
+La ejecución paralela divide tareas entre varios núcleos reales para acelerar cálculos. Por ejemplo: simulación científica.
+La ejecución distribuida reparte el trabajo entre varias máquinas conectadas por red. Por ejemplo: aplicación web en varios servidores.
+
+La concurrencia mejora la respuesta, el paralelismo acelera el rendimiento y la distribución permite escalar, aunque con más complejidad. Además, la distribuida es la más costosa.
+
+EXTRA (como yo las entiendo en la vida real):
+* Ejemplo de concurrencia (competencia): En una cocina familiar donde una persona cuece la pasta y otra prepara la salsa; ambas trabajan a la vez y se pasan la fuente cuando cada parte está lista. No compiten por la misma tarea: se coordinan para que la comida salga bien y a tiempo. En programación, varios “trabajadores” (hilos) cooperan compartiendo una zona común (por ejemplo, una bandeja o una cola) y se avisan entre sí para no pisarse, así el plato final se monta correctamente.
+* Ejemplo de programación paralela: Al cortar leña para el invierno: si una sola persona corta toda la leña tardará mucho, pero si tres vecinos vienen y cada uno corta su montón al mismo tiempo, el trabajo se acaba mucho antes.
+Eso es paralelismo: dividir una tarea grande en partes iguales y hacerlas a la vez para ir más rápido porque hay manos (núcleos/CPUs) diferentes trabajando realmente al mismo tiempo.
+* Ejemplo de programación distribuida: Al organizar una fiesta grande y pides a amigos de diferentes pueblos que traigan comida. Cada uno cocina en su casa y luego manda la comida en furgoneta al lugar de la fiesta. Aquí cada cocina es independiente, la comunicación es por carretera (red) y hay que coordinar horarios y contingencias (si una furgoneta se retrasa). En un sistema distribuido las “cocinas” son máquinas distintas que intercambian mensajes para colaborar en un objetivo común.
