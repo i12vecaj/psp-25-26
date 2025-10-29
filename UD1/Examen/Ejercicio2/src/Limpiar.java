@@ -1,0 +1,31 @@
+
+public class Limpiar implements Runnable {
+    private int id;
+    private int iter;
+
+    public Limpiar (int id, int iter)
+    {
+        this.id = id;
+        this.iter = iter;
+    }
+
+    public void run()
+    {
+
+        System.out.println("[Limpiar] Comenzando tarea...");
+        for (int i = 0; i < iter; i++)
+        {
+//            System.out.println("Iteración " + i + " dentro del hilo " + id);
+            try
+            {
+                Thread.sleep(3000);
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+        }
+
+        System.out.println("[Limpiar] Tarea finalizada.");
+    }
+}
