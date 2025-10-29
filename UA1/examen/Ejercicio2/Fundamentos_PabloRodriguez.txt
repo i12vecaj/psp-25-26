@@ -1,0 +1,61 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse. (2 puntos)
+
+- Pues el sistema operativo bloquearía el archivo que los procesos intentaban acceder, lo dejaría en un estado de exclusión. Si esto ocurre puede dar muchos problemas como que los procesos que necesitaban acceder a ese archivo no lo hagan, dando error y otros procesos esperaban a que terminaran darían error haciendo una cadena de errores.
+- Para evitarlo hay varias maneras por ejemplo podría darse una prioridad a un proceso en concreto a la hora de acceder a ese archivo o hacer que uno de los procesos que hacen que choquen se ejecute cuando el otro proceso finalice, así irían en orden.
+
+
+
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos Daemon. (2 puntos)
+(Se mas o menos lo que es por conocimiento externo pero no se ha dado en clase ni esta en el repo)
+
+- Un hilo Daemon es un hilo que tiene baja prioridad comparada con otros hilos, se podría utilizar para hacer comprobaciones de hilos mas importantes para ver que estos funcionan bien y respeten un orden o cuando quieres hacer alguna función de mantenimiento sin molestar a los hilos importantes teniendo este hilo Daemon en segundo plano
+
+- Si el hilo principal termina antes que los Daemon, estos últimos terminarían automáticamente da igual que estén haciendo o porque parte su ejecución estén.
+
+
+
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+
+Explica:
+
+Qué tipo de problemas podrían aparecer.
+
+	- Podrían aparecer problemas de uso, si uno de los hilos modifica la variable global y otro hilo quiere usar la variable, el nuevo valor de la variable puede 		que ya no le sirva para su función.
+
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+
+	- Para solucionar varios problemas se puede usar funciones sincronizadas, así solo un hilo puede entrar a la vez a la función y así que no se bloquee en medio 	de la función porque otro hilo ya estuviera haciendo esa función y haya modificado el dato
+
+Si existe alguna alternativa más eficiente en ciertos casos.
+
+	- Se le podría dar prioridad a X hilo según el caso para así asegurarse de que cada hilo pueda usar la variable para su función da igual si esta haya sido 	modificada con antelación
+
+
+
+
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+
+Un ejemplo típico de aplicación en cada caso:
+	- La ejecución concurrente se podría usar para ejecuciones mas fáciles y ligeras como un banco donde cada hilo corresponde a un usuario y una cuenta del banco y 	podrían hacer diferentes cosas como ingresar dinero, retirar dinero, hacer transferencias, etc. sin necesidad de esperar a que otro usuario haga su función.
+
+	- La ejecución paralela se puede usar para programas mas pesados que requiera una velocidad de ejecución muy alta, por ejemplo un videojuego
+	
+	- La ejecución distribuida se puede utilizaría para Google drive o servicios en la nube
+
+Qué tipo de hardware o entorno necesita cada modelo:
+	- Para ejecución concurrente se utilizaría un procesadores multinúcleo y entornos mas sencillos
+	- Para ejecución paralela se usa sistemas multiprocesador y entornos complejos
+	- Para ejecución distribuida el hardware y software están distribuidos y se conectan mediante la red
+
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad:
+	- La ejecución concurrente, al ser concurrente aprovecha mucho mejor la CPU y asi la velocidad de ejecución y no son muy complejos de realizar usando hilos
+	
+	- La ejecución paralela al usar varias CPU y ejecución simultanea son mejor en rendimiento que la ejecución concurrente y además resuelve problemas complejos, 	el problema es que montar un entorno es mucho mas complicado y es mucho mas difícil de programar de forma paralela.
+	
+	- La ejecución distribuida tiene buen rendimiento al tener muy buena flexibilidad y disponibilidad pero es complicado por sus problemas de comunicación y 	seguridad al usarse
+
