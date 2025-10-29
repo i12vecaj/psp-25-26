@@ -1,3 +1,10 @@
+/*
+ * Nombre: Elena Expósito Lara
+ * Fecha: 29/10/2025
+ * Descripción: Ejercicio teórico
+ * FR implementados: a, b, c, d
+ */
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
 Si dos procesos acceden al mismo archivo simultáneamente, el sistema operativo debe coordinar su uso.
