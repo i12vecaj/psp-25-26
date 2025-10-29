@@ -1,0 +1,46 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+
+    cuando dos procesos acceden a un mismo archivo de manera simultanea pueden ocurrir conflictos sobre todo si estan modificando un objeto o valor.
+    la manera de solucionarlo sin riesgo a conflicto seria con Sychronized
+
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+    un hilo daemon es un subproceso interno del procesador.
+    puede ser util cuando necesites que un proceso tenga que pasar por el procesador para realizar alguna tarea.
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+(3 puntos)
+
+    los problemas que podrian surgir es que al compartir la variable entrara en conflicto entre si al estar modificando la variable sin orden
+    haria una clase sincronizada por la que tuvieran que pasar los hilos y mecanismos de prevencion por si no pueden cumplir su funcion como el try y catch
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+(3 puntos)
+
+    1. la ejecucion concurrente ejecuta varios procesos e hilos de manera simultaneamente alternandose en el tiempo.
+    por ejemplo un software de descargas, alternando las descargas y no haciendolo a la vez todo.
+    puede ejecutarse en cualquier tipo hardware.
+    es un tipo de ejecucion sencillo pero con bajo rendimiento al tener que alternar entre procesos.
+
+    2. la paralela ejecuta procesos e hilos en varios procesadores o nucleos pudiendo ejecutar varias tareas a la vez.
+    se utilizaria en software como videojuegos o similares siendo capaz de ejecutar varios procesos e hilos seguidos aprovechando los nucleos del procesadores.
+    tambien podria ejecutarse en casi cualquier hardtware como telefono, consolas, ordenadores...
+    es un tipo de ejecucion mas compleja pero da mejor rendimiento al no tener que estar alternando todo el rato entre procesos.
+
+    3. la distribuida es la que usa varios equipos conectados a una misma red resolviendo actuando a la par para solucionar un problemas.
+    un servicio en linea que requiera de conexion a internet y varios usuarios conectados simultaneamente.
+    se puede ejecutar en hardware adaptado como seria un servidor o similar.
+    es un tipo de ejecucion compleja y de alto rendimiento al tener varios equipos trabajando simultaneamente.
+
+
