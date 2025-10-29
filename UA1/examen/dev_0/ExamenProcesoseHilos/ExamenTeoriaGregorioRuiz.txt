@@ -1,0 +1,44 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea.
+Indica qué problemas podrían surgir y cómo podrían evitarse. (2 puntos)
+
+Si dos procesos intentan acceder al mismo archivo, ocurriría un error, ya que ambos procesos requieren el uso del mismo recurso del sistema.
+Para evitar este suceso, se pueden implementar sistemas de prioridad al momento de usar el recurso, como lo son FIFO y el de orden de importancia,
+para gestionar el uso del recurso, aunque no sea de forma simultánea.
+
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+Es un hilo secundario que actúa de soporte para un hilo principal. Se utilizan cuando el suceso que realiza el hilo principal es más complejo. Si el hilo 
+principal termina, los daemon asociados también (esto no viene en el repo, pero el concepto me sonaba de haberlo tratado en linux previamente)
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.(3 puntos)
+
+El problema que aparecería es que estos hilos accederían a una variable modificable que cambiaría el comportamiento de los hilos dependiendo de su valor.
+Para solucionarlo se pueden crear condiciones de acceso a la variable, de tal forma que no exista dicho error.
+La alternativa que se me ocurre es la de crear prioridades de acceso a la variable y que no sea accesible a lectura si otro hilo la está empleando en ese momento.
+
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+(3 puntos)
+
+La programación concurrente permite que varios sucesos sucedan al mismo tiempo, gracias a las múltiples unidades
+de proceso de nuestro hardware. Las instrucciones se van intercalando, compitiendo o colaborando con los recursos del sistema
+Tiene como beneficios el mejor aprovechamiento de la CPU e incrementa la velocidad de ejecución
+
+En la programación paralela, el programa se ejecuta a la vez. Es INDISPENSABLE un sistema multiprocesador.
+Su ejecución es simultánea, disminuyendo el tiempo de ejecución y permite resolver problemas complejos, aunque los programas
+son más difíciles de escribir y requiere un mayor consumo de energía.
+
+En la programación distribuida, los componentes de hardware o software se encuentran repartidos en distintos puntos,
+conectados mediante una red. Se pueden compartir recursos de varias máquinas para un mismo fin, la capacidad de crecimiento es siempre añadida
+(nuevo hardware sin necesidad de reemplazar el antiguo), pero a riesgo de un aumento de su complejidad, de seguridad al atacar a la red y de pérdida de mensajes si
+el volumen es excesivo.
+
