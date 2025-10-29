@@ -1,0 +1,56 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+	
+	Si ambos procesos intentan acceder al mismo archivo a la vez daría error porque ambos están necesitan acceder al mismo recurso del sistema que accede a ese archivo, y chocarían en	el intento de acceder.
+	Una forma de evitarlo sería cambiar la prioridad con la que se ejecutan estos procesos, que uno sea más importante que otro y por consecuencia se ejecute primero, no se ejecutarían
+	de manera simultánea pero al menos tampoco daría error en la ejecución.
+	
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+	No se ha explicado en clase lo que son los hilos Daemon.
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+(3 puntos)
+
+	El primer problema que creo que podría aparecer es que estos hilos estarían accediendo a la variable posiblemente ya modificada por el, o los otros hilos, que hayan accedido primero. 	Esto quiere decir que la información a la que estarían accediendo estos hilos, sería cada vez distinta y daría problemas de concurrencia.
+
+	Una posible solución podría ser que los hilos sigan compartiendo esta variable global pero en el cambio de que haya alguna modificación, esta se guarde en una variable aparte, propia 	de cada hilo, así la información general de la variable global no sería modificada y sería siempre la misma.
+	
+	
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+(3 puntos)
+
+
+	Ejecución concurrente:
+		La programación concurrente se puede usar en diversos ámbitos donde se necesite que varios procesos se ejecuten al mismo tiempo, como puede ser en aplicaciones multimedia, 		para reproducir sonido/video mientras se descarga; o en un videojuego, donde los gráficos del entorno tienen que cargar a la vez que las físicas de estos.
+		
+		La programación concurrente principalmente tira de CPU donde lo que necesita es velocidad de ejecución para que se pueda ejecutar todo bien y al mismo tiempo.
+		
+		Este tipo de programación tiene un buen rendimiento, ya que si hay 5 procesos que necesitan ejecutarse, este los ejecuta en el tiempo de 1 mismo, me explico, al ejecutarse 		todos los procesos al mismo tiempo, necesita de mucha más CPU, pero también aprovecha mucho mejor el tiempo ya que no se retrasa tanto la ejecución.
+		
+		
+	Ejecución paralela:
+		Un ejemplo creo que podría ser un navegador como pueden ser Google, Firefox u Opera, ya que estos pueden llegar a necesitar de varios procesadores en el caso de que tengan 		que trabajar con mucha información, por ejemplo si hay varias pestañas activas abiertas.
+		
+		Este modelo necesita de un sistema multiprocesador ya que puede llegar a necesitar varias CPU trabajando a la vez para solucionar un mismo problema.
+		
+		Las principales ventajas de esto es que la ejecución es simultánea y disminuye el tiempo de ejecución de los procesos, también teniendo en cuenta de que gracias al uso de 		varias CPU puede solucionar problemas complejos en una breve cantidad de tiempo. A contraparte, también necesita de compiladores y entornos mas complejos, lo que dificulta 		significativamente la escritura del programa, consume mucha más energía que cualquier otro modelo y se puede llegar a complicar también la comunicación entre archivos o 		procesos.    
+		
+		
+	Ejecución distribuida:
+		Un ejemplo típico de este uso es el Cloud Computing de Internet.
+		
+		Los componentes de este método se interconectan mediante una red, lo que facilita compartir datos y recursos entre sí, tiene mayor flexibilidad y alta disponibilidad. Lo 		malo de este modelo es que la complejidad de programación se incrementa y, si hay algún problema con la red, es probable que haya pérdidas de paquetes de datos, saturación 		de la red al estilo cuello de botella, o similar y diversos problemas de seguridad.
+		
+		
