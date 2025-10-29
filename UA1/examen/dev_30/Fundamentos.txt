@@ -1,0 +1,51 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea.
+Indica qué problemas podrían surgir y cómo podrían evitarse.
+
+El sistema deberia gestionar el acceso al recurso mediante un sistema de prioridad para que acceda al recurso el proceso más prioritario o colaboren entre ellos
+Si ambos procesos Acceden a un mismo recurso del sistema al mismo tiempo,
+el problema que puede haber es que queden bloqueados y ninguno de los dos pueda acceder al recurso del sistema,
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon.
+
+    Són ejecuciones en segundo plano que no interfieren en la ejecucion del programa principal,
+    un caso de uso sería cuando estas ejecuciones en segundo plano hacen procesos de mantenimiento para que el programa principal siga funcionando.
+    Si la ejecucion principal termina antes que los hilos daemon simplemnete ellos terminan también.
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer:
+    condiciones de competencia y errores en los datos compartidos.
+
+Cómo podrías solucionarlos empleando mecanismos de sincronización:
+    utilizando bloques synchronized, semáforos para controlar el acceso a la variable compartida.
+
+Si existe alguna alternativa más eficiente en ciertos casos:
+    el uso de variables atómicas que permiten operaciones seguras.
+
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+Comparación de ejecuciones concurrente, paralela y distribuida:
+
+    Ejecucion concurrente:
+        ejemplo: una base de datos recibiendo muchas solicitudes.
+        hardware: basata con un solo procesador.
+        ventajas: menor complejidad en la gestión de recursos.
+        inconvenientes: puede ser menos eficiente en tareas más grandes y complejas.
+
+    Ejecucion paralela:
+        ejemplo: procesamiento de cálculos científicos.
+        hardware: necesita multiples procesadores.
+        ventajas: es más efectiva en tareas muy complejas y dividiendo esos problemas por partes especificas mejora el rendimiento para completarlos.
+        inconvenientes: es la más compleja.
+
+    Ejecucion distribuida:
+        ejemplo: aplicaciones web con servidores distribuidos.
+        hardware: múltiples servidores conectados a través de la red.
+        ventajas: si un servidor falla los demás lo pueden respaldar.
+        inconvenientes: es muy complejo establecer la comunicacion y sincronizacion entre ellos.
