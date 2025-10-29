@@ -1,0 +1,55 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+
+Cuando 2 procesos acceden al mismo archivo a la misma vez, el archivo puede por así decirlo protegerse impidiendo que puedan acceder a él, ya que podría pasar que por ejemplo un proceso esté leyendo los datos de un archivo a la vez que otro los está modificando o cosas por el estilo, la solución a este problema es básicamente bloquear el acceso de un proceso al archivo que necesitemos hasta que el otro proceso acabe, esto se podría hacer por ejemplo con Thread.sleep
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+(3 puntos)
+
+Pues un problema bastante grave que podría aparecer es que esto sería bastante ineficiente para la programación concurrente por ejemplo, me explico, se puede dar el caso de un proceso que tiene que hacer un calculo, y un dato de una operación de ese calculo es la variable global, esto haría que no tenga sentido repetir el proceso, haciendo básicamente inútil la programación concurrente.
+
+una solución a este problema podría ser poner el proceso dentro de una clase, y que la variable que antes era global ahora se pueda modificar cada vez que instancies esa clase usando el constructor, así se podría hacer el proceso haciendo un calculo diferente cada vez, pudiendo usar programación concurrente.
+
+una solución que podría ser mas eficiente en un caso concreto, sería si no tienes la necesidad de usar programación concurrente, es decir solo te interesa hacer el cálculo 1 vez, en cuyo caso puedes ejecutar el proceso una vez y cambiar la variable global cada vez que quieras.
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+(3 puntos)
+
+Ejemplos:
+
+programación concurrente:
+un programa que por ejemplo mida las constantes vitales de una persona, y cuando estas estén alteradas calcule y muestre cuales serían las correctas
+programación paralela:
+un programa que calcule la velocidad de subida y bajada de archivos de dos usuarios con distinta velocidad de internet
+programación distribuida:
+ya que usa mas recursos se puede destinar a tareas más complejas como programas que manejen bases de datos muy grandes
+
+Hardware/Entorno necesario:
+
+programación concurrente: 
+es el que mejor aprovecha la CPU, así que el hardware que necesites dependerá en la escala del proyecto que quieras hacer, aunque generalmente no se usa para cosas muy complejas
+programación paralela:
+permite (y está pensado) para multiprocesador, por lo que en general se usa en equipos e IDEs que tengan esta característica
+programación distribuida:
+lo más correcto es usarlo en cloud computing, ya que al ser una programación pensada para distribuir (como su propio nombre indica) los recursos, es perfecto para crear un servidor en la nube con recursos a repartir entre los usuarios que se conecten
+
+Ventajas e inconvenientes:
+
+programación concurrente:
+permite intercalar varios procesos a la vez haciéndola mas eficiente, pero puede dar errores lógicos como varios procesos intentando acceder al mismo archivo
+programación paralela:
+es mas eficiente que la programación concurrente ya que los procesos no se intercalan si no que se ejecutan a la vez, el inconveniente es que necesita mas recursos y es más complicado trabajar con ella, ya que es más compleja
+programación distribuida:
+es idónea para el cloud computing y el trabajo de varios usuarios, pero a su vez los errores son mas tediosos ya que ocurren más que en el resto y de forma individual
