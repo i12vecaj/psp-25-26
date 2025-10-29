@@ -1,0 +1,15 @@
+A) - Que no se interfiere entre ellos. Se ejecutan los dos a la vez.
+  - Los problemas que pueden tener es que uno finaliza el proceso antes que otro.
+
+B) - El hilo Daemon se ejecuta antes de arrancarlo mediante thread.setDaemon.
+   - Sería útil para limpiar la memoria cache.
+   -Si el hilo principal termina y solo quedan hilos Daemon se corta la ejecución.
+
+C) - Problemas: pueden perder incrementos o lecturas inconsistentes.
+   - Soluciones: Utilizar sincronización o clases atómicas.
+   - Alternativas: utilizar confinamiento del hilo.
+
+D) 
+    - Concurrente: múltiples tareas lógicas progresan (se intercalan) en el tiempo — puede ser en un solo núcleo mediante multiplexación o en varios núcleos. Es un concepto de diseño.
+    - Paralela: ejecución simultánea real de varias tareas al mismo tiempo — requiere hardware con múltiples núcleos/CPUs o unidades de procesamiento (GPUs).
+    - Distribuida: ejecución de tareas en diferentes máquinas (nodos) interconectadas por red; requiere coordinación por red y manejo de fallos parciales.
