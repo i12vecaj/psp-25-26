@@ -1,0 +1,42 @@
+Maria Luisa Ortega Lucena
+
+a)Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+
+Primero cada uno el procesador le asigna los recursos necesarios, problemas que podrían surgir seria que a la hora de cambiar algo o modificar cualquier cosa, un proceso tendría el cambio hecho pero el otro no tendría ese cambio entonces si necesita ese cambio para realizar el proceso se interrumpiría. Se podría evitar mediante hilos, que hacen que cada uno se ejecute según el procesador le va diciendo, y se ejecutan de forma concurrente, no paralela ni secuencial.
+
+
+b)Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. 
+
+//Como comentario de que ya lo hemos hablado antes en el examen, esto me lo ha explicado mi hermano//(estuvo en dam hace 3 años)no quiero que te pienses otra cosa, gracias
+
+Un hilo daemon es un hilo que se ejecuta en segundo plano para tareas y no evita que el programa principal termine, sería últil para cuando estamos jugando y por ejemplo en segundo plano se está cargando por ejemplo algo que viene en el videojuego, y no se tiene que terminar en ningún momento. Si el hilo principal termina antes que los hilos daemon, seguirían actuando en segundo plano hasta que se cierre ese programa en ejecución
+
+
+c)En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+
+Creo que el problema que podría suceder es que cuando se ejecuten solo entre el primer hilo que ha entrado y los demás no lleguen a ejecutarse.
+La sincronización sería para bloquear el hilo, no sabría decirte si hay otra alternativa para solucionar el caso de que tengan los tres hilos la misma variablo global.
+
+
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+Ejemplo de ejecucion concurrente: por ejemplo en una aplicación de un banco, un cliente quiera sacar tres veces dinero, serían tres hilos que cada uno tiene el proceso de realizar esa acción.
+Ejemplo de ejecución paralela: serían dos nodos donde cada uno tiene un procesador y cada uno ejecuta un proceso diferente en cada máquina
+Ejemplo de ejecución distribuida: serían muchas máquinas donde cada uno tiene asginado un proceso y según un procesador que le vaya asignando los recursos se van ejecutando
+
+Ejecución concurrente: un solo procesador
+Ejecución paralela: varios nodos el cual cada uno tiene un procesador
+Ejecución disribuida: diferentes máquinas y procesadores
+
+Ejecución concurrente: como desventaja, es más difícil de depurar, y ventaja varios procesos pueden ser ejecutados de forma concurrente y solo por un procesador.
+Ejecución paralela: como desventaja, es necesario más equipo y entorno,como ventaja, es más fácil de depurar al contrario de la ejecución concurrente.
+Ejecución disribuida: como ventaja, los procesos son divididos en diferentes entornos y asi si uno diese error los demás seguirían funcionando
