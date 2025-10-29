@@ -1,0 +1,16 @@
+import static java.lang.Thread.sleep;
+
+public class LavarRopa implements Runnable{
+
+    @Override
+    public void run() {
+        try {
+            sleep(3000);
+            System.out.println("Comenzando a Lavar la Ropa...");
+            sleep(1500);
+            System.out.println("Ropa lavada.");
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
