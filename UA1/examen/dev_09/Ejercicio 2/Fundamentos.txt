@@ -1,0 +1,49 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+        El sistema manda los procesos a ejecutar al mismo tiempo, lo que dependiendo de como este programado nos podria dar 2 supuestos, en uno uno de los procesos espera a que el otro termine (supuesto usando hilos y usando sync),
+            y el supuesto con el error, el cual nos da como resultado que uno de los procesos si realiza modificaciones se pierde ya que el archivo esta en uso por el otro proceso.
+            A esto se le llama competencia, termino que usamos cuando queremos decir que un proceso quiere interactuar con un archivo al mismo tiempo que otro.
+        Dependiendo de como este progrmado, si usamos hilos existe un atributo que es sync() el cual hace que los hilos esperen a que el archivo este libre para no entorpecerse entre ellos.
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+        No se a que hace referencia un hilo daemon, imagino que sera un tipo de hilo hijo, pero no se exactamente que es, me suena, pero ni idea.
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.(3 puntos)
+Explica:
+- Qué tipo de problemas podrían aparecer.
+        Sobreescritura y perdida de datos ya que si almacenamos dentro de una misma variable el dato de varios hilos, estos pueden modificar su valor y no tener sentido dentro del proceso.
+
+- Cómo podrías solucionarlos empleando mecanismos de sincronización.
+        Con sync() creo que se podria ya que el hilo detectaria cuando se esta usando la variable por otro y entraria en un modo de espera.
+
+- Si existe alguna alternativa más eficiente en ciertos casos.
+        Que hayamos visto en clase creo que no hay altternativas más eficientes.
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:(3 puntos)
+- Un ejemplo típico de aplicación en cada caso.
+- Qué tipo de hardware o entorno necesita cada modelo.
+- Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+* Ejecucion concurrente: Los programas deriban en hilos autogestionados para dividir cargas y repartir recursos eficazmente,
+    todos se lanzan simultaneamente pero no se ejecutan al mismo tiempo ni en el mismo orden, sino que comparten los recursos altenando su uso.
+
+- Ejemplo: un servidor o una base de datos atendiendo peticiones de los clientes.
+- Entorno: Procesador multinucleo capaz de soportar la carga.
+- Ventajas: Mejora eficiencia al usar los tiempos de espera y permite mantener el uso del sistema, ya que no saturamos con los procesos a nuestro procesador.
+- Inconvenientes: Existencia de competencia y necesidad de sincronizacion.
+
+* Ejecucion paralela: La ejecucion paralela es parecida a la concurrente ya que lanza los hilos al mismo tiempo pero estos en cambio si se ejecutan al unisono,
+    dando asi que se cree una mayor competencia y una carga mayor.
+
+- Ejemplo: El procesamiento de una imagen, antiguamente al tener pocos nucleos los procesadores se cargaban las imagenes de forma "lineal", esto sigue pasando pero al ser tan potentes los procesadores actuales y con tanto nucleo, esto se hace casi imperceptible.
+- Entorno: El mismo entorno que encontramos con la concurrente.
+- Ventajas: Escalabilidad y aumento de rendiento del programa.
+- Inconvenientes: Sobrecarga del sistema cuando se requiera muchos recursos y mayor complejidad de programacion ya que entramos a tener encuenta diferentes problemas de gestion de recursos.
+
+* Ejecucion distribuida: La distribucion se refiere a la distribucion de carga en diferentes equipo conectados mediante red.
+
+- Ejemplo: un cpd de una empresa la cual esta en diferente localizacion.
+- Entorno: Multiples puestos todos igual de potentes o sino encontraremos mas adversidades.
+- Ventajas: Distribuimos carga y mayor capacidad de procesamiento.
+- Inconvenientes:Dependemos de la red en caso de estar en diferentes localizaciones y esto puede ser mas costoso si queremos que todos nuestros equipos sean muy potentes.
