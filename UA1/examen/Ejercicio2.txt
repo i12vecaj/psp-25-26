@@ -1,0 +1,42 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+
+    RESPUESTA: Normalmente el sistema operativo está adaptado para que en caso que dos procesos choquen entre sí el último de ellos no se inicie.
+    Esto se debe a que si ambos procesos acceden al mismo archivo puede ocasionar cualquier tipo de error, por lo que es una buena práctica evitar
+    que esto ocurra para que el usuario no disponga de problemas al usar la aplicación.
+    
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+    RESPUESTA: Es un hilo de ejecución en segundo plano mientras que el programa principal está activo.
+                Si el hilo principal termina todos los hilos daemon se paran.
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+(3 puntos)
+
+    RESPUESTA: Cuando se intentan ejecutar varios hilos de manera simultánea puede ocurrir que se ocasionen ciertos errores. Por ejemplo, supongamos que tenemos una aplicación
+    de un banco en la cual una madre y un hijo comparten la misma cuenta, si ambos intentan sacar dinero al mismo tiempo posiblemente el sistema falle debido a que los procesos
+    no se ejecutan de manera lineal. Para solucionar este problema utilizaremos synchronized en la función donde varios hilos accedan o modifiquen el recurso a la vez, esto hará
+    que se sincronice y siga un orden adecuado, evitando así cualquier tipo de error.
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+(3 puntos)
+
+    RESPUESTA: 
+        - Concurrente: varios procesos e hilos pueden estar activos a la vez, aunque no es necesario que se ejecuten simultaneamente. El incoveniente principal es que no es tan 
+        eficiente como la ejecución paralela y distribuida, por lo que son más simples. 
+        Ejemplo: Una app de descargas donde se inician varios ficheros al mismo tiempo.
+        - Paralela: varias tareas se ejecutan a la vez en procesadores o núcleos distintos, lo que aumenta el rendimiento pero el coste es mucho mayor, por lo que
+        no es recomendable en equipos pequeños. Ejemplo: un programa que requiera de una potencia mayor como aplicaciones de vídeo profesionales, modelado 3D,
+        aplicaciones de diseño gráfico...
+        - Distribuida: varias tareas se ejecutan en varios equipos conectados entre sí en red para resolver un mismo problema, lo que permite una mayor rapidez para la elaboración
+        de estas tareas pero al igual que en la paralela los costos aumentan bastante y requiere de una buena calidad de servicios técnicos. Por lo que son demasiados complejos.
+        Ejemplo: servidores conectados entre sí en la red para una aplicación de un banco que requiere de cuentas constantementes.
