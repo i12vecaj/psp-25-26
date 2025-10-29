@@ -1,0 +1,46 @@
+A) Esto se a lo que llama competencia, la lucha de dos archivos los cuales quieren entrar a la misma base de datos (por ejemplo)
+y la cual necesita unos estándares de prihoridad. Lo que pasaria es que puede colapsar y que el sistema vaya muy lento ,esto se 
+evita de una manera muy simple que es por la prihoidad de procesos segun la escala de importancia que se de.
+
+
+
+
+
+B)Si termina el hilo principal antes que el daemon el hilo daemon intuyo que se terminaria todo, ya que el hilo daemon no mantiene la 
+JVM activa(La JVM es el Java Virtual Machine el cual es la maquina que hace que se pueda utilizar java en windows, mac, etc.) y suelen 
+ser para cosas de segundo plano. (este concepto no lo hemos visto en clase)
+
+
+
+
+
+C) Puede darse el error de que en el uso de los tres hilos de colision dentro del sistema.
+
+Esto se podria arreglar haciendo que cuando un hilo termine pues se inicie el siguiente.
+
+La alternativa mas eficiente para estos casos son Thread de forma local, si los datos pueden ser locales por hilo, usar esto 
+elimina necesidad de sincronización. Esto es muy util y bueno ya que no hacer falta mantener su estado de acumulacion de datos.
+Tambien no es la misma velocidad al ser local que al tener que ir cogiendo datos de sitios externos.
+
+
+
+D) Concurrente: 
+ Ejecutar varias tareas como al mismo tiempo dentro de un mismo proceso alternando
+ la ejecución en el tiempo mediante saltos.
+ Ventajas: Pueden hacerse tareas a la vez lo que hace que consuma mas RAM del sistema pero garantiza mas velocidad en las cargas de 
+ datos, terminar tareas,etc.
+ 
+
+Paralela: 
+ Ejecución en vivo simultánea de dibersas tareas en varias CPUs al mismo tiempo.
+Ventajas: Se van a hacer todas las tareas secuencialmente y es de una forma mas sencilla su construccion.
+
+
+Distribuida: 
+ Trabajo dividido entre procesos independientes que se ejecutan en diferentes máquinas que se 
+ comunican a traves de la red.
+ Ventajas:Se pueden hacer varias tareas a la vez como en la concurrente pero esta al ser en diferentes CPUs pueden hacerse procesos
+ mucho mas grandes ya que la RAM no está limitada a un dispositivo solo, sino en varios.
+
+
+ Sinceramente el tipo de hardware y modelo no me acuerdo de nada lo siento.
