@@ -1,0 +1,37 @@
+a) 
+Dependiendo del sistema operativo y el orden de prioridad un proceso accederá al archivo antes que el 
+otro, pudiendo llevar a  corrupción de datos, condiciones de carrera en las que ambos compiten por acceso, 
+inconsistencias, y posibles bloqueos, lo que se puede solucionar bien con bloquear a nivel de fichero
+o manejando adecuadamente el flujo y el manejo de errores.
+
+b)
+No visto en clase: Un hilo daemon es un hilo de fondo que no impide que la JVM termine, un ejemplo de esto es un
+logger en segundo plano.
+
+c)
+PROBLEMAS: Condiciones de carrera, producir valores corruptos, problemas de visibilidad 
+POSIBLE SOLUCIONES: bloquear sesiones que sean criticas para un correcto funcionamiento
+
+d)
+Concurrente:
+Varias tareas se intercaladan en el tiempo, esto se usa en servidores web en un solo servidor,
+puede funcionar en un solo CPU requiere menos complejidad hardware pero cuidado con sincronización
+
+Paralela:
+Las tareas se ejecutan simultáneamente en distintos CPUs, se usa, por ejemplo, 
+en el procesamiento de imagenes se usa hardware con multinucleos, mejorando el rendimiento
+pero requiere de gestión de concurrencia
+
+Distribuida:
+Tareas divididas en nodos en la red , como por ejemplo en bases de datos distribuidas
+Gran escalabilidad y tolerancia a fallos pero mayor complejidad
+
+
+
+
+
+
+
+
+
+
