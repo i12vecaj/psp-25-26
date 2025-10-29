@@ -1,0 +1,58 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+
+Al acceder ambos procesos sin restricción alguna, se podrían dar cambios en el archivo o base de datos, siendo así que los problemas que pueden surgir son falta de integridad en los datos 
+y una falta grandísima de seguridad. Se podrían evitar bloqueando el acceso a un archivo cuando entra otro antes, protegiendo así la integridad de este.
+
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+No los hemos dado en clase, no se incluyen en el repo ni se lo que son.
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+
+Explica:
+
+Qué tipo de problemas podrían aparecer.
+Evidentemente cuando varios hilos se ejecutan al mismo tiempo y modifican dicha variable, los otros hilos realizarán cálculos con una valor que no es la que nosotros queremos,
+se realizaría un toqueteo a la variable por varios sitios distintos y puede que compile pero no tendría sentido ninguno.
+
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+
+Desconozco todavía si es posible sincronizar hilos y que compartan información, supongo que si se podrá y varios hilos podrán cooperar para no destruir el programa
+
+Si existe alguna alternativa más eficiente en ciertos casos.
+
+Yo pienso que sería más útil usar una variable para cada hilo, y si no fuese posible se podría almacenar en variables temporales cualquier cosa que necesitamos y tenga que afectar
+directamente a la variable global.
+
+(3 puntos)
+
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+
+Un ejemplo típico de aplicación en cada caso.
+
+Un ejemplo de concurrente puede ser un programa que se ejecuta y mientras se esta ejecutando realiza varias acciones a la vez, como puede ser que dos procesos por ejemplo de ese programa
+accedan a dos bases de datos distintas y se traigan datos para operar con ellos.
+
+Un ejemplo de paralela sería un sistema que divide su programa en varios procesadores, para que mientras una parte del programa está por ejemplo haciendo cálculos aritméticos, la otra
+parte del programa puede estar comprobando una base de datos o haciendo cualquier otra cosa. Yo diría que es un escalón por encima de la programación concurrente.
+
+Un ejemplo de distribuida es que varios sistemas diferentes soportan un programa, como por ejemplo internet. Estos sistemas están conectados y se pueden compartir recursos y datos,
+aunque sean muchísimo mas complejos.
+
+Qué tipo de hardware o entorno necesita cada modelo.
+
+Un modelo concurrente se puede dar en cualquier ordenador que tenga un procesador decente, para programación paralela ya se exige un mayor nivel de hardware que exige tener un procesador
+apto para llevar la cantidad de procesos del programa. El modelo distribuido es el que necesita mayor infraestructura, ya que su nivel de complejidad y sus requerimientos son altísimos.
+
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+Concurrente: rendimiento asequible para cualquier ordenador de hoy en día y una complejidad sencilla para alguien que sepa programar.
+Paralela: rendimiento exigente a nivel de hardware y requiere de un nivel más alto de abstracción por lo que es algo mas complejo que la programación recurrente.
+Distribuida: requiere un hardware muy potente y muy costoso, supongo que el nivel de abstracción será una locura para cualquier persona que no haya trabajado en sistemas complejos.
+
+(3 puntos)
