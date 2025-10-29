@@ -1,0 +1,50 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. 
+Indica qué problemas podrían surgir y cómo podrían evitarse.
+
+El SO de alguna forma tendría que establecer unas pautas para que esos dos procesos no compitan por acceder a ese archivo porque si nos fijamos en la programación concurrente aunque los procesos trabajen de forma simultanea, no es exactamente así (en lo que a tiempo real se refiere).
+Por lo que el principal problema que surgiría es que al intentar acceder al mismo archivo dos procesos y hay una actualización en ese archivo o se pierden datos, los dos procesos fallarían en su trabajo, y una buena forma de arreglarlo, sería poniendo una cola de actuación es decir que primero actué uno y luego el otro.
+
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos Daemon
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+- Que compitan por los recursos o que accedan de forma simultanea
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+- Estableciendo una cola de actuación para que primero actue uno y luego el otro
+Si existe alguna alternativa más eficiente en ciertos casos.
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+Por un lado la ejecución concurrente funciona de tal manera que hace que los procesos se ejecuten de forma simultanea que se asemeja mucho a la ejecución distribuida ya que utiliza varios equipos conectados a la red que de forma simultanea trabajan en tareas distintas, aquí la única que difiere un poco sería la ejecución paralela ya que ejecuta muchas tareas pero un una misma 
+máquina.
+
+Ejemplos: 
+- Concurrente: Video Juego.
+- Paralela: La típica aplicación de cobro de bar
+- Distribuida: AWS(Ya que puede gestionar distintas tareas desde distintos equipos y si por lo que sea se cae alguno de esos equipos los demás pueden seguir trabajando en sus tareas sin problemas)
+
+Tipo de Hardware: 
+
+Concurrente: 
+Paralela:
+Distribuida:
+
+Ventajas 
+Concurrente: Velocidad y eficiencia a la hora de ejecutar tareas
+Paralela: Al igual que con la concurrente posee una ejecución simultanea de procesos, y hace que sea más rápida su ejecución
+Distribuida: al estar distribuida en varios equipos se pueden compartir recursos y hace que los programas sean más flexibles.
+
+Incovenientes:
+
+
+Concurrente: 
+Paralela: Al estar centralizado en un solo equipo es mas complicado acceder a los datos
+Distribuida: Si hay un fallo en la red ya no hay comunicación entre los equipos lo que perjudica a la ejecución del programa, con la posibilidad de ataques
+
+
