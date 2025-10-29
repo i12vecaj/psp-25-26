@@ -1,3 +1,10 @@
+ /*
+ * Nombre: Jonathan Martínez Pullana
+ * Fecha: 29/10/2025
+ * Descripción: Fundamentos sobre hilos, procesos, modelos de ejecución y problemas derivados.
+ * FR implementados: Todos
+ */
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
 
