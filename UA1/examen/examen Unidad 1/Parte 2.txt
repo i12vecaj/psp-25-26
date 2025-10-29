@@ -1,0 +1,67 @@
+Antonio Rodríguez Cortés
+
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea.
+Indica qué problemas podrían surgir y cómo podrían evitarse.
+
+yo díria que se solaparían si quisieran acceder al mismo archivo.
+una de las opciones que yo veo para evitar eso es que el programa sea de forma concurrente para evitar que se solapen entre ellas.
+
+
+
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. 
+
+no se ha visto en clase
+
+yo lo que imagino que es: un hilo maestro que es el que mas prioridad tiene entre todos los hilos.
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+
+Explica:
+
+Qué tipo de problemas podrían aparecer.
+
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+
+Si existe alguna alternativa más eficiente en ciertos casos.
+
+problema: puede provocar errores en los resultados al modificar la variable al mismo tiempo
+
+Solución: usar sincronización.
+
+Alternativa: 
+
+
+
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+
+Un ejemplo típico de aplicación en cada caso.
+
+concurrente: varias tareas se ejecutan al mismo tiempo por ejemplo dispone de 3 hilos y cada uno se encarga de una cosa:
+hilo1: buscar todas las palabras de un pdf y que las cuente.
+hilo2: cuenta todas las "o".
+hilo3: cuenta todas las "i".
+
+paralela: utilizar varios hilos para que sumen varias cuentas bancarias a la vez y luego poder hacer una media rapidamente.
+
+distribuida: servidores de una app de streaming que gestiona usuarios y vídeos por zonas.
+
+
+Qué tipo de hardware o entorno necesita cada modelo.
+
+concurrente: un ordenador.
+
+paralela: es desde el procesador del ordenador.
+
+distribuida: varios ordenadores (servidores).
+
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+la concurrente puede ser mas compleja de aplicar y de rendimiento mas pesada.
+la paralela tal vez es mas facil pero el rendimiento puede ser muy alto por el esfuerzo del procesador.
+la distribuida tal vez es la mas compleja pero la mas liviana en rendimiento.
+
+
+
