@@ -1,0 +1,35 @@
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+
+ Esto podría generar problemas de exclusión por ese intento de acceder a un mismo recurso, lo que podría bloquearlo.
+ Para evitarlo, podemos crear hilos, ya que así pueden compartir ese dato sin generar problemas.
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon.
+ No se ha explicado en clase
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+
+Se generarían los problemas de exclusión comentados anteriormente ya que intentan entrar a la misma variable bloqueándola.
+Una buena solución seria hacer sleeps para que cada hilo pueda acceder sin generar conflicto.
+
+d)Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+
+Concurrente: Por ejemplo cuando se accede a una base de datos. Varios hilos o procesos pueden acceder a dicha base de datos. En este caso
+	     necesitaríamos un gestor de base de datos al que acceder. Al poder acceder varios hilos o procesos es mas rápido, por lo que 
+             mejora el rendimiento
+Paralela:   Cualquier programa que dependa de otro para ejecutarse. Este tendrá que esperar a que el otro programa se ejecute para 		    ejecutarse.
+	    Necesitaría de varios procesadores ya que este modelo empeora el rendimiento y pierde velocidad al tener que esperar para 	  	    ejecutarse.
+Distribuida: En este caso es cuando se ejecutan varios procesos de distintos dispositivos. Un ejemplo de uso muy claro seria internet.
+	     El principal problema es que si hay muchos procesos en ejecución puede hacer que caiga el hardware. Por otro lado
+	     una ventaja seria que casi siempre el recurso estará disponible.
+
+
+
+	 
