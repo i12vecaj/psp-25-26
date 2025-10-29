@@ -15,15 +15,15 @@ public class Tarea implements Runnable {
     @Override
     public void run() {
         long idHilo = Thread.currentThread().getId();
-        System.out.println("[" + nombre + "] ejecutándose en el hilo " + idHilo);
+        System.out.println( nombre + " ejecutándose en el hilo " + idHilo);
 
         try {
             int tiempo = (int) (Math.random() * 1000 + 500);
             Thread.sleep(tiempo);
         } catch (InterruptedException e) {
-            System.out.println("[" + nombre + "] interrumpida.");
+            System.out.println(nombre + " interrumpida.");
         }
 
-        System.out.println("[" + nombre + "] finalizada.");
+        System.out.println(nombre + " finalizada.");
     }
 }
