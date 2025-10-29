@@ -1,1 +1,2 @@
-Simulación de ProcesosTiempo paralelo: 151 ms
+Simulación de Procesos
+Tiempo: 139 ms

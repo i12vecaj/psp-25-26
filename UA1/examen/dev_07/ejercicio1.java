@@ -29,7 +29,7 @@ public class ejercicio1 {
 
             FileWriter log = new FileWriter("resultados_multiproceso.txt", false);
             
-            log.write("Simulación de Procesos");
+            log.write("Simulación de Procesos\n");
 
         long startPar = System.currentTimeMillis();
             Process tarea1 = new ProcessBuilder("java", "ScriptA").start();
@@ -44,7 +44,7 @@ public class ejercicio1 {
 
              long endPar = System.currentTimeMillis();
             long tiempoParalelo = endPar - startPar;
-            log.write("Tiempo paralelo: " + tiempoParalelo + " ms\n");
+            log.write("Tiempo: " + tiempoParalelo + " ms\n");
 
 
             log.close();
