@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Has entendido que el acceso simultáneo a un mismo archivo puede causar pérdida de datos o fallos. La idea de poner los procesos en cola refleja razonamiento propio. Faltan términos técnicos como “bloqueo” o “exclusión mutua”.
+
+b) No respondes esta pregunta, pero era una trampa: bien por no inventar respuesta y mantener el trabajo propio.
+
+c) Identificas que compartir una variable global puede causar conflictos y propones secuenciar hilos, lo cual muestra comprensión básica. Faltan soluciones técnicas formales como synchronized, Lock o variables atómicas.
+
+d) Tus ejemplos de concurrente, paralela y distribuida muestran entendimiento general, aunque la explicación técnica es escasa y faltan detalles sobre hardware y ventajas/inconvenientes más precisos.
+
+Comentario general:
+Buen razonamiento y ejemplos propios. Para mejorar, repasa la terminología técnica y profundiza en soluciones de sincronización y concurrencia, así como en las características de cada modelo de ejecución.
+
+**********************************************************************/
+
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. 
 Indica qué problemas podrían surgir y cómo podrían evitarse.
 
@@ -46,5 +67,6 @@ Incovenientes:
 Concurrente: 
 Paralela: Al estar centralizado en un solo equipo es mas complicado acceder a los datos
 Distribuida: Si hay un fallo en la red ya no hay comunicación entre los equipos lo que perjudica a la ejecución del programa, con la posibilidad de ataques
+
 
 
