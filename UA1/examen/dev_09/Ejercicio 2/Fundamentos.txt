@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Has entendido que acceder simultáneamente a un mismo archivo puede causar pérdida de datos y que la sincronización evita conflictos. Buen razonamiento, aunque falta precisión técnica sobre mecanismos formales como synchronized o locks.
+
+b) No respondes esta pregunta, pero era una trampa: bien por no inventar respuesta y mantener tu trabajo propio.
+
+c) Identificas correctamente que compartir una variable global puede causar problemas y propones sincronización mediante sync(). Faltan referencias más precisas como synchronized, Lock o variables atómicas, que son las soluciones estándar en Java.
+
+d) Tus explicaciones de concurrente, paralela y distribuida son correctas y muestran comprensión general. Los ejemplos y ventajas/inconvenientes son adecuados, aunque faltan algunos detalles técnicos y precisión en hardware recomendado.
+
+Comentario general:
+Buen razonamiento y ejemplos propios. Para mejorar, repasa la terminología técnica y profundiza en soluciones de sincronización, concurrencia y diferencias entre los modelos de ejecución.
+
+**********************************************************************/
+
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
         El sistema manda los procesos a ejecutar al mismo tiempo, lo que dependiendo de como este programado nos podria dar 2 supuestos, en uno uno de los procesos espera a que el otro termine (supuesto usando hilos y usando sync),
