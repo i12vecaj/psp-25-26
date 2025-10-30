@@ -1,0 +1,31 @@
+Miguel Castilla Gallego
+
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+(2 puntos)
+
+- Ambos procesos ocurren de manera concurrente y el sistema operativo usaría recursos en ambos al mismo tiempo. Si ese archivo es modificado se puede crear un conflicto si el otro proceso necesita leer dicho archivo, para evitar esto habría que sincronizar ambos procesos evitando que uno esté en ejecución mientras el otro usa el mismo archivo.
+
+b) Define qué es un hilo daemon y describe un caso práctico en el que sería útil utilizarlo.
+Indica también qué ocurriría si el hilo principal termina antes que los hilos daemon. (2 puntos)
+
+- Los hilos Daemon no los hemos dado en clase ni están en el repo, ni en la presentación. Lo único que sé de ellos es que son hilos que ocurren en segundo plano.
+
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Qué tipo de problemas podrían aparecer.
+Cómo podrías solucionarlos empleando mecanismos de sincronización.
+Si existe alguna alternativa más eficiente en ciertos casos.
+(3 puntos)
+
+-Podría darse el caso que un hilo intente cambiar una variable mientras otro esté leyéndolo creando un conflicto entre ellos. Podría interrumpirse un hilo mientras el otro acaba para evitarlo así. Para ser más eficiente se me ocurre que no modifiquen esa variable hasta acabar el hilo guardando los datos en nuevas variables auxiliares.
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y complejidad.
+(3 puntos)
+
+-Concurrente, es aquella ejecución de procesos o hilos que se ejecutan al mismo tiempo, son útiles para aprovechar mejor la CPU.
+-Paralela es un tipo de programación concurrente cuyos procesos ocurren todos en la misma máquina, los procesos tienen fácil comunicación y sincronía. Útil en programas grandes como un videojuego.
+_Distribuida es un tipo de programación concurrente cuyos procesos están repartidos en diferentes máquinas conectadas a una red. Es menos demandante para cada máquina pero la comunicación entre los procesos es más lenta. Útil en la programación de grandes servicios de empresas y servidores.
