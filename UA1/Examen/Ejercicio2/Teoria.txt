@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Respuesta correcta. Describes adecuadamente la ejecución simultánea y los posibles conflictos de finalización. Podrías mencionar la exclusión mutua o los bloqueos para completarlo.
+
+b) Muy bien. Explicas correctamente qué es un hilo daemon, su utilidad y el comportamiento al finalizar el hilo principal.
+
+c) Excelente. Identificas los problemas clásicos de concurrencia y propones soluciones correctas (sincronización, clases atómicas, confinamiento). Muy buena precisión técnica.
+
+d) Muy completa y precisa. Diferencias correctamente los tres modelos y explicas con claridad sus características y requisitos de hardware.
+
+Comentario general:
+Gran trabajo, con respuestas técnicas y bien estructuradas. Se nota buena comprensión de la materia y vocabulario adecuado.
+
+**********************************************************************/
+
+
 A) - Que no se interfiere entre ellos. Se ejecutan los dos a la vez.
   - Los problemas que pueden tener es que uno finaliza el proceso antes que otro.
 
