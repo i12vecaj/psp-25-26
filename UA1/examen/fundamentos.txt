@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Has comprendido bien cómo un SO debe coordinar el acceso a un mismo archivo y propones correctamente bloqueos y acceso secuencial. Buen uso de terminología y concepto de exclusión mutua.
+
+b) Aunque no lo habéis dado en clase, explicas correctamente qué es un hilo daemon y das un ejemplo práctico adecuado. Buen razonamiento propio.
+
+c) Identificas correctamente los problemas de compartir una variable global y propones soluciones válidas con synchronized, Lock o estructuras concurrentes. Demuestra comprensión de la sincronización en Java.
+
+d) Explicas correctamente los modelos concurrente, paralelo y distribuido, con ejemplos claros y comprensibles. La parte extra de analogías de la vida real refleja muy buena comprensión de los conceptos.
+
+Comentario general:
+Muy buen trabajo. Has demostrado comprensión sólida de concurrencia, paralelismo y distribución, y sabes aplicar ejemplos claros. Para mejorar, podrías profundizar en detalles técnicos de hardware y limitaciones de cada modelo.
+
+**********************************************************************/
+
+
 /*
  * Nombre: Elena Expósito Lara
  * Fecha: 29/10/2025
