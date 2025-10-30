@@ -1,3 +1,27 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Buena explicación general, aunque algo confusa la idea de “error por exclusión mutua”.
+   Has entendido el problema y la solución mediante espera, pero faltan términos técnicos como “bloqueo” o “sincronización”.
+
+b) No la respondes, pero era un gazapo: bien por no caer en ella.
+
+c) Falta identificar los problemas reales (condiciones de carrera, acceso concurrente a variables).
+   No se propone una solución válida ni se menciona synchronized o Locks.
+
+d) Las respuestas son correctas a nivel general y los ejemplos están bien elegidos, aunque algo escuetos.
+   Faltan matices en ventajas/inconvenientes y precisión técnica.
+
+Comentario general:
+Has entendido los conceptos básicos y los explicas con lógica, aunque falta vocabulario técnico y precisión en la parte de sincronización y concurrencia. Buen trabajo general.
+
+**********************************************************************/
+
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 
 - Al tratar de ejecutar dos procesos que acceden a un mismo archivo el sistema dará error por exclusión mutua.
@@ -48,3 +72,4 @@ Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y comp
 - Concurrente: Errores al interactuar variaos procesos con un mismo archivo, incremento de velocidad de ejecución.
 - Paralela: Mayor consumo de energía, disminuye el tiempo de ejecución.
 - Distribuida: Precio elevado, alta disponibilidad.
+
