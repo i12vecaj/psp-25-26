@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Has comprendido que acceder simultáneamente a un mismo archivo puede generar problemas de exclusión mutua y pérdida de datos. Correcta idea de usar sincronización, aunque faltan detalles técnicos precisos como locks o synchronized en Java.
+
+b) No respondes esta pregunta, pero era una trampa: bien por no inventar respuesta y mantener tu trabajo propio.
+
+c) Identificas correctamente que compartir una variable global puede causar bloqueos y propones sincronización. La referencia a Condiciones Bernstein muestra razonamiento, aunque faltan las soluciones estándar de Java (synchronized, Lock, variables atómicas).
+
+d) Explicas bien los tres modelos de ejecución, con ejemplos adecuados y ventajas/inconvenientes correctos. Falta un poco más de detalle técnico sobre hardware y precisión en la implementación de cada modelo.
+
+Comentario general:
+Buen entendimiento general Bernardo y razonamiento propio. Para mejorar, repasa soluciones de sincronización en Java y la terminología técnica de concurrencia y modelos de ejecución.
+
+**********************************************************************/
+
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 
 	Tendría un problema de exclusión mutua ya que no se podría acceder al mismo archivo, habría que controlar la sincronización de procesos para que si ese archivo esta ocupado no pueda acceder otro hasta que no termine el primero
@@ -71,6 +92,7 @@ Inconveniente Consume mucha mas energía y la comunicación y sincronización es
 La ventaja de la Distribuida es que tiene mas disponibilidad a no tener que estar en un mismo sitio y estar en la nube
 
 Inconveniente: Requiere mas complejidad técnica a la hora de implementar soluciones y problemas de seguridad 
+
 
 
 (3 puntos)
