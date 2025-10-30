@@ -1,3 +1,23 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Entiendes el problema de acceso simultáneo, pero faltan detalles sobre bloqueos o sincronización. 
+
+b) No la respondes, pero era una trampa: bien por no caer en ella.
+
+c) Detectas el problema de concurrencia, pero te falta vocabulario técnico y mencionar soluciones (synchronized, Lock, etc.).
+
+d) Buenos ejemplos y analogías, aunque falta hablar del hardware y ventajas/inconvenientes.
+
+Comentario general:
+Buen razonamiento y ejemplos, aunque debes usar más términos técnicos y reforzar la teoría sobre sincronización.
+
+**********************************************************************//
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 
 -Pues cuando se ejecutan dos procesos para el mismo archivo el sistema lo controla y cuando uno accede a un archivo pues como que digamos que informaría al otro de que ya ha accedido para que no accedan los dos a la vez.
