@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+
+Comentarios:
+
+a) Explicación correcta en términos generales: identificas que el sistema operativo controla el acceso concurrente y evitas la corrupción del archivo. Sin embargo, faltan conceptos técnicos como condición de carrera o bloqueo de archivo (file locking).
+
+b) Muy buena definición del hilo daemon, breve pero precisa. También señalas correctamente el comportamiento al finalizar el hilo principal. Podrías haber añadido un ejemplo concreto (por ejemplo, un hilo que limpia registros o monitoriza la memoria). Este concepto no lo hemos visto en clase.
+
+c) Excelente ejemplo del problema de concurrencia con el caso del banco. Mencionas correctamente la palabra clave synchronized como solución. Se nota comprensión clara del concepto, aunque podrías haber mencionado alternativas como Lock o clases atómicas.
+
+d) Respuesta completa y bien estructurada. Distingues adecuadamente concurrencia, paralelismo y distribución, con ejemplos bien escogidos. Se echa en falta algo más de precisión técnica en las ventajas y hardware requerido, pero el razonamiento es sólido y coherente.
+
+Comentario general:
+Buen examen, con explicaciones claras y ejemplos aplicados. Se nota que dominas los conceptos fundamentales y los sabes relacionar con casos reales. Podrías mejorar incluyendo más vocabulario técnico y alguna referencia a los mecanismos internos del sistema operativo.
+
+**********************************************************************/
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
 
