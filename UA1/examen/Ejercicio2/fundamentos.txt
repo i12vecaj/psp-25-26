@@ -1,4 +1,25 @@
- /*
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025  
+Profesor: JD    
+
+Comentarios:
+
+a) Excelente explicación. Has identificado correctamente la **condición de carrera** y los **problemas de concurrencia**. Muy buena analogía con la base de datos y propuesta de solución mediante sincronización o bloqueo.  
+
+b) Respuesta completa y precisa. Has descrito correctamente qué es un **hilo daemon**, su utilidad práctica y el comportamiento al finalizar el hilo principal. Buena conexión con ejemplos reales (Linux, tareas de fondo).  Este concepto no lo hemos visto en clase, tal como me comentaste.
+
+c) Buen razonamiento técnico, especialmente al reconocer la necesidad de sincronización. Correcto uso del término *synchronized*. El uso de base de datos como alternativa es interesante, aunque algo fuera del contexto del manejo directo de hilos en Java.  
+
+d) Explicación muy sólida, clara y bien estructurada. Se nota que comprendes las diferencias conceptuales entre **concurrencia, paralelismo y distribución**. Has aportado ejemplos adecuados, ventajas y desventajas bien expresadas.  
+
+Comentario general:  
+Excelente trabajo, con terminología técnica correcta y ejemplos aplicados. Solo podrías mejorar afinando algunos detalles de precisión en la parte c), pero el razonamiento general es muy bueno y demuestra comprensión completa del tema.
+
+**********************************************************************/
+
+
+/*
  * Nombre: Jonathan Martínez Pullana
  * Fecha: 29/10/2025
  * Descripción: Fundamentos sobre hilos, procesos, modelos de ejecución y problemas derivados.
