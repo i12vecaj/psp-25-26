@@ -1,3 +1,23 @@
+/*********************************************************************
+
+Fecha de corrección: 31 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) La respuesta capta la idea general de competencia entre procesos y la necesidad de que solo un proceso acceda al recurso a la vez. Faltan términos técnicos clave como exclusión mutua, condición de carrera, bloqueo de archivo y manejo de sincronización más formal en sistemas operativos.
+
+b) Bien por no responder, no se ha explicado.
+
+c) Se comprende que compartir una variable global entre varios hilos puede causar problemas, y se menciona la necesidad de impedir el acceso simultáneo, aunque de forma informal. Sería recomendable especificar mecanismos de sincronización en Java (synchronized, Locks, clases atómicas) y alternativas como confinamiento de hilos o variables locales.
+
+d) Los ejemplos de concurrente, paralela y distribuida son comprensibles, aunque algo confusos y sin terminología precisa. La explicación de hardware es básica y contiene errores conceptuales (por ejemplo, la ejecución distribuida no depende solo de Internet sino de máquinas y coordinación). Ventajas e inconvenientes están expresadas de forma general y no siempre son correctas.
+
+Comentario general:
+Se evidencia comprensión básica de los conceptos, con ejemplos sencillos y razonamiento intuitivo. Para mejorar, se debe incorporar terminología técnica correcta, detallar los mecanismos de sincronización y clarificar las diferencias entre modelos de ejecución, así como precisar los requisitos de hardware y entorno.
+
+**********************************************************************/
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. 
 Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
