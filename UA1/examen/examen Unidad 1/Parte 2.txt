@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 3 Noviembre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Has comprendido correctamente que dos procesos pueden **solaparse o interferirse** al acceder al mismo archivo. Sin embargo, la explicación es algo general. Hubiera sido ideal mencionar que el **sistema operativo gestiona estos accesos mediante bloqueos** o permisos de lectura/escritura para evitar conflictos.
+
+b) No se ha dado en clase, pero tu suposición es razonable aunque incorrecta: un **hilo daemon** no es un hilo maestro, sino uno de **baja prioridad que trabaja en segundo plano** y **se detiene automáticamente al finalizar el hilo principal**.
+
+c) Has detectado correctamente el **problema de acceso concurrente a variables compartidas** y la necesidad de sincronización. Faltó detallar cómo se aplicaría (`synchronized`) o mencionar alternativas como **clases atómicas** o **confinamiento del hilo**.
+
+d) Buena descripción general de los tres modelos de ejecución con ejemplos adecuados y propios. Se valora la claridad en los ejemplos y la diferenciación entre los entornos (ordenador, procesador, servidores). La parte de ventajas e inconvenientes es razonable, aunque algo confusa: la **concurrente no es más pesada**, sino más difícil de depurar; y la **paralela** exige más recursos.
+
+Comentario general:
+Demuestras una comprensión básica pero funcional de los conceptos de concurrencia y modelos de ejecución. Buen razonamiento y ejemplos propios, aunque faltó precisión técnica y terminología en varias partes.
+
+**********************************************************************/
+
+
 Antonio Rodríguez Cortés
 
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea.
