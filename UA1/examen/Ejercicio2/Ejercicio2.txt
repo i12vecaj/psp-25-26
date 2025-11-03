@@ -1,3 +1,32 @@
+/*********************************************************************
+
+Fecha: 3 noviembre 2025
+Profesor: JD
+
+a) Acceso simultáneo a un mismo archivo
+Has identificado correctamente que hay un problema de exclusión de recursos.
+La solución propuesta con hilos y sleeps no es la más adecuada ni segura, ya que los sleeps no garantizan la sincronización ni evitan condiciones de carrera.
+Sugerencia: utilizar mecanismos de sincronización reales como synchronized, locks, mutex o control de acceso a nivel de fichero.
+
+b) Hilo daemon
+No se proporciona definición correcta ni ejemplos concretos. Solo se indica que “no se ha explicado en clase”.
+Sugerencia: un hilo daemon es un hilo que se ejecuta en segundo plano y termina automáticamente cuando termina el hilo principal. Ejemplo: recolector de basura de Java, logger de eventos.
+
+c) Tres hilos compartiendo variable global
+Correctamente identificas que puede haber problemas de exclusión y bloqueo al acceder a la misma variable.
+La solución de usar sleeps no asegura la sincronización y puede generar errores aleatorios.
+Usar synchronized, ReentrantLock o clases atómicas (AtomicInteger) para controlar el acceso concurrente. También se podrían considerar variables locales o copias independientes según el caso.
+
+d) Modelos concurrente, paralelo y distribuido
+Se entiende la idea de cada modelo y se han dado ejemplos razonables: base de datos (concurrente), dependencia entre programas (paralela), procesos en internet (distribuida).
+Se mencionan ventajas e inconvenientes generales aunque con algo de confusión en los términos.
+
+Comentarios generales
+Se ha captado la idea general de concurrencia y exclusión de recursos, estoy encantado de tu actitud en clase Eduardo, sigue así.
+
+
+**********************************************************************/
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 
  Esto podría generar problemas de exclusión por ese intento de acceder a un mismo recurso, lo que podría bloquearlo.
