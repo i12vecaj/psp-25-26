@@ -1,3 +1,20 @@
+/*********************************************************************
+
+Fecha 3 noviembre 2025
+Profesor JD
+
+Comentarios
+
+a) Se identifica correctamente la necesidad de gestionar el acceso al archivo mediante prioridades o coordinación Entre procesos se reconoce el riesgo de bloqueo pero se podría profundizar en mecanismos específicos de exclusión mutua
+
+b) No se ha visto en clase.
+
+c) Se señalan correctamente problemas de concurrencia y se mencionan soluciones con synchronized y variables atómicas Es una respuesta técnica adecuada
+
+d) La comparación de los modelos concurrente, paralelo y distribuido está clara con ejemplos, hardware necesario y ventajas/desventajas Se podría sintetizar un poco más para mayor claridad
+
+**********************************************************************/
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea.
 Indica qué problemas podrían surgir y cómo podrían evitarse.
 
