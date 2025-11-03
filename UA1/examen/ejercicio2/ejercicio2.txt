@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 3 Noviembre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Buena comprensión del problema de **acceso simultáneo** a un archivo y mención correcta al uso de *synchronized* como mecanismo de protección. Faltaría mencionar conceptos como **condición de carrera** o **bloqueo de recursos (locks)**, así como distinguir entre acceso de lectura y escritura.
+
+b) Este concepto no lo hemos visto en clase.
+
+c) Se identifica correctamente el conflicto al compartir una variable global, aunque el uso de *try-catch* no es un mecanismo de sincronización. Hubiera sido ideal mencionar el uso de *synchronized*, **bloques críticos** o **AtomicInteger**.
+
+d) Muy buena exposición. Las definiciones de **concurrencia, paralelismo y distribución** son claras y con ejemplos adecuados. Has identificado bien las diferencias en hardware, rendimiento y complejidad. Buen razonamiento general, aunque convendría afinar detalles (por ejemplo, no toda ejecución paralela es posible “en cualquier hardware”).
+
+Comentario general:
+Buen trabajo. Se aprecia una comprensión general sólida, especialmente en la parte d). Deberías reforzar la precisión técnica en los apartados b) y c), pero el razonamiento y los ejemplos son adecuados.
+
+**********************************************************************/
+
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
 
