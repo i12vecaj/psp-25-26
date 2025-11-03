@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 3 Nov. 2025
+Profesor: JD
+
+Comentarios:
+
+a) Respuesta muy completa. Has distinguido correctamente entre **lectura simultánea** y **escritura concurrente**, identificando el riesgo de **pérdida de actualizaciones**. Excelente síntesis y precisión técnica.
+
+b) Explicación clara y correcta, pero esto no lo hemos visto en clase.
+
+c) Muy buena respuesta. Identificas correctamente los **problemas de concurrencia (caché y operaciones interrumpidas)**, propones la solución con *synchronized* y mencionas una **alternativa más eficiente** (*clases atómicas*), demostrando comprensión avanzada.
+
+d) Excelente comparación entre **concurrencia, paralelismo y distribución**. Ejemplos adecuados, buena asociación con el tipo de hardware y una tabla de ventajas e inconvenientes muy clara y completa.
+
+Comentario general:
+Excelente examen. Respuestas precisas, estructuradas y con vocabulario técnico adecuado. Se aprecia comprensión sólida y capacidad de síntesis.
+
+**********************************************************************/
+
+
 /*
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 
