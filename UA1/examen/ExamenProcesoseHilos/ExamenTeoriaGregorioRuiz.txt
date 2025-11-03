@@ -1,3 +1,38 @@
+/*********************************************************************
+
+
+Profesor: JD
+Fecha: 3 noviembre 2025
+
+
+a) Acceso simultáneo a un mismo archivo
+
+Muy buena explicación general del conflicto por acceso simultáneo.
+Has identificado correctamente el problema (competencia por un recurso compartido) y propuesto una posible solución mediante prioridades o gestión de acceso.
+Podrías haber concretado mecanismos reales de sincronización de archivos, como bloqueo de ficheros, semaforización o control mediante el SO (lock, mutex).
+
+
+
+b) Buena definición conceptual: hilo secundario de soporte que termina cuando lo hace el hilo principal.
+El ejemplo y la observación sobre Linux muestran comprensión.
+Quizás podrías mencionar que en Java, los daemon se usan, por ejemplo, para tareas de limpieza o monitoreo en segundo plano.
+
+c) Tres hilos compartiendo variable global
+
+Identificas correctamente el problema de interferencia entre hilos.
+Has propuesto condiciones de acceso y prioridades, lo cual es razonable.
+Sugerencia: menciona explícitamente el uso de mecanismos concretos como synchronized, ReentrantLock o AtomicInteger.
+Eso reforzaría la precisión técnica.
+
+d) Modelos concurrente, paralelo y distribuido
+
+Excelente respuesta. 
+
+A nivel general Gregorio tienes un buen dominio de los conceptos y redacción clara.
+
+
+*********************************************************************//
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea.
 Indica qué problemas podrían surgir y cómo podrían evitarse. (2 puntos)
 
