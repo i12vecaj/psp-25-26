@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 3 Nov. 2025
+Profesor: JD
+
+
+Comentarios:
+
+a) Muy buena explicación. Has identificado correctamente los posibles problemas de concurrencia (condiciones de carrera, bloqueos, corrupción de datos) y las soluciones más adecuadas mediante bloqueo de archivos o control del flujo.
+
+b) No evaluado al no haberse visto en clase, aunque el ejemplo del logger es correcto y demuestra comprensión adicional.
+
+c) Identificas bien los problemas de visibilidad y condiciones de carrera, aunque la solución podría concretarse un poco más (por ejemplo, uso de synchronized o variables atómicas).
+
+d) Muy buena comparación entre los tres modelos. Has explicado correctamente la concurrencia, el paralelismo y la distribución, con ejemplos y consideraciones de rendimiento claras.
+
+Comentario general:
+Buen trabajo Dani, con explicaciones precisas y ejemplos adecuados.
+
+**********************************************************************/
+
 a) 
 Dependiendo del sistema operativo y el orden de prioridad un proceso accederá al archivo antes que el 
 otro, pudiendo llevar a  corrupción de datos, condiciones de carrera en las que ambos compiten por acceso, 
