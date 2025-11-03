@@ -1,3 +1,23 @@
+/*********************************************************************
+
+Fecha de corrección: 3 Nov. 2025
+Profesor: JD
+
+Comentarios:
+
+a) Muy buena respuesta. Has identificado correctamente los problemas de concurrencia en el acceso a recursos compartidos y has propuesto mecanismos adecuados de comunicación y sincronización entre procesos (pipes, herramientas del sistema operativo). La redacción es técnica y clara.
+
+b) No se ha evaluado por no haberse impartido en clase.
+
+c) La respuesta muestra comprensión del concepto de hilos en Java, pero no aborda directamente el problema de acceso concurrente a una variable global. Hubiera sido ideal mencionar mecanismos de sincronización como synchronized o el uso de clases atómicas.
+
+d) Excelente análisis comparativo entre los tres modelos de ejecución. Has descrito con detalle sus ventajas e inconvenientes, junto con el tipo de hardware y entorno que requiere cada uno. La estructura es muy completa y demuestra comprensión general del tema.
+
+Comentario general:
+Buen trabajo, con explicaciones sólidas en las partes teóricas y un análisis muy cuidado en la comparación de modelos. Se recomienda reforzar la parte práctica de sincronización en Java para mejorar el dominio técnico.
+
+**********************************************************************/
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
 
@@ -74,6 +94,7 @@ Los programas son más difíciles de escribir, cada proceso trabajaría con hilo
 
 
 (3 puntos)
+
 
 
 
