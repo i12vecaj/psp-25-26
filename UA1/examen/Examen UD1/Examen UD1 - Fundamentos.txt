@@ -1,3 +1,20 @@
+*********************************************************************
+
+Fecha 3 noviembre 2025
+Profesor JD
+
+Comentarios
+
+a) El acceso simultáneo a un archivo puede provocar conflicto y corrupción de datos Se menciona prioridad de procesos para evitar errores pero no garantiza integridad
+
+b) Hilo daemon no se ha explicado.
+
+c) Compartir una variable global puede generar problemas de concurrencia La propuesta de variables separadas por hilo es correcta
+
+d) Los modelos concurrente paralelo y distribuido se explican con ejemplos claros y diferencias de hardware y rendimiento
+
+**********************************************************************/
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
 	
