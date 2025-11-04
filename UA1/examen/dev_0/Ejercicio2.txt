@@ -1,3 +1,23 @@
+/*********************************************************************
+
+Fecha de corrección: 4 Nov. 2025
+Profesor: JD
+
+Comentarios:
+
+a) Buena comprensión del conflicto de acceso simultáneo. Describes correctamente el riesgo de interferencia y propones la sincronización como medida adecuada, aunque faltan detalles sobre mecanismos concretos.
+
+b) Indicas correctamente que los hilos daemon trabajan en segundo plano. Aunque no se viera en clase, tu explicación es coherente con el concepto.
+
+c) Identificas bien el problema de concurrencia y propones soluciones razonables. La idea de usar variables auxiliares demuestra buena intuición, aunque faltan referencias a técnicas de sincronización concretas (como synchronized o Lock).
+
+d) Descripción correcta de los tres modelos. Entiendes las diferencias y das ejemplos acertados. Falta algo de precisión técnica en el uso del término “paralela”, pero el razonamiento es bueno.
+
+Comentario general:
+Buen examen, con razonamientos lógicos y ejemplos adecuados. Muestras comprensión general de los conceptos, aunque podrías reforzar la parte técnica con terminología más específica. Muy bien Miguel, enhorabuena (casi no llega el examen, pero al final llegó jejeje).
+
+**********************************************************************/
+
 Miguel Castilla Gallego
 
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
@@ -29,3 +49,4 @@ Qué ventajas e inconvenientes tiene cada uno en términos de rendimiento y comp
 -Concurrente, es aquella ejecución de procesos o hilos que se ejecutan al mismo tiempo, son útiles para aprovechar mejor la CPU.
 -Paralela es un tipo de programación concurrente cuyos procesos ocurren todos en la misma máquina, los procesos tienen fácil comunicación y sincronía. Útil en programas grandes como un videojuego.
 _Distribuida es un tipo de programación concurrente cuyos procesos están repartidos en diferentes máquinas conectadas a una red. Es menos demandante para cada máquina pero la comunicación entre los procesos es más lenta. Útil en la programación de grandes servicios de empresas y servidores.
+
