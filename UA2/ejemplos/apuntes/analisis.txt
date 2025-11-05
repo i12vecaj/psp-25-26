@@ -1,0 +1,39 @@
+1. ¿El orden de ejecución de los hilos siempre es el mismo?
+No. El orden de ejecución de los hilos no es determinista, ya que depende del planificador de hilos del sistema operativo. Aunque los hilos se inician en el orden Hilo-1, Hilo-2 y Hilo-3, su ejecución real puede variar cada vez que se ejecuta el programa. Por tanto, el resultado puede cambiar en cada ejecución.
+
+2. ¿Influye la prioridad?
+Sí, influye, pero no garantiza un orden fijo. La prioridad solo sirve como sugerencia para el planificador, que puede darle más tiempo de CPU a un hilo con prioridad más alta. En este caso, el Hilo-3 (prioridad máxima) suele ejecutarse antes o terminar antes que los demás, pero esto depende del sistema operativo.
+
+3. Diferencia entre start() y run()
+
+start(): Crea un nuevo hilo de ejecución y llama automáticamente al método run() en ese nuevo hilo. Permite que los hilos se ejecuten de forma concurrente.
+
+run(): Ejecuta el código del hilo en el mismo hilo actual (por ejemplo, el hilo principal). No se crea concurrencia, por lo que los hilos se ejecutan uno tras otro de forma secuencial.
+
+4. ¿Qué pasa si en lugar de start() se llama directamente a run()?
+Si se llama directamente a run(), los tres hilos se ejecutan de forma secuencial dentro del hilo principal. No hay ejecución paralela ni mezcla de mensajes entre hilos, y isAlive() devolverá siempre false porque los hilos nunca llegan a estar activos como hilos independientes.
+
+5. Prueba con setPriority(): Hilo-1 prioridad máxima y Hilo-3 mínima
+Si se cambia la prioridad de forma que Hilo-1 tenga prioridad máxima y Hilo-3 mínima, el Hilo-1 tiende a ejecutarse antes y a completar su trabajo antes que los demás. Sin embargo, no siempre ocurre así, ya que el sistema operativo puede repartir el tiempo de CPU de forma distinta. La prioridad influye, pero no garantiza el orden.
+
+6. Comenta la línea donde se llama a interrupt() y vuelve a ejecutar
+Si se comenta la línea h2.interrupt();, el Hilo-2 ya no será interrumpido. En ese caso, completará normalmente su bucle hasta el final.
+Si no se comenta, el hilo se interrumpe durante el sleep() y lanza un InterruptedException, por lo que imprime el mensaje “❌ Hilo-2 fue interrumpido.” y termina antes de completar todas sus iteraciones.
+
+7. Añadir una línea al final del main con isAlive()
+Cuando se comprueba el estado de los hilos con isAlive(), devuelve true mientras el hilo está en ejecución y false cuando ha terminado.
+Si se añaden llamadas a isAlive() justo al final del main, es posible que alguno todavía esté vivo si el main termina antes que ellos.
+Para asegurarse de que todos han terminado, se pueden usar los métodos join() antes de comprobar el estado. Después de que todos los hilos finalicen, isAlive() devuelve false para todos.
+
+8. Imprimir h1.toString() en distintos momentos
+El método toString() de la clase Thread muestra información como el nombre, la prioridad y el grupo del hilo, por ejemplo:
+Thread[Hilo-1,10,main]
+Este texto no cambia con el estado, pero puede combinarse con getState() para observar las transiciones del hilo entre los estados:
+
+NEW: antes de llamar a start()
+
+RUNNABLE: cuando se está ejecutando o preparado para ejecutar
+
+TIMED_WAITING: cuando está dormido (sleep())
+
+TERMINATED: cuando ha terminado su ejecución
