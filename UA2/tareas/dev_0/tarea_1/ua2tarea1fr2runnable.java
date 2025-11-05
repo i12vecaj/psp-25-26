@@ -1,20 +1,16 @@
-package UA2.tareas.dev_0.tarea_1;
-
-public class ua2tarea1fr2 {
-
+public class ua2tarea1fr2runnable {
 
     private static int contador = 0;
-    public static synchronized void incrementar() {
+
+    public synchronized static void incrementar() {
         contador++;
         System.out.println("Contador: " + contador);
     }
 
     public static void main(String[] args) {
-
-        Thread[] hilos = new Thread[5];
-
-        for (int i = 0; i < 5; i++) {
-            hilos[i] = new Thread(() -> {
+        Runnable tarea = new Runnable() {
+            @Override
+            public void run() {
                 try {
                     for (int j = 0; j < 1000; j++) {
                         incrementar();
@@ -22,7 +18,13 @@ public class ua2tarea1fr2 {
                 } catch (Exception e) {
                     System.out.println("Error: " + e.getMessage());
                 }
-            });
+            }
+        };
+
+        Thread[] hilos = new Thread[5];
+
+        for (int i = 0; i < 5; i++) {
+            hilos[i] = new Thread(tarea);
             hilos[i].start();
         }
 
@@ -34,7 +36,6 @@ public class ua2tarea1fr2 {
             System.out.println("Error: " + e.getMessage());
         }
 
-        System.out.println("Final (con sincronización usando Thread): " + contador);
-       
+        System.out.println("Final: " + contador);
     }
 }
