@@ -1,0 +1,54 @@
+package tareas.dev_X.tarea_1;
+
+/**
+ * ua2tarea1fr2.java
+ * 
+ * FR2: Programa que sincroniza el acceso a la variable compartida.
+ * Los hilos se crean directamente extendiendo la clase Thread.
+ * 
+ * Objetivo: Evitar condiciones de carrera usando un bloque synchronized.
+ */
+
+public class ua2tarea1fr2 {
+
+    private static int contador = 0;
+
+    // Objeto de bloqueo para sincronización
+    private static final Object lock = new Object();
+
+    // Clase interna que extiende Thread
+    static class HiloContador extends Thread {
+        @Override
+        public void run() {
+            for (int i = 0; i < 1000; i++) {
+                synchronized (lock) {
+                    contador++;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            HiloContador[] hilos = new HiloContador[5];
+
+            for (int i = 0; i < 5; i++) {
+                hilos[i] = new HiloContador();
+                hilos[i].start();
+            }
+
+            for (HiloContador hilo : hilos) {
+                hilo.join();
+            }
+
+            System.out.println("Valor final del contador (sincronizado - Thread): " + contador);
+            System.out.println("Valor esperado: 5000");
+            System.out.println("→ Ahora el resultado es consistente gracias a la sincronización.");
+
+        } catch (InterruptedException e) {
+            System.err.println("Error: ejecución interrumpida - " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error inesperado: " + e.getMessage());
+        }
+    }
+}
