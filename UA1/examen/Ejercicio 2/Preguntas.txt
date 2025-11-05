@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Has entendido la idea de que varios procesos pueden acceder al mismo archivo y causar conflictos. La explicación es clara, pero faltan términos técnicos como “bloqueo” o “sincronización” y no es correcto usar Thread.sleep como solución en sistemas reales.
+
+b) No la respondes, pero era una trampa: bien por no caer en ella.
+
+c) Identificas que compartir una variable global puede causar problemas en la concurrencia, y propones crear instancias para evitarlo, lo que refleja razonamiento propio. Faltan soluciones técnicas como synchronized, Lock o variables atómicas.
+
+d) Los ejemplos de modelos concurrente, paralelo y distribuido son adecuados y muestran comprensión. Falta algo de precisión técnica sobre hardware y ventajas/inconvenientes, pero la explicación es clara y lógica.
+
+Comentario general:
+Buen entendimiento de los conceptos y razonamiento propio. Para mejorar, usa más vocabulario técnico y profundiza en soluciones concretas de sincronización y concurrencia.
+
+**********************************************************************/
+
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
 
