@@ -1,4 +1,24 @@
-        a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Buen razonamiento. Explicas correctamente el concepto de exclusión mutua y la idea de que el sistema operativo gestiona el acceso al recurso mediante mecanismos de sincronización. Faltó mencionar términos técnicos concretos como mutex o bloqueo de archivo.
+
+b) No conoces el concepto, pero tu razonamiento es lógico y coherente con la idea de jerarquía de hilos. Faltó la definición técnica: un hilo daemon es aquel que trabaja en segundo plano y finaliza cuando termina el hilo principal.
+
+c) Entiendes bien el problema de compartir una variable global entre hilos. Buena propuesta de control por turnos y alternativa eficiente con variables separadas. Faltó mencionar explícitamente el uso de synchronized o Lock.
+
+d) Buenos ejemplos en general, aunque confundes ligeramente los términos concurrente y paralela. Has captado la esencia de la distribuida y sus ventajas. Correcto uso de ejemplos de software real y entorno hardware.
+
+Comentario general:
+Buen razonamiento y comprensión global del tema. Se nota esfuerzo y reflexión en las respuestas, aunque falta algo de precisión técnica y vocabulario especializado.
+
+**********************************************************************/
+
+a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
         (2 puntos)
 
         Al querer dos procesos acceder al mismo recurso el sistema operativo utilizaría un mecanismo de sincronización.
