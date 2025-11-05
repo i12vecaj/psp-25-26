@@ -1,2 +1,2 @@
 Simulación de Procesos
-Tiempo: 139 ms
+Tiempo: 172 ms
