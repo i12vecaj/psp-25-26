@@ -1,6 +1,6 @@
 package UA2.tareas.dev_0.tarea_1;
 
-public class ua2tarea1fr2 {
+public class ua2tareafr2_runnable {
 private int contador = 0;
 
 // Método sincronizado para evitar condiciones de carrera
@@ -8,11 +8,11 @@ public synchronized void incrementar() {
     contador++;
 }
 
-// Clase interna que hereda de Thread
-static class HiloThread extends Thread {
-    private ua2tarea1fr2 tarea;
+// Clase interna que implementa Runnable
+static class HiloRunnable implements Runnable {
+    private ua2tareafr2_runnable tarea;
 
-    public HiloThread(ua2tarea1_thread tarea) {
+    public HiloRunnable(ua2tarea1_runnable tarea) {
         this.tarea = tarea;
     }
 
@@ -30,14 +30,14 @@ static class HiloThread extends Thread {
 
 // Método principal
 public static void main(String[] args) {
-    ua2tarea1_thread tareaCompartida = new ua2tarea1fr2();
+    ua2tarea1_runnable tareaCompartida = new ua2tarea1_runnable();
 
-    // Crear e iniciar hilos
-    HiloThread t1 = new HiloThread(tareaCompartida);
-    HiloThread t2 = new HiloThread(tareaCompartida);
-    HiloThread t3 = new HiloThread(tareaCompartida);
-    HiloThread t4 = new HiloThread(tareaCompartida);
-    HiloThread t5 = new HiloThread(tareaCompartida);
+    // Crear hilos con Runnable
+    Thread t1 = new Thread(new HiloRunnable(tareaCompartida));
+    Thread t2 = new Thread(new HiloRunnable(tareaCompartida));
+    Thread t3 = new Thread(new HiloRunnable(tareaCompartida));
+    Thread t4 = new Thread(new HiloRunnable(tareaCompartida));
+    Thread t5 = new Thread(new HiloRunnable(tareaCompartida));
 
     t1.start();
     t2.start();
@@ -56,6 +56,6 @@ public static void main(String[] args) {
         Thread.currentThread().interrupt();
     }
 
-    System.out.println("Valor final del contador (Thread): " + tareaCompartida.contador);
+    System.out.println("Valor final del contador (Runnable): " + tareaCompartida.contador);
 }
 }
