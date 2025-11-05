@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Has captado la idea de conflicto entre procesos accediendo al mismo recurso y propones el uso de prioridades, lo cual es válido conceptualmente. Faltan términos técnicos como “bloqueo”, “exclusión mutua” o “sincronización”.
+
+b) Aunque no lo conoces, tu intuición sobre el comportamiento de un hilo daemon y su relación con la JVM es correcta. Buen detalle por responder lo que sabes y no inventar.
+
+c) Entiendes que compartir una variable global puede causar colisiones y propones secuenciar hilos o usar variables locales, lo que demuestra razonamiento propio. Faltan soluciones técnicas formales como synchronized, Lock o variables atómicas.
+
+d) Tus ejemplos de concurrente, paralela y distribuida muestran comprensión básica de cada modelo. La explicación es correcta de manera general, aunque faltan detalles sobre hardware y precisión técnica en ventajas/inconvenientes.
+
+Comentario general:
+Buen razonamiento y ejemplos propios. Para mejorar, profundiza en vocabulario técnico y soluciones de sincronización y concurrencia, así como en las características de cada modelo de ejecución.
+
+**********************************************************************/
+
+
 A) Esto se a lo que llama competencia, la lucha de dos archivos los cuales quieren entrar a la misma base de datos (por ejemplo)
 y la cual necesita unos estándares de prihoridad. Lo que pasaria es que puede colapsar y que el sistema vaya muy lento ,esto se 
 evita de una manera muy simple que es por la prihoidad de procesos segun la escala de importancia que se de.
