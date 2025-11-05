@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Muy buena explicación con un ejemplo claro (el del banco). Has identificado correctamente el problema de concurrencia y la necesidad de sincronización. Faltaría mencionar términos técnicos como “exclusión mutua” o “bloqueo de recursos”.
+
+b) No respondida. Efectivamente no se ha tratado en clase, pero podrías haber intentado una definición general (por ejemplo, “un hilo en segundo plano que se detiene al finalizar el principal”).
+
+c) Correcto y bien razonado. Identificas adecuadamente la condición de carrera y propones synchronized como solución. Podrías haber añadido alguna alternativa (como variables atómicas o semáforos) para completar.
+
+d) Explicación comprensible y con ejemplos útiles. Buena diferenciación entre los tres modelos, aunque faltó mencionar el tipo de hardware o entorno específico (núcleos, red, multiprocesador, etc.) y comentar ventajas/inconvenientes de cada uno.
+
+Comentario general:
+Buen razonamiento y claridad en los ejemplos. Falta algo de precisión técnica en algunos apartados, pero se nota comprensión del tema.
+
+**********************************************************************/
+
+
 a) Explica cómo se comportaría un sistema operativo 
 al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. 
 Indica qué problemas podrían surgir y cómo podrían evitarse.
