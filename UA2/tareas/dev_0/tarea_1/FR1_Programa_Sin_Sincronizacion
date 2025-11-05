@@ -1,0 +1,47 @@
+package tareas.dev_X.tarea_1;
+
+/**
+ * ua2tarea1fr1.java
+ * 
+ * FR1: Programa que crea 5 hilos, cada uno incrementa una variable compartida 1000 veces.
+ * No se sincroniza el acceso al contador, por lo que el resultado final puede no ser el esperado.
+ * 
+ * Objetivo: Observar los efectos de la falta de sincronización (condición de carrera).
+ */
+
+public class ua2tarea1fr1 {
+
+    private static int contador = 0; // Variable compartida
+
+    public static void main(String[] args) {
+        try {
+            Thread[] hilos = new Thread[5];
+
+            for (int i = 0; i < 5; i++) {
+                hilos[i] = new Thread(() -> {
+                    for (int j = 0; j < 1000; j++) {
+                        contador++; // Incremento sin sincronización
+                    }
+                });
+                hilos[i].start();
+            }
+
+            // Esperar a que terminen todos los hilos
+            for (Thread hilo : hilos) {
+                hilo.join();
+            }
+
+            System.out.println("Valor final del contador (sin sincronización): " + contador);
+            System.out.println("Valor esperado: 5000");
+
+            if (contador != 5000) {
+                System.out.println("→ El resultado no es el esperado debido a condiciones de carrera.");
+            }
+
+        } catch (InterruptedException e) {
+            System.err.println("Error: ejecución interrumpida - " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error inesperado: " + e.getMessage());
+        }
+    }
+}
