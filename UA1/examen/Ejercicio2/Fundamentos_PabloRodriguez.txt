@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 3 Nov. 2025
+Profesor: JD
+
+Comentarios:
+
+a) Muy buena explicación general del **acceso concurrente a archivos**. Has identificado correctamente el **bloqueo y la exclusión mutua**, aunque sería ideal mencionar que el sistema operativo gestiona estos conflictos mediante **mecanismos de bloqueo (locks)** y **modos de acceso (lectura/escritura)**. Buena propuesta de solución.
+
+b) Definición correcta y razonamiento coherente del **hilo daemon**, aunque algo general. El ejemplo de uso y el comportamiento al finalizar el hilo principal son acertados. Faltó mencionar que se configura con `setDaemon(true)` antes de iniciarlo. Estupendo comentar que no lo hemos visto.
+
+c) Buena descripción del **problema de sincronización de variables compartidas** y de la solución con métodos sincronizados. La idea de establecer prioridades es válida, aunque no es la alternativa más eficiente en estos casos (sería mejor mencionar las **clases atómicas**).
+
+d) Excelente desarrollo. Has entendido correctamente los tres modelos (**concurrente, paralelo y distribuido**) y los has acompañado con ejemplos muy acertados (banco, videojuego, Google Drive). Buena explicación de ventajas e inconvenientes.
+
+Comentario general:
+Buen examen, con razonamientos claros y ejemplos bien aplicados. Falta algo de precisión técnica en la parte b) y c), pero se nota comprensión global de los conceptos.
+
+**********************************************************************/
+
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse. (2 puntos)
 
 - Pues el sistema operativo bloquearía el archivo que los procesos intentaban acceder, lo dejaría en un estado de exclusión. Si esto ocurre puede dar muchos problemas como que los procesos que necesitaban acceder a ese archivo no lo hagan, dando error y otros procesos esperaban a que terminaran darían error haciendo una cadena de errores.
