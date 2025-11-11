@@ -1,64 +1,65 @@
-# 🧵 Ejercicio — Observación del comportamiento de los hilos en Java
+# Tarea 1  Programacion y sincronización de hilos
 
-##🔹 Orden de ejecución de los hilos
+## Enunciado Parte 1
+FR1: Crea un programa en Java que lance 5 hilos. 
+Cada hilo incrementará una variable contador de tipo entero en 1000 unidades. 
+Esta variable estará compartida por todos los hilos. 
+Comprueba el resultado final de la variable y reflexiona sobre el resultado. 
+¿Se obtiene el resultado esperado? - 3 puntos
 
-¿Siempre es el mismo?
-No hace siempre lo mismo al ejecutar el .yield() hace como una sugerencia pero es exactamente eso, además al tener que tomar el valor i puede estar pasando un hilo u otro sin que sea siempre exacto salvo el 2 que está interrumpido previamente.
-
-Influencia de la prioridad
-
-¿Influye la prioridad?
-Esto la influye en esa parte del código:
-
-´´´ java 
-h1.setPriority(Thread.MIN_PRIORITY);   // Prioridad más baja
-h2.setPriority(Thread.NORM_PRIORITY);  // Prioridad normal
-h3.setPriority(Thread.MAX_PRIORITY);   // Prioridad más alta
+### Muestra 
+La salida es la siguiente por termianl
 ```
-En esta parte del código establecemos qué prioridad tiene cada hilo, pero en esta parte de código:
-
-```Java
-// Interrumpimos el hilo 2 tras un pequeño retraso
-try {
-   Thread.sleep(10);
-   h2.interrupt();
-} catch (InterruptedException e) {
-   e.printStackTrace();
-}
-
-Establecemos un tiempo de “dormir” todos los hilos, incluso uno de ellos se para totalmente.
-Y ese tiempo que están dormidos ya no afecta a la prioridad que hemos establecido previamente.
-
-##🔹 Diferencia entre start() y run()
-
-En pocas palabras:
-Al usar run() los hilos que haya van de forma secuencial
-y al establecer start() los hilos van de forma concurrente.
-
-##🔹 ¿Qué pasa si en lugar de start() llamas directamente a run()?
-
-Empieza y va alternando los dos hilos, o sea, de forma concurrente.
-
-##🔹 Experimenta con setPriority()
-
-Prueba a darle al Hilo-1 prioridad máxima y al Hilo-3 mínima.
-¿Qué cambia?
-Comenta la línea donde se llama a interrupt() y vuelve a ejecutar.
-
-¿Qué ocurre ahora con el hilo 2?
-Al comentar la línea 25 el hilo 2 ya no se interrumpe y ya están todos los hilos en true, o dicho de otra forma, funcionan correctamente.
-
-##🔹 Añade una línea al final del main que muestre el estado final de los hilos con isAlive()
-
-```java
-System.out.println("Estado final → " 
-   + h1.isAlive() + ", " 
-   + h2.isAlive() + ", " 
-   + h3.isAlive());
+Hilo: 37 Contador parcial: 4761
+Hilo: 40 Contador parcial: 5000
+Hilo: 38 Contador parcial: 2562
+Hilo: 36 Contador parcial: 3815
+Hilo: 39 Contador parcial: 5000
+Valor  5000
 ```
-¿Cuándo pasa a false?
-Ya está en true porque al comentar la línea 25 no se ha interrumpido.
+### Reflexión de resultados
+Cada vez que ejecuto el programa, el contador muestra un número diferente
+porque los hilos se están ejecutando al mismo tiempo. Cuando el for de cada
+hilo llega a lo establecido, ese hilo se detiene, pero como ninguno espera
+a los demás, todos avanzan en paralelo. Al hacerlo, cada hilo toma valores
+distintos de la variable compartida y por eso el resultado final del contador
+cambia en cada ejecución.
 
-##🔹 Prueba a imprimir h1.toString() en distintos momentos
+## Enunciado Parte 2
+FR2: Modifica el programa anterior para sincronizar el acceso a dicha varaible. 
+Lanza primero los hilos mediante la clase Thread y después mediante el interfaz Runnable. 
+Comprueba los resultados e indica las variaciones - 3 puntos
 
-No noto cambios ya que la información que muestra es la del hilo.
+### Muestra Sin sincronizra
+```
+Hilo: 37 Contador: 3131
+Hilo: 36 Contador: 1784
+Hilo: 38 Contador: 2010
+Hilo: 40 Contador: 2549
+Hilo: 39 Contador: 3383
+````
+
+### Muestra Sincronizados
+```
+Hilo: 36 Contador parcial: 1352
+Hilo: 38 Contador parcial: 4877
+Hilo: 40 Contador parcial: 4908
+Hilo: 37 Contador parcial: 3875
+Hilo: 39 Contador parcial: 5000
+Valor  5000
+```
+
+### Reflexión resultados
+
+Al no estar sincronizados, los hilos nunca llegan al valor que queremos,
+porque todos acceden al contador al mismo tiempo y se van pisando unos a otros.
+Esto provoca que muchos incrementos se pierdan y el resultado final cambie
+en cada ejecución.
+
+En cambio, cuando sincronizamos los hilos correctamente, ya no se pisan entre sí.
+Cada incremento del contador se hace de forma ordenada y no se solapa con
+los demás hilos. Por eso el contador sí llega al valor correcto.
+
+Además, al usar Runnable ya no podemos acceder directamente al id del hilo
+como hacíamos con Thread. En este caso debemos usar otros métodos, como
+Thread.currentThread().getId(), para obtener el identificador del hilo.
