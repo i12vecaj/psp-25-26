@@ -32,7 +32,7 @@ public class CuentaCorriente {
 
     private void dormirAleatorio() {
         try {
-            int tiempo = 250 + random.nextInt(1751); // entre 250 y 2000 ms
+            int tiempo = 250 + random.nextInt(2000);
             Thread.sleep(tiempo);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
