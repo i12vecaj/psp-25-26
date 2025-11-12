@@ -1,0 +1,18 @@
+public class IngresoThread extends Thread {
+    private CuentaCorriente cuenta;
+    private double cantidad;
+    private String nombrePersona;
+
+    // Constructor
+    public IngresoThread(CuentaCorriente cuenta, double cantidad, String nombrePersona) {
+        this.cuenta = cuenta;
+        this.cantidad = cantidad;
+        this.nombrePersona = nombrePersona;
+    }
+
+    // Método run() que ejecuta el ingreso
+    @Override
+    public void run() {
+        cuenta.ingresar(cantidad, nombrePersona);
+    }
+}
