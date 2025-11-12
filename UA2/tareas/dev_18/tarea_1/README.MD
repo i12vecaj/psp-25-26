@@ -1,0 +1,3 @@
+En el primer programa (FR1) no hay sincronización: las operaciones contador++ se intercalan entre hilos provocando condiciones de carrera y pérdidas de incrementos. El resultado es impredecible y normalmente menor que 5000.
+
+En el segundo (FR2) se sincroniza el acceso con synchronized(LOCK), lo que garantiza exclusión mutua y un resultado consistente de 5000. Esto hace la ejecución determinista, pero introduce sobrecoste por contención del lock. Como conclusión, FR1 falla en corrección mientras que FR2 corrige el problema a costa de rendimiento; una alternativa con menor bloqueo es usar AtomicInteger.
