@@ -1,3 +1,24 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Buena comprensión general del problema. Has identificado correctamente los riesgos de pérdida de integridad y seguridad. Faltó mencionar el concepto técnico de “exclusión mutua” y mecanismos concretos como bloqueos o sincronización.
+
+b) No respondida. Efectivamente no se vio en clase, pero podrías haber indicado que los hilos daemon son hilos en segundo plano que se detienen cuando termina el hilo principal.
+
+c) Buen razonamiento sobre el problema de interferencia entre hilos. Sin embargo, faltó usar vocabulario técnico (condición de carrera, sincronización, variable compartida) y mencionar mecanismos concretos de control como synchronized o semáforos.
+
+d) Explicación clara y estructurada con ejemplos bien elegidos. Buena diferenciación entre los modelos y su nivel de hardware. Podrías haber resumido las ventajas e inconvenientes de manera más técnica (rendimiento, escalabilidad, coste de sincronización, etc.).
+
+Comentario general:
+Buen nivel de razonamiento y ejemplos prácticos. Falta precisión técnica y uso de terminología propia del tema, pero se nota comprensión general de los conceptos.
+
+**********************************************************************/
+
+
 a) Explica cómo se comportaría un sistema operativo al ejecutar dos procesos que acceden al mismo archivo de manera simultánea. Indica qué problemas podrían surgir y cómo podrían evitarse.
 (2 puntos)
 
