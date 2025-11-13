@@ -1,0 +1,30 @@
+/*
+
+Nombre: German Gutierrez Gimenez
+Fecha: 29/10/2025
+Descripción: Ejercicio2
+FR implementados: [FR1, FR2...]
+*/
+a)Que daría error al intentar acceder a la vez, podría pasar que incluso se dañará, no el archivo pero si el sistema operativo o hardware ya que se esta forzando.
+Se podrían evitar generando procesos secuenciales, que hasta que no termine uno, no acceda el otro.
+
+b) Es un Hilo en segundo plano y no lo deja hasta que el programa se termine, un caso practico y seria bueno usarlo seria un antivirus
+
+c) En un programa Java, se crean tres hilos que comparten una misma variable global.
+Explica:
+Pues que necesiten a la vez los mismos recursos.
+Se podría solucionar haciendo que sean secuenciales..
+La alternativa más segura sería una confirmación de hilo o que tuviera un id, identificativo.
+
+d) Compara los modelos de ejecución concurrente, paralela y distribuida, indicando:
+Un ejemplo típico de aplicación en cada caso.
+Qué tipo de hardware o entorno necesita cada modelo.
+
+MODELOS y APLICACION DE CADA CASO:
+Concurrente: esta hecha para un sistema operativo monoprocesador, Paralela: esta hecha para un sistema operativo multiprocesador, Distribuida: Necesita estar conectada(A esto me refiero a CPD, conexión por cables, etc...), ya que la distancia es significativa
+
+TIPO DE HARDWARE y ENTORNO:
+Concurrente: Su ventaja es que puede consumir menos energía. Inconvenientes, complejidad de procesos
+Paralela: Su ventaja es que puedes trabajar a la vez, para realizar la operación que tenga que hacer. Inconvenientes, complejidad de procesos, mayor consumo energético,
+Distribuida: Su ventaja es la distancia, ya que, se puede trabajar desde lejos.. Inconvenientes, mayor gastos económicos(Este tiene varios CPD repartidos a gran distancia, y están conectados por cables), ya que tienen que estar conectadas entre si
+
