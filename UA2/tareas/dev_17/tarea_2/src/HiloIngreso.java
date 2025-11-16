@@ -14,7 +14,7 @@ public class HiloIngreso extends Thread{
     public void run() {
 
         cuenta.ingresar(this.getName(), cantidad); //Uso this para acceder a este hilo una vez esté creado, entonces como
-                                                    // la clase Thread qeu es de la que extiende requiere de un nombre para la creación del hilo uso super para acceder al nombre de la clase que hereda
+                                                    // la clase Thread que es de la que extiende requiere de un nombre para la creación del hilo uso super para acceder al nombre de la clase que hereda
 
     }
 }
