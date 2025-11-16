@@ -1,9 +1,5 @@
 import java.util.Random;
 public class CuentaCorriente {
-
-
-
-
     // Atributo: saldo de la cuenta
     private double saldo;
     // Generador de números aleatorios para el retardo
@@ -15,19 +11,13 @@ public class CuentaCorriente {
     // Getter del saldo (añadir sleep aleatorio)
     public double getSaldo() {
         // TODO: Añadir un sleep aleatorio entre 250 y 2000 ms
-
-
-
         int numeroAleatorio = random.nextInt(250,2000); // Genero un número aleatorio
-
-
 
         try {
             Thread.sleep(numeroAleatorio); // Lo englobo en un try cath ya que si no no es posible usarlo directamente a no ser que extienda de InterruptedException
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
 
 
         return saldo;
