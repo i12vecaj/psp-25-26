@@ -1,0 +1,17 @@
+FR3 – Comparativa de tiempos
+
+Ejecución sin hilos (secuencial):
+
+El Quijote → 43 ms
+
+Calisto y Melibea → 31 ms
+
+Wigetta → 15 ms
+
+Tiempo total aproximado: 89 ms
+
+Ejecución con hilos (concurrente):
+
+Los tres se leen al mismo tiempo
+
+Tiempo total aproximado: 59 ms
