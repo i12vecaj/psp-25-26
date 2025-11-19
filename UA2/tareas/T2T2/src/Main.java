@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Main {
     
     public static void main(String[] args) {
@@ -48,11 +46,10 @@ public class Main {
                 System.out.println("%n✗ RESULTADO INCORRECTO: Se han perdido operaciones por falta de sincronización");
             }
             
-            System.out.println("%n" + "=".repeat(70));
-            System.out.println("NOTA: Para el FR4, elimina 'synchronized' de los métodos de");
-            System.out.println("CuentaCorriente y observa cómo el saldo final es incorrecto debido");
-            System.out.println("a las condiciones de carrera (race conditions).");
-            System.out.println("=".repeat(70));
+            //fr4  Quitando el synchronized ocurre:
+            //Varios hilos leen el mismo saldo al mismo tiempo
+            //Cada uno calcula su nuevo saldo basándose en ese valor desactualizado
+            //Todos escriben su resultado, sobrescribiendo los cambios de otros hilos
             
         } catch (IllegalArgumentException e) {
             System.err.println("Error de argumento: " + e.getMessage());
