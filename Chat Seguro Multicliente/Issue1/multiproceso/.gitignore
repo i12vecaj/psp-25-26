@@ -1,0 +1,10 @@
+# Ignorar contenido generado en logs
+logs/
+!logs/.gitkeep
+
+# Archivos temporales de SO / IDE
+*.class
+*.log
+.DS_Store
+.idea/
+.vscode/
