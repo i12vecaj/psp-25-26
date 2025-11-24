@@ -1,0 +1,4 @@
+El tiempo de diferencia entre la secuencial y la consurrente es muy infima pero se nota mas rapido la concurrente. Esto en procesos
+más amplios y pesados de ser una diferencia minima en estos momentos se podría convertir en varios segundos de diferencia 
+los cuales si vamos sumando segundos de varios procesos pueden llegar a ser minutos de diferencia entre la programación
+concurrente y secuencial dentro de una aplicación por ejemplo.
