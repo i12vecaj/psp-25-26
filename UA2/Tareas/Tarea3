@@ -1,0 +1,93 @@
+package paquete;
+
+/*
+ * Tarea 3 - Programación y sincronización de hilos en Java
+ * FR1: Ejecución secuencial
+ * FR2: Ejecución concurrente creando un hilo por fichero
+ * FR3: Comparación de tiempos
+ * Incluye control de errores y documentación
+ */
+
+import java.io.*;
+import java.util.*;
+
+public class Tarea3 {
+
+    // Método que cuenta caracteres de un fichero
+    public static long contarCaracteres(String nombreFichero) {
+        long contador = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader(nombreFichero))) {
+            int c;
+            while ((c = br.read()) != -1) contador++;
+        } catch (FileNotFoundException e) {
+            System.err.println("[ERROR] No se encuentra el fichero: " + nombreFichero);
+        } catch (IOException e) {
+            System.err.println("[ERROR] Problema leyendo el fichero: " + nombreFichero);
+        }
+        return contador;
+    }
+
+    // Hilo para la ejecución concurrente
+    static class HiloContador extends Thread {
+        private final String fichero;
+        private long total;
+
+        HiloContador(String fichero) {
+            this.fichero = fichero;
+        }
+
+        public void run() {
+            total = contarCaracteres(fichero);
+            System.out.println("[HILO] " + fichero + " → " + total + " caracteres");
+        }
+
+        public long getTotal() { return total; }
+    }
+
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.err.println("Uso: java Tarea3 <fichero1> <fichero2> ...");
+            return;
+        }
+
+        System.out.println("===== FR1: EJECUCIÓN SECUENCIAL =====");
+        long t1_ini = System.currentTimeMillis();
+        for (String fichero : args) {
+            long total = contarCaracteres(fichero);
+            System.out.println(fichero + " → " + total + " caracteres");
+        }
+        long t1_fin = System.currentTimeMillis();
+        long tiempoSecuencial = t1_fin - t1_ini;
+        System.out.println("Tiempo total secuencial: " + tiempoSecuencial + " ms\n");
+
+
+        System.out.println("===== FR2: EJECUCIÓN CONCURRENTE =====");
+        long t2_ini = System.currentTimeMillis();
+
+        List<HiloContador> hilos = new ArrayList<>();
+        for (String fichero : args) {
+            HiloContador h = new HiloContador(fichero);
+            hilos.add(h);
+            h.start();
+        }
+
+        // Esperamos a que terminen
+        for (HiloContador h : hilos) {
+            try { h.join(); } catch (InterruptedException e) {}
+        }
+
+        long t2_fin = System.currentTimeMillis();
+        long tiempoConcurrente = t2_fin - t2_ini;
+        System.out.println("Tiempo total concurrente: " + tiempoConcurrente + " ms\n");
+
+        // FR3: Comparación
+        System.out.println("===== FR3: COMPARACIÓN =====");
+        System.out.println("Tiempo secuencial : " + tiempoSecuencial + " ms");
+        System.out.println("Tiempo concurrente: " + tiempoConcurrente + " ms");
+
+        System.out.println("\nDIFERENCIAS OBSERVADAS:");
+        System.out.println("- En ejecución secuencial los ficheros se procesan uno tras otro, por lo que el tiempo total es la suma de todos.");
+        System.out.println("- En ejecución concurrente cada fichero se procesa en paralelo usando varios hilos.");
+        System.out.println("- Normalmente concurrente es más rápido, especialmente con ficheros grandes y varios núcleos disponibles.");
+    }
+}
