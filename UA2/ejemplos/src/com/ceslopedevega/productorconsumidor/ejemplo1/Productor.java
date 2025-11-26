@@ -1,5 +1,3 @@
-package com.ceslopedevega.productorconsumidor.ejemplo1;
-
 public class Productor extends Thread {
     private Cola cola;
     private int n;
@@ -11,7 +9,7 @@ public class Productor extends Thread {
 
     public void run() {
         for (int i = 0; i < 5; i++) {
-            cola.put(i); //pone el número
+            cola.put(i); //pone el nï¿½mero
             System.out.println(i + "=>Productor : " + n
                                + ", produce: " + i);
             try {

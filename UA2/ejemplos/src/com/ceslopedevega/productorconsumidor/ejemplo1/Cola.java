@@ -1,15 +1,13 @@
-package com.ceslopedevega.productorconsumidor.ejemplo1;
-
 public class Cola {
     private int numero;
     private boolean disponible = false;//inicialmente cola vacia
 
     public int get() {
-	    if(disponible) {      //hay número en la cola
-		disponible = false; //se pone cola vacía
+	    if(disponible) {      //hay nï¿½mero en la cola
+		disponible = false; //se pone cola vacï¿½a
             return numero;      //se devuelve
 	    }
-          return -1;	//no hay número disponible, cola vacía	
+          return -1;	//no hay nï¿½mero disponible, cola vacï¿½a	
     }
 
     public void put(int valor) {

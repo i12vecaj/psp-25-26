@@ -1,5 +1,3 @@
-package com.ceslopedevega.productorconsumidor.ejemplo1;
-
 public class ProductoConsumidor {
   public static void main(String[] args) {  
     Cola cola = new Cola();

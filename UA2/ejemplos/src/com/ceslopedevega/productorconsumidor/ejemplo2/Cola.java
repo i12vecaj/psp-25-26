@@ -1,5 +1,3 @@
-package com.ceslopedevega.productorconsumidor.ejemplo2;
-
 public class Cola {
     private int numero;
     private boolean disponible = false;//inicialmente cola vacia
