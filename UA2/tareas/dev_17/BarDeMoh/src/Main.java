@@ -7,7 +7,7 @@ import java.util.Random;
 public class Main {
 
     /**
-     * Genera un número aleatorio entre min y max (ambos incluidos).
+     * Función para generar número aleatorio después en la clase HiloClientes
      * @param min Valor mínimo
      * @param max Valor máximo
      * @return Número aleatorio entre min y max
@@ -17,7 +17,7 @@ public class Main {
     }
 
     /**
-     * Clase que representa un vaso de cerveza.
+     * Clase VasoCerveza
      */
     public static class VasoCerveza {
 
@@ -60,7 +60,7 @@ public class Main {
         }
 
         /**
-         * Representación en String del vaso de cerveza.
+         * Método toString.
          * @return Descripción del vaso
          */
         @Override
@@ -82,7 +82,7 @@ public class Main {
     }
 
     /**
-     * Clase que representa un camarero que sirve y recoge vasos de cerveza.
+     * Clase Camarero
      */
     public static class Camarero {
 
@@ -92,16 +92,16 @@ public class Main {
         /** Nombre del camarero */
         String nombre;
 
-        /** Último vaso servido (para devolverlo posteriormente) */
+        /** Utilizo una variable para devolver el último vaso que se sirve para después usar esa misma variable para devolverlo */
         VasoCerveza vasoServido;
 
         /**
          * Constructor del camarero.
-         * Inicializa nombre y agrega 3 vasos a la lista.
          * @param nombre Nombre del camarero
          */
         public Camarero(String nombre) {
             this.nombre = nombre;
+            //Añado tres vasos al array de vasos
             listaVasos.add(new VasoCerveza());
             listaVasos.add(new VasoCerveza());
             listaVasos.add(new VasoCerveza());
@@ -121,21 +121,30 @@ public class Main {
                 }
             }
 
+            //Genero un número aleatorio, lo multiplico por el tamaño de la lista para que el número que me devuelva que usaré como id no sea un id inexistente.
             int numeroRandom = (int) (Math.random() * listaVasos.size());
             System.out.println("Aquí tienes la cerveza:" + listaVasos.get(numeroRandom).toString());
 
             vasoServido = listaVasos.get(numeroRandom);
             listaVasos.remove(numeroRandom);
+            //Elimino el vaso de la lista
 
             return vasoServido;
+            //Devuelvo que vaso se ha servido
         }
 
         /**
          * Devuelve un vaso de cerveza a la lista y notifica a los hilos que esperan.
          */
         public synchronized void devolverCerveza() {
+            //Añado a la lista el último vaso que se sirvió y por lo tanto el último que se eliminó
             listaVasos.add(vasoServido);
-            notifyAll(); // Notifica a todos los hilos que hay un vaso disponible
+            notifyAll(); // Notifica a todos los hilos que hay un vaso disponible, ya que en el método servirCerveza primero se comprobó si la lista está vacía y en caso de estarla se usó wait() para poner a la instancia en espera hasta que haya un vaso disponible, en este caso la instancia que usa este método es un hilo, entonces en este caso con NotifyAll() se notifica a todos los hilos de que ya hay un vaso libre por lo tanto:
+            //1. Se le da el vaso al primer hilo que estaba esperando.
+            //2. Este hilo bebe cerveza y devuelve el vaso al camarero.
+            //3. Al devolver el vaso al camarero usa notifyAll() también, por lo tanto el siguiente hilo que estaba en espera es notificado (junto al resto de los hilos) pero es él el que recibe la cerveza, la devuelve y así continuamente.
+
+
         }
 
         /**
@@ -205,7 +214,7 @@ public class Main {
     }
 
     /**
-     * Método principal que inicia la simulación del bar.
+     * Método main
      * @param args Argumentos de la línea de comandos
      */
     public static void main(String[] args) {
