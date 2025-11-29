@@ -139,7 +139,7 @@ public class Main {
         public synchronized void devolverCerveza() {
             //Añado a la lista el último vaso que se sirvió y por lo tanto el último que se eliminó
             listaVasos.add(vasoServido);
-            notifyAll(); // Notifica a todos los hilos que hay un vaso disponible, ya que en el método servirCerveza primero se comprobó si la lista está vacía y en caso de estarla se usó wait() para poner a la instancia en espera hasta que haya un vaso disponible, en este caso la instancia que usa este método es un hilo, entonces en este caso con NotifyAll() se notifica a todos los hilos de que ya hay un vaso libre por lo tanto:
+            notifyAll(); // Notifica a todos los hilos que hay un vaso disponible, ya que en el método servirCerveza primero se comprobó si la lista está vacía y en caso de estarla se usó wait() para poner a la instancia en espera hasta que haya un vaso disponible, en este caso la instancia que usa este método es un hilo, entonces en este caso con notifyAll() se notifica a todos los hilos de que ya hay un vaso libre por lo tanto:
             //1. Se le da el vaso al primer hilo que estaba esperando.
             //2. Este hilo bebe cerveza y devuelve el vaso al camarero.
             //3. Al devolver el vaso al camarero usa notifyAll() también, por lo tanto el siguiente hilo que estaba en espera es notificado (junto al resto de los hilos) pero es él el que recibe la cerveza, la devuelve y así continuamente.
