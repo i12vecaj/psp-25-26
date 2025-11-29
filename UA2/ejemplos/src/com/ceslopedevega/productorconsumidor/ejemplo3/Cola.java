@@ -12,7 +12,7 @@ public class Cola {
     	  }
     	  System.out.println("Se consume: " + numero);    	  
     	  disponible = false;
-    	  notify();
+    	  notifyAll();
     	  return numero;
     	}
 
@@ -26,7 +26,7 @@ public class Cola {
     	  numero = valor;
     	  disponible = true;
     	  System.out.println("Se produce: " + numero);   
-    	  notify();
+    	  notifyAll();
     	}
 
      
