@@ -11,7 +11,7 @@ public class Productor extends Thread {
 
     public void run() {
         for (int i = 0; i < 5; i++) {
-            cola.put(i); //pone el número
+            cola.put(i); //pone el nÃºmero
             System.out.println(i + "=>Productor : " + n
                                + ", produce: " + i);
             try {
@@ -21,5 +21,3 @@ public class Productor extends Thread {
         }
     }
 }
-
-
