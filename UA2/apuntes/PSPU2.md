@@ -94,6 +94,12 @@ public synchronized void metodoSeguro() {
 
 ## 9. CREACIÓN DE HILOS EN JAVA
 
+Para crear hilos tenemos 2 formas hacerlo extendiendo de la clase Thread o implementando Runnable
+
+Con la clase Thread seria creando una clase que extienda de esa clase haciendo sus metodos y el metodo run , luego solo reia crear los hilos de esta manera Threar t1 = new Thread ().... t1.start();
+
+Mientras que con la interfaz seria se crea una interfaz con los nombres de las funciones que se van hacer y los daos que necesitan y luego en otra clase que seria la Main es decir donde se va a ejcutar  se tiene que implementar la clase Runnable y luego se pone los metodos que estan en la interfaz pero con el codigo(funcionando) y luego por ultimo para crear el hilo es con Thread t1 = new Thread(new Main(si necesita datos porque tiene constrauctor si no no)) y t1.start.
+
 
 ---
 
