@@ -114,6 +114,7 @@ join()	        Esperar otro hilo
 interrupt()	    Interrumpir hilo
 isAlive()	    Saber si sigue activo
 yield()	        Ceder turno
+getId()         Obtener id (Thread.currentThread().getId())
 
 ---
 
