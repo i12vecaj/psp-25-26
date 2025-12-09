@@ -1,17 +1,34 @@
-## 🧵 Sprint 2 – Servidor multicliente con hilos
+## Sprint 2 – Servidor multicliente con hilos
 
-### 🎯 Objetivo
-Desarrollar un servidor TCP que gestione múltiples clientes simultáneamente mediante hilos.
+Servidor TCP sencillo que acepta múltiples clientes de manera concurrente mediante hilos. Incluye un cliente de terminal para probar la conexión.
 
-### ✅ Tareas
-- [ ] Crear clase `MultiThreadedServer` que acepte conexiones en un puerto.
-- [ ] Cada cliente debe ser gestionado por un hilo diferente.
-- [ ] Implementar mensajes tipo: "Bienvenido", "Hasta luego", etc.
-- [ ] Permitir que los clientes se conecten desde terminal o clase Java.
+### Estructura
 
-### 📦 Entregables
-- Código funcional en carpeta `/multihilo`.
-- Captura de pruebas con 2 o más clientes conectados.
-- Documentación breve en README.
+- `src/`: código fuente (`MultiThreadedServer`, `ClientHandler`, `ClienteTerminal`).
+- `bin/`: clases compiladas.
 
-### 📅 Fecha de entrega: 2025
+### Cómo compilar
+
+```sh
+javac -d bin src/*.java
+```
+
+### Cómo ejecutar
+
+1. **Servidor** (una terminal):
+
+```sh
+java -cp bin MultiThreadedServer
+```
+
+2. **Clientes** (dos o más terminales distintas):
+
+```sh
+java -cp bin ClienteTerminal
+```
+
+### Flujo de prueba manual (2+ clientes)
+
+- Al conectar cada cliente se muestra: `Bienvenido al servidor multihilo!`.
+- Cada línea enviada se devuelve con: `Recibido: <mensaje>`.
+- Al escribir `adios` el servidor responde `Hasta luego!` y cierra ese cliente sin afectar a los demás.
