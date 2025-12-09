@@ -12,11 +12,10 @@ varias conexiones concurrentes.
 ## Estructura del proyecto
 
     /multihilo
-     ├── server
-     │     ├── MultiThreadedServer.java
-     │     └── ClientHandler.java
-     └── client
-           └── SimpleClient.java
+     ├── ClienteSimple
+     ├── ProcesadorClientes
+     └── ServidorMultiThread
+
 
 ------------------------------------------------------------------------
 
@@ -25,13 +24,13 @@ varias conexiones concurrentes.
 ### Iniciar el servidor
 
 ``` bash
-java server.MultiThreadedServer
+java server.ServidorMultiThread
 ```
 
 ### Iniciar uno o varios clientes
 
 ``` bash
-java client.SimpleClient
+java client.ClienteSimple
 ```
 
 ------------------------------------------------------------------------
