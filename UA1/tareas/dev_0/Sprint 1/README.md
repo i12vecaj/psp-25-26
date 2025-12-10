@@ -1,4 +1,23 @@
-Un proceso es un programa en ejecución que tiene su propio espacio de memoria y recursos del sistema. Los procesos son independientes entre sí, y si uno falla no afecta a los demás.
-Un hilo, en cambio, es una unidad de ejecución dentro de un proceso. Varios hilos comparten la misma memoria y recursos, por lo que su comunicación es más rápida, pero también más arriesgada: si un hilo falla, puede afectar a todo el proceso.
+# Sprint 2 – Servidor multicliente con hilos
 
-En Java, los procesos se manejan con ProcessBuilder o Runtime.exec(), mientras que los hilos se crean con Thread, Runnable o ExecutorService.
+## Objetivo
+Desarrollar un servidor TCP que gestione múltiples clientes simultáneamente mediante hilos.
+
+## Funcionalidad
+El servidor acepta conexiones en un puerto y crea un hilo independiente para cada cliente conectado.  
+Cada cliente recibe un mensaje de bienvenida y puede enviar mensajes al servidor.  
+Si el cliente envía "bye" o "adios", el servidor responde con "Hasta luego" y cierra la conexión.
+
+## Características implementadas
+- Servidor multicliente usando hilos.
+- Gestión individualizada de cada cliente.
+- Mensajes básicos de bienvenida y despedida.
+- Compatibilidad con clientes desde terminal o desde una clase Java.
+
+## Entregables
+- Código funcional en la carpeta `/multihilo`.
+- Capturas de dos o más clientes conectados simultáneamente.
+- README explicativo del funcionamiento.
+
+## Fecha de entrega
+2025
