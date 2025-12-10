@@ -1,0 +1,72 @@
+1. Explica la diferencia entre los métodos start() y run() en un hilo.
+El método run(), es para la concurrencia en secuencial
+El método start() es para con concurencia en paralelo
+Pon un ejemplo breve donde se vea la diferencia.
+Con run() se ejecuta el hilo y hasta que no se acabe no pasa al siguiente, por lo contrario en el método start(), va alternando entre hilos 
+
+
+2. ¿Qué es una condición de carrera?
+Describe qué la provoca y menciona una técnica para evitarla.
+Es cuando muchos hilos acceden a los datos compartidos de sin ningún orden, para ordenarlos podemos usar el patron Productor - Consumidor con el método synchronized y asi evitamos que esto se porduzca
+
+3. ¿Qué es el modelo Productor–Consumidor?
+Sirve para sincronizar las peticiones de un "método" que sirve un producto, y otro "método" que coge ese producto, al controlarse con hilos, controla que si llega y no hay recursos se pare y cuando el "método" productor lo haga 
+envie una notificación con notifyall() para reanudar el hilo, todo ello con un método que sea sychronized y si hay que pararlos hilos se usa wait() y quedan en parada
+Indica qué problema resuelve y en qué casos se utiliza.
+Por ejemplo en una Fruetria mientras haya fruta se puede comprar(consumidor), pero si sea acaba se para hasta que el frutero(productor) la reponga
+
+4. Observa el siguiente código y responde:
+
+Thread t = new Thread(() -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println("A");
+    }
+});
+
+t.start();
+
+System.out.println(t.isAlive());
+
+a) ¿Qué puede imprimir isAlive()?
+Devuelve un boleano para indicar si el hilo esta parado o esta esta en ejecución.
+b) ¿Por qué el resultado puede variar de una ejecución a otra?
+Por que puede indicar en que estado se encuentra si ha terminado, o si se ha iniciado
+
+5. ¿Para qué sirve el método yield()?
+Explica por qué no garantiza orden de ejecución entre hilos.
+"Sugiere" al procesador que ceda el procesador para permitir que otros hilo se puedan ejecutar, por eso mismo como es una sugerencia no es fiable que eso ocurra
+
+
+6. ¿Qué hace el método interrupt() en un hilo?
+Indica cómo debería reaccionar un hilo bien programado cuando recibe una interrupción.
+Para un hilo que esta en espera, dormido o bloqueado, pero este no lo detiene sino que lanza una Excepción.
+Por lo que puedo entender es que interrunpe el "sueño" del hilo, y lanza una excepción para comunicarnos su estado
+
+7. ¿Qué significa que un método sea synchronized?
+Indica cómo afecta a la ejecución cuando varios hilos intentan acceder al mismo recurso.
+Establece un orden en lo hilos que dependiendo de la características que le asignemos para o sigue si se dan las condiciones apropiadas , si se para con el método notifyall() comunica al resto de hilos que ya esta disponible
+
+8. Explica la diferencia entre sleep() e interrupt().
+Indica qué ocurre cuando interrumpimos un hilo que está durmiendo.
+No lo tengo muy claro, pero entiendo que si sleep() lo usamos para dormir el hilo y después de un tiempo que le indicar para que otros hilos se ejecuten mientras el que esta en sleep() se despierte. con interrrput() lo que hace es depertarlo para que continue
+
+9. Dado el siguiente código, indica si produce o no una condición de carrera y por qué:
+
+class Contador {
+    public int valor = 0;
+}
+
+Contador c = new Contador();
+
+Thread t1 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+Thread t2 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+
+t1.start();
+t2.start();
+En mi opinión es una condición de carrera ya que para que no lo sea tiene que usar sychrornized y usar los métodos wait() para el hilo y notifall() para notificar al resto de los hilos que se pongane n marcha
+
+10. Describe qué es la prioridad de un hilo (setPriority()) y cómo afecta realmente a la ejecución.
+Indica una prioridad pero esta puede que el sistema no lo garantice
+
+¿Es una garantía de orden? ¿Por qué puede comportarse de forma diferente según el sistema operativo?
+Efectivamente aunque esta la hagamos efectiva, el sistema operatativo es la que la establece
