@@ -1,0 +1,78 @@
+1. Explica la diferencia entre los métodos start() y run() en un hilo.
+Pon un ejemplo breve donde se vea la diferencia.
+
+Cuando ejecutas un hilo mediante run() se ejecuta como un método estándar y no hay concurrencia, al contrario que con Start() que ejecuta internamente el método run() creando un nuevo hilo.
+
+ 
+2. ¿Qué es una condición de carrera?
+Describe qué la provoca y menciona una técnica para evitarla.
+
+Cuando 2 o más hilos acceden y modifican los mismos datos de manera compartida de manera simultánea y sin control, lo cual puede resultar en que un hilo modifique unos datos mientras otro los lee y provocar que esos datos se corrompan. Para evitar esto podemos usar un mecanismo de coordinación como es el wait()/notify(), Con wait() podemos hacer esperar a los demás hilos mientras otro modifica datos y con notify() o notifyAll() avismos para que continúen cuando el hilo termine de modificar datos.
+
+3. ¿Qué es el modelo Productor–Consumidor?
+Indica qué problema resuelve y en qué casos se utiliza.
+
+Es un modelo de cooperación, sirve para evitar sacar datos de un buffer que se encuentre vacío. Se utiliza cuando hay un mecanismo que inserta datos en un buffer y otro que los saca.
+
+4. Observa el siguiente código y responde:
+
+Thread t = new Thread(() -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println("A");
+    }
+});
+
+t.start();
+
+System.out.println(t.isAlive());
+
+a) ¿Qué puede imprimir isAlive()?
+
+Imprime un True o False dependiendo de si el hilo sigue en funcionamiento o ya a muerto, respectivamente
+
+b) ¿Por qué el resultado puede variar de una ejecución a otra?
+
+Si al hilo le ha dado tiempo a terminar la acción (imprimir "A" en este caso) antes de que la maquina compile el isAlive() será false. Ya que el tiempo de compilación puede variar a veces habrá un caso o el contrario.
+
+5. ¿Para qué sirve el método yield()?
+Explica por qué no garantiza orden de ejecución entre hilos.
+
+yield() únicamente sugiere al planificador que el hilo está dispuesto a ceder su uso de la CPU a otros hilos pero no lo garantiza. Para garantizar un orden hay que hacer uso del método setPriority(int p).
+
+6. ¿Qué hace el método interrupt() en un hilo?
+Indica cómo debería reaccionar un hilo bien programado cuando recibe una interrupción.
+
+El método interrupt() como su nombre indica interrumpe la acción del hilo excepto si está bloqueado mediante los métodos wait(), sleep() o join(). Un hilo bien programado debería quedar indefinidamente en pausa.
+
+7. ¿Qué significa que un método sea synchronized?
+Indica cómo afecta a la ejecución cuando varios hilos intentan acceder al mismo recurso.
+
+Cuando un método es syncronized se evita que varios hilos accedan a él al mismo tiempo. El resto de hilos esperan en cola. Es decir, si varios hilos intentan acceder al mismo recurso pero este está tras un método syncronized lo harán uno por uno en orden para no "pisarse" unos a otros y evitar así datos corruptos.
+
+8. Explica la diferencia entre sleep() e interrupt().
+Indica qué ocurre cuando interrumpimos un hilo que está durmiendo.
+
+sleep() pausa la ejecución de un hilo durante un número específico de milisegundos que se le haya asignado, mientras que interrupt() detiene por completo la acción de un hilo.
+Si intentamos interrumpir un hilo que está durmiendo ocurrirá un innterruptException evitando que se pueda llevar a cabo dicha acción.
+
+9. Dado el siguiente código, indica si produce o no una condición de carrera y por qué:
+
+class Contador {
+    public int valor = 0;
+}
+
+Contador c = new Contador();
+
+Thread t1 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+Thread t2 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+
+t1.start();
+t2.start();
+
+Sí, se produce una condición de carrera porque ambos hilos acceden a la variable "valor" para leerla y posteriormente modificarla sin ningún tipo de mecanismo de coordinación lo que puede provocar que ambos accedan al mismo tiempo y los datos de la variable se corrompan.
+
+10. Describe qué es la prioridad de un hilo (setPriority()) y cómo afecta realmente a la ejecución.
+
+¿Es una garantía de orden? ¿Por qué puede comportarse de forma diferente según el sistema operativo?
+
+setPriority() asigna una prioridad de hilos pero no está garantizada y puede variar según el sistema operativo (esto último no se a que se debe :C)
