@@ -1,0 +1,35 @@
+package Nuevo;
+
+import java.util.concurrent.ThreadLocalRandom; // esto es un generador de numeros aleatorios en entornos concurrentes(Multihilo)
+
+public class ModuloTrabajo extends Thread {
+    private final String nombre;
+
+    public ModuloTrabajo(String nombre) {
+        super(nombre);
+        this.nombre = nombre;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Módulo " + nombre + " iniciado. ID: " + getId());
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Módulo " + nombre + " – iteración " + i);
+            if (i == 3) {
+                Thread.yield();//para pausar la ejecucion y ceder a la CPU otro hilo para ejecutarse
+            }
+            try {
+                int sleepMs = ThreadLocalRandom.current().nextInt(300, 801);// importante para tener un sleep aleatorio
+                Thread.sleep(sleepMs);
+            } catch (InterruptedException e) {
+                System.out.println("Módulo " + nombre + " interrumpido durante la ejecución");
+                return;
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "MóduloTrabajo{nombre='" + nombre + "', id=" + getId() + ", prioridad=" + getPriority() + "}";
+    }
+}
