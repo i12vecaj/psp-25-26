@@ -1,0 +1,118 @@
+1. Explica la diferencia entre los métodos start() y run() en un hilo.
+Pon un ejemplo breve donde se vea la diferencia.
+
+con el metodo run() ejecuta el codigo que el mismo tiene, haciendolo menos util a la hora de ejecutar varios hilos con distintas funciones
+y el metodo start() es el que llama al metodo run() para iniciar el proceso de los hilos
+
+Ejemplo de run(), en este solo se puede crear un hilo haciendo que sea menos utilizable en proyectos reales
+
+public class HiloSimple1 extends Thread {
+	private int id;
+	private int iter;
+	
+	public HiloSimple1 (int id, int iter)
+	{
+		this.id = id;
+		this.iter = iter;
+	}
+	
+	public void run()
+	{
+		for (int i = 0; i < iter; i++)
+		{
+			System.out.println("Iteración " + i + " dentro del hilo " + id);
+			try 
+			{
+				Thread.sleep(1000);
+			} 
+			catch (InterruptedException e) 
+			{
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println("El hilo " + id + " ha terminado su ejecución");
+	}
+}
+
+ejemplo de Start()
+
+seria añadiendo el metodo run() anterior y llamando al hilo de esta manera = Hilo hilo1 = new Hilo(1,23);
+									     hilo1.start();
+
+
+2. ¿Qué es una condición de carrera?
+Describe qué la provoca y menciona una técnica para evitarla.
+
+
+3. ¿Qué es el modelo Productor–Consumidor?
+Indica qué problema resuelve y en qué casos se utiliza.
+
+es un tipo de comunicacion en el que unos hilos trabajan generando información mientras que otro trabajan 
+consumen(utilizan) esa información, se comunican mediante un buffer
+
+4. Observa el siguiente código y responde:
+
+Thread t = new Thread(() -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println("A");
+    }
+});
+
+t.start();
+
+System.out.println(t.isAlive());
+
+inicia el hilo con un bucle simple que imprime 5 veces la letra A
+luego esta el metodo start() que le da inicio al hilo anterior mencionado
+y por ultimo sale por pantalla el metodo isAlive() que devuelve true si el metodo sigue funcionando y no a muerto
+
+a) ¿Qué puede imprimir isAlive()? este metodo puede imprimir true si el hilo aun sigue funcionando y no a muerto, si
+se ha quedado colgado por el camino imprime un false
+
+b) ¿Por qué el resultado puede variar de una ejecución a otra? porque hay veces que el tiempo de espera puede ser muy largo 
+o no le quedan recursos que consumir y queda muerto
+
+5. ¿Para qué sirve el método yield()? 
+sugerir un hilo para ceder sus recursos de la cpu a otros
+
+Explica por qué no garantiza orden de ejecución entre hilos. 
+porque es una sugerencia no una orden
+
+
+6. ¿Qué hace el método interrupt() en un hilo?
+Indica cómo debería reaccionar un hilo bien programado cuando recibe una interrupción.
+envia la señal de interrupcion a un hilo
+
+7. ¿Qué significa que un método sea synchronized?
+Indica cómo afecta a la ejecución cuando varios hilos intentan acceder al mismo recurso.
+que los hilos entran en cola a una seccion critica del codigo, permitiendo que no haya problemas a la hora de modificar
+que si todos los hilos entran a la vez puede haber conflictos y robo de recursos dejando hilos sin funcionar correctamente
+
+8. Explica la diferencia entre sleep() e interrupt().
+Indica qué ocurre cuando interrumpimos un hilo que está durmiendo.
+con sleep() paramos el hilo mientrar que con interrupt() lo interrumpimos completamente
+si intentamos interrumpir un hilo que esta durmiendo va a saltar un InterruptException
+
+9. Dado el siguiente código, indica si produce o no una condición de carrera y por qué:
+
+class Contador {
+    public int valor = 0;
+}
+
+Contador c = new Contador();
+
+Thread t1 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+Thread t2 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+
+t1.start();
+t2.start();
+
+si la produce porque el hilo no tiene marcado unos segundos de espera, lo mas probable es que cuando inicies los hilos
+el contador ya este en 1000
+
+10. Describe qué es la prioridad de un hilo (setPriority()) y cómo afecta realmente a la ejecución.
+los hilos tienen una prioridad del 1 al 10 y con setPriority() podemos modificarla
+
+¿Es una garantía de orden? ¿Por qué puede comportarse de forma diferente según el sistema operativo?
+no es una garantia de orden porque el sistema operativo no tiene porque hacer caso
