@@ -1,0 +1,79 @@
+1. Explica la diferencia entre los métodos start() y run() en un hilo.
+Pon un ejemplo breve donde se vea la diferencia.
+la diferencia está en que el metodo starr() ejecuta el hilo desde una clase que controla dicho hilo,
+y run() ejecuta la funcion o la tarea del hilo(o lo inicia si es en la misma clase)
+
+2. ¿Qué es una condición de carrera?
+Describe qué la provoca y menciona una técnica para evitarla.
+cuando varios procesos compiten por acceder al mismo recursor y se acaba bloqueando,
+para evitarlo seria una buena practica usar metodos con 'Syncronized'
+
+3. ¿Qué es el modelo Productor–Consumidor?
+Indica qué problema resuelve y en qué casos se utiliza.
+es una metodologia que crea y consume sus mismos recursos con la colaboracion de un productor, un cosumidor y un buffer,
+que controla el acceso de cada hilo mediante sincronizacion y suspendiendolos cuando es necesario para evitar procesos sin fin alguno
+resolviendo el problema de la condicion de carrera y utilizado en: servidores web, bases de datos, etc.
+
+4. Observa el siguiente código y responde:
+
+Thread t = new Thread(() -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println("A");
+    }
+});
+
+t.start();
+
+System.out.println(t.isAlive());
+
+a) ¿Qué puede imprimir isAlive()?
+un boleano diciendo si esta en ejecucion o no
+b) ¿Por qué el resultado puede variar de una ejecución a otra?
+porque puede estar en estado de suspension y puede devolver que no este activo
+
+5. ¿Para qué sirve el método yield()?
+Explica por qué no garantiza orden de ejecución entre hilos.
+sirve para ceder el recurso a otro proceso,
+no lo garantiza porque solo avisa de que cede el paso para que se ejecute otro hilo, no hace que el hilo en si se ejecute
+
+
+6. ¿Qué hace el método interrupt() en un hilo?
+Indica cómo debería reaccionar un hilo bien programado cuando recibe una interrupción.
+interrumpe un hilo que este suspendido o bloqueado pero no lo detiene del todo, solo que si esta en estado de suspension le da una excepcion
+deberia reaccionar de manera que asume la excepcion para deje de estar en estado de suspension
+
+7. ¿Qué significa que un método sea synchronized?
+Indica cómo afecta a la ejecución cuando varios hilos intentan acceder al mismo recurso.
+es un metodo para controlar el acceso de un recurso compartido para que no halla errores y se bloque el recurso,
+afecta de mamera que cuando un hilo accede a un recurso, ese recurso de cierra para los demas hilos y no pueden acceder a el hasta que el hilo actual lo libere
+
+8. Explica la diferencia entre sleep() e interrupt().
+Indica qué ocurre cuando interrumpimos un hilo que está durmiendo.
+la diferencia esta en que slee() suspende el hilo durante x tiempo mientras que interrupt() lo interrumpe cuando esta suspendido(dormido)
+interrupe el estado de suspension para que ejcute su tarea correspondiente
+
+9. Dado el siguiente código, indica si produce o no una condición de carrera y por qué:
+
+class Contador {
+    public int valor = 0;
+}
+
+Contador c = new Contador();
+
+Thread t1 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+Thread t2 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+
+t1.start();
+t2.start();
+
+si produce una condicion de carrera porque estan accediendo a la vez a la variable valor, pudiendo asi perder valores durante algunas ejecuciones,
+porque no hacen uso de ningun metodo de control de acceso sincronizado como 'synchronized'
+
+10. Describe qué es la prioridad de un hilo (setPriority()) y cómo afecta realmente a la ejecución.
+sirve para otorgrr un cierto nivel(1-10) prioridad a un hilo para darle mas tiempo de cpu(dependiendo del SO),
+afecta de manera que al otorgarle mas recursos del SO mejora al tiempo de ejecucion del hilo y la eficiencia de la ejecucion de su tarea correspondiente
+
+¿Es una garantía de orden? ¿Por qué puede comportarse de forma diferente según el sistema operativo?
+no garantiza el orden, solo garantiza que un hilo obtenga mas tiempo de uso de la cpu,
+puede comportarse diferente porque el SO dictamina que procesos por encima del hilo en ejecucion pueden tener una prioridad mayor que este mismo,
+por ejemplo los propios procesos del SO
