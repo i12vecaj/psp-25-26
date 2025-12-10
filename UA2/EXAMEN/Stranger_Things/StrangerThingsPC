@@ -1,0 +1,14 @@
+package Nuevo;
+
+public class StrangerThingsPC {
+    public static void main(String[] args) {
+        BufferEventos buffer = new BufferEventos(5);
+        int totalEventos = 20;
+
+        Productor eleven = new Productor(buffer, totalEventos);
+        Consumidor laboratorio = new Consumidor(buffer, totalEventos);
+
+        eleven.start(); // Como Productor
+        laboratorio.start(); // Como Consumidor
+    }
+}
