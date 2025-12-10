@@ -15,3 +15,25 @@ Desarrollar un servidor TCP que gestione múltiples clientes simultáneamente me
 - Documentación breve en README.
 
 ### 📅 Fecha de entrega: 2025
+
+# Resolución del issue 2
+
+## DESCRIPCIÓN
+
+Este Proyecto implementa un servidor TCP con la capacidad de gestionar múltiples clientes mediante el uso de hilos, permitiendo conexiones concurrentes, ya que cada cliente se conecta por un hilo independiente.
+
+## ESTRUCTURA
+
+/multihilo
+ ├── ClienteSimple
+ ├── ProcesadorDeClientes
+ └── ServidorMultihilo
+
+ ## EJECUCIÓN
+
+ Inicio el servidor con Java ServidorMultihilo. Posteriormente ya puedo conectarme como cliente mediante Java ClienteSimple
+
+## Capturas
+
+<img width="624" height="276" alt="image" src="https://github.com/user-attachments/assets/90c1aad8-45ab-4f5c-b1a2-368a8f4f4f64" />
+
