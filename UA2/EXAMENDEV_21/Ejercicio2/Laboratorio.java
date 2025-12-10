@@ -101,7 +101,6 @@ class BufferCompartido {
     }
 
     public synchronized Evento consumirEvento(String nombreConsumidor) {
-        // Si el buffer está vacío, el consumidor debe esperar
         while (eventos.isEmpty()) {
             try {
                 System.out.println("[" + nombreConsumidor + "] Buffer vacío. Esperando eventos...");
