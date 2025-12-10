@@ -1,0 +1,136 @@
+1. Explica la diferencia entre los métodos start() y run() en un hilo. Pues uno es secuencial y el otro recurrente.
+Pon un ejemplo breve donde se vea la diferencia.
+
+Ejemplo start():
+public class LanzaHilosSimple1 {
+	public static void main (String[] args)
+	{
+		HiloSimple1 hilo1 = new HiloSimple1(1, 10);
+		HiloSimple1 hilo2 = new HiloSimple1(2, 4);
+		HiloSimple1 hilo3 = new HiloSimple1(3, 5);
+		
+		// Se lanzan los hilos
+		hilo1.start();
+		hilo2.start();
+		hilo3.start();
+	}
+}
+
+
+public class HiloSimple2 implements Runnable {
+	private int id;
+	private int iter;
+	
+	public HiloSimple2 (int id, int iter)
+	{
+		this.id = id;
+		this.iter = iter;
+	}
+
+Ejemplo run():
+	public void run()
+	{
+		for (int i = 0; i < iter; i++)
+		{
+			System.out.println("Iteración " + i + " dentro del hilo " + id);
+			try 
+			{
+				Thread.sleep(1000);
+			} 
+			catch (InterruptedException e) 
+			{
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println("El hilo " + id + " ha terminado su ejecución");
+	}
+}
+
+
+2. ¿Qué es una condición de carrera?
+cuando dos o más hilos acceden al mismo tiempo y modifican el resultado por el orden que se ejecutan.
+Describe qué la provoca y menciona una técnica para evitarla.
+Provoca varias alteraciones internas.
+Hay varias formas entre ellas, usar synchronized.
+
+3. ¿Qué es el modelo Productor–Consumidor?
+Es una arquitectura parecida a la del cliente -servidor.
+Los productores generan datos y los colocan el buffer, y los consumidores toman esos datos y lo procesan
+Indica qué problema resuelve y en qué casos se utiliza.
+Evita bloqueos y condiciones de carrera cuando muchos hilos producen y consumen elementos del buffer compartido.
+
+4. Observa el siguiente código y responde:
+
+Thread t = new Thread(() -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println("A");
+    }
+});
+
+t.start();
+
+System.out.println(t.isAlive());
+
+a) ¿Qué puede imprimir isAlive()? 
+puede imprimir true o false
+b) ¿Por qué el resultado puede variar de una ejecución a otra?
+depende del momento exacto
+Si el hilo ya empezó pero no ha terminado entonces es true
+Si terminó antes de la llamada entonces es false
+La planificación de hilos no está garantizada, por eso el resultado cambia.
+
+5. ¿Para qué sirve el método yield()?yield() sirve para ceder voluntariamente la CPU para permitir que otros hilos se ejecuten.
+Por qué NO garantiza orden
+Explica por qué no garantiza orden de ejecución entre hilos.
+...
+
+
+6. ¿Qué hace el método interrupt() en un hilo? Interrumpe el hilo, lo marca el hilo como interrupido
+Indica cómo debería reaccionar un hilo bien programado cuando recibe una interrupción.
+Debe:
+Lo revisaría de vez en cuando Thread.interrupted(), y salir limpiamente si es interrumpido.
+Y dependiendo de si está en sleep()/wait()/join(), capturar InterruptedException y hacer;
+limpiar recursos
+terminar la ejecución
+
+7. ¿Qué significa que un método sea synchronized? Que solo un hilo a la vez puede ejecutar ese método sobre el mismo objeto (o clase si es estático).
+Indica cómo afecta a la ejecución cuando varios hilos intentan acceder al mismo recurso. Tienen dos procesos: efecto en ejecución y evita condiciones de carrera bloqueando el acceso simultáneo al recurso compartido.
+
+8. Explica la diferencia entre sleep() e interrupt(). sleep() detiene el hilo por un tiempo, e interrupt() que debe detener o cambiar su ejecución.
+Indica qué ocurre cuando interrumpimos un hilo que está durmiendo.Se puede lanzar InterruptedException, el hilo despierta inmediatamente.
+
+
+9. Dado el siguiente código, indica si produce o no una condición de carrera y por qué:
+
+class Contador {
+    public int valor = 0;
+}
+
+Contador c = new Contador();
+
+Thread t1 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+Thread t2 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+
+t1.start();
+t2.start();
+
+Sí, porque c.valor++ no es atómico: se compone de 3 pasos internos:
+
+1)Leer valor
+
+2)Incrementar
+
+3)Escribir
+
+
+Si dos hilos lo hacen a la vez, varias operaciones se pisan y el resultado al final no será de 2000.
+
+10. Describe qué es la prioridad de un hilo (setPriority()) y cómo afecta realmente a la ejecución.
+Es una pista para el planificador del sistema operativo: hilos con más prioridad pueden obtener más tiempo de CPU.El sistema operativo puede ignorar o reinterpretar las prioridades.
+¿Es una garantía de orden? No. ¿Por qué puede comportarse de forma diferente según el sistema operativo?
+Porque, algunos respetan más las prioridades, otros menos.
+
+
+
+
