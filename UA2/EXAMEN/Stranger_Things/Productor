@@ -1,0 +1,33 @@
+package Nuevo;
+
+class Productor extends Thread {
+    private final BufferEventos buffer;
+    private final int cantidadEventos;
+    private final String[] posiblesEventos = {
+        "Demogorgon detectado",
+        "Portal inestable",
+        "Señal psíquica de Vecna",
+        "Actividad del Upside Down",
+        "Ruptura dimensional menor"
+    };
+
+    public Productor(BufferEventos buffer, int cantidadEventos) {
+        this.buffer = buffer;
+        this.cantidadEventos = cantidadEventos;
+    }
+
+    @Override
+    public void run() {
+        try {
+            for (int i = 0; i < cantidadEventos; i++) {
+                String evento = posiblesEventos[(int)(Math.random() * posiblesEventos.length)];
+                buffer.producir(evento);
+                Thread.sleep(300); // Simula tiempo entre portales y utilizo el bucle for para ello
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+//
