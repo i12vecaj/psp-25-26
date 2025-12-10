@@ -1,0 +1,82 @@
+1. Explica la diferencia entre los métodos start() y run() en un hilo.
+Pon un ejemplo breve donde se vea la diferencia.
+
+-start cuando se ejecuta el hilo con start se hace una programacion concurrente mientras que si utilizamos el metodo run para ejecutar el hilo se haria una programación secuencial
+
+
+2. ¿Qué es una condición de carrera?
+Describe qué la provoca y menciona una técnica para evitarla.
+La condición de carrera la que provoca es que varios hilos entren a la vez a la misma parte del codigo una tecnica para evitarla es poniendo el metodo synchronized.
+
+
+
+3. ¿Qué es el modelo Productor–Consumidor?
+Indica qué problema resuelve y en qué casos se utiliza.
+
+el modelo productor consumidor lo que hace es que el productor consume datos si el buffer no esta lleno y el consumidor consume los datos del productor si el buffer no esta vacio
+Soluciona que que el productor no produzca cuando el buffer esta lleno, que el consumidor no consuma cunado el buffer esta vacio y combina los dos hilos sin condición de carrera
+
+
+4. Observa el siguiente código y responde:
+
+Thread t = new Thread(() -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println("A");
+    }
+});
+
+t.start();
+
+System.out.println(t.isAlive());
+
+a) ¿Qué puede imprimir isAlive()?
+Dice si el hilo si el hilo se ha iniciado y si todavia no ha terminado de ejecutarse
+b) ¿Por qué el resultado puede variar de una ejecución a otra?
+Porque con la programación secuencial el metodo run no se hace de la forma optima mientras que la programación concurrente metodo start si se hace de la forma optima
+
+5. ¿Para qué sirve el método yield()?
+Explica por qué no garantiza orden de ejecución entre hilos.
+
+lo que hace es ceder el turno del hilo no se puede garantizar la ejecución entre hilos porque la programación concurrente no hay un ordén fijo no como en la programación secuencial
+
+
+6. ¿Qué hace el método interrupt() en un hilo?
+Indica cómo debería reaccionar un hilo bien programado cuando recibe una interrupción.
+
+Lo que hace es interrunpir el hilo que se esta ejecutando. lo que haria un hilo bien programado es pararse para que cuando otro hilo lo llame pueda seguir con su ejecución
+
+
+7. ¿Qué significa que un método sea synchronized?
+Indica cómo afecta a la ejecución cuando varios hilos intentan acceder al mismo recurso.
+
+El metodo synchronized lo que hace es que solo entre un hilo a la vez haciendo que los otros se esperen a que termine para poder entrar el siguiente.
+Cuando varios hilos quieren entrar al mismo programa lo que hace es que entra uno y los demas esperan para entrar.
+
+
+8. Explica la diferencia entre sleep() e interrupt().
+Indica qué ocurre cuando interrumpimos un hilo que está durmiendo.
+
+sleep lo que hace es dormir al hilo hasta que otro lo llame y el metodo interrupt lo que hace es interrunpir el hilo directamente.
+
+
+9. Dado el siguiente código, indica si produce o no una condición de carrera y por qué:
+
+class Contador {
+    public int valor = 0;
+}
+
+Contador c = new Contador();
+
+Thread t1 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+Thread t2 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+
+t1.start();
+t2.start();
+
+no se produce ninguna condición de carrera ya que cada hilo tiene su propio codigo en su creación se produciria si se crea un función y los dos fueran a esa función sin el metodo synchronized
+
+10. Describe qué es la prioridad de un hilo (setPriority()) y cómo afecta realmente a la ejecución.
+¿Es una garantía de orden? ¿Por qué puede comportarse de forma diferente según el sistema operativo?
+
+La prioridad de un hilo va desde el 1 hasta el 10 y se puede modificar con el metodo setPriority el cual da mayor prioridad pero no significa que el orden sea ese.
+Porque si el Sistema Operativo es moderno lo que hace es evitar que el hilo tenga todo la priorida de la CPU
