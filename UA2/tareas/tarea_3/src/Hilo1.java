@@ -22,7 +22,7 @@ public class Hilo1 extends Thread {
                 caract = fr.read();
                 contador++;
             }
-            t_comienzo, t_fin;
+
             t_comienzo = System.currentTimeMillis();
             t_fin = System.currentTimeMillis();
             t_total = t_fin - t_comienzo;
