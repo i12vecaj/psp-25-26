@@ -1,0 +1,80 @@
+1. Explica la diferencia entre los métodos start() y run() en un hilo.
+Pon un ejemplo breve donde se vea la diferencia.
+
+	Al ejecutar el método start() se carga e inicializa el contenido dentro del hilo donde esté situado, pero ejecuta el run() en un hilo distinto.
+	El método run() ejecuta el contenido dentro del hilo actual sin crear otro hilo aparte de ejecución.
+
+2. ¿Qué es una condición de carrera?
+Describe qué la provoca y menciona una técnica para evitarla.
+
+	Es un problema de concurrencia en el código donde el resultado depende del orden impredecible de ejecución, donde 2 o más hilos o procesos intentan ejecutar a la vez una misma 	función.
+	Para evitarlo se puede nombrar como synchronized dicha función.
+
+3. ¿Qué es el modelo Productor–Consumidor?
+Indica qué problema resuelve y en qué casos se utiliza.
+
+		es un sistema donde el productor genera datos los cuales guarda en una cola y el consumidor los recoge de dicha para procesarlos. El principal problema que tiene esto es 	que si no hay ningún dato guardado en esa cola, el consumidor leerá -, habiendo una coordinación pésima.
+
+4. Observa el siguiente código y responde:
+
+Thread t = new Thread(() -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println("A");
+    }
+});
+
+t.start();
+
+System.out.println(t.isAlive());
+
+a) ¿Qué puede imprimir isAlive()?
+
+	Devolverá un valor True o False, dependiendo de si el hilo sigue o no en marcha. En este caso imprimirá 5 veces True.
+
+b) ¿Por qué el resultado puede variar de una ejecución a otra?
+
+	Depende de si el hilo ha terminado de trabajar, si ha acabado ya será False el isAlive().
+
+5. ¿Para qué sirve el método yield()?
+Explica por qué no garantiza orden de ejecución entre hilos.
+
+	Es un método estático para dar paso de un hilo a otro. No garantiza el orden de ejecución porque este método solo cede el paso no lo ejecuta, si el sistema no determina cambiar de 	hilo, se quedará tal cuál está.
+
+6. ¿Qué hace el método interrupt() en un hilo?
+Indica cómo debería reaccionar un hilo bien programado cuando recibe una interrupción.
+
+	Interrumpe un hilo que esté en espera, dormido o bloqueado. En vez de detenerse completamente, lanza una excepción (InterrumpedException) de (sleep, wait, etc) dependiendo de en 	que estado se encuentre este hilo.
+
+7. ¿Qué significa que un método sea synchronized?
+Indica cómo afecta a la ejecución cuando varios hilos intentan acceder al mismo recurso.
+
+	Que el sistema adquiere el lock del objeto. Este se reparte de tal manera que solo un hilo puede tenerlo para poder acceder al método synchronized, de mientras el resto de hilos 	que intenten acceder estarán en modo BLOCKED esperando a recibir el lock del método. 
+
+8. Explica la diferencia entre sleep() e interrupt().
+Indica qué ocurre cuando interrumpimos un hilo que está durmiendo.
+
+	El método sleep() pausa un proceso un tiempo determinado que nosotros le pongamos y luego lo vuelve a poner en marcha. En cambio el método interrump() para por completo el proceso 	cortando todo.
+
+9. Dado el siguiente código, indica si produce o no una condición de carrera y por qué:
+
+class Contador {
+    public int valor = 0;
+}
+
+Contador c = new Contador();
+
+Thread t1 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+Thread t2 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+
+t1.start();
+t2.start();
+
+	Sí, se produciría una condición de carrera puesto que ambos hilos t1 y t2 intentan acceder al contador de forma simultánea y al no haber synchronized no hay nada que controle esta 	entrada.
+
+10. Describe qué es la prioridad de un hilo (setPriority()) y cómo afecta realmente a la ejecución.
+
+	El método setPriority() establece una sugerencia de orden al planificador con la que nosotros queremos que se ejecuten los hilos, el orden de los mismos. Pero es solo una sugerencia, no asegura que se vayan a ejecutar con ese orden si el programa no lo quiere.
+
+¿Es una garantía de orden? ¿Por qué puede comportarse de forma diferente según el sistema operativo?
+
+	
