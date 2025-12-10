@@ -26,7 +26,7 @@ rest-api/ (Directorio raíz del proyecto)
 │       └── java/
 │           └── com/
 │               └── example/ (Paquete correspondiente al groupId)
-│                   ├── Main.java         (Clase principal)
+│                   ├── PSP_UA3_Ejemplo_5_urlCon_2.java         (Clase principal)
 │                   ├── DataStore.java    (Clase para almacenar datos)
 │                   └── Person.java       (Clase modelo)
 ├── target/ (Generado automáticamente por Maven al compilar)
@@ -36,7 +36,7 @@ rest-api/ (Directorio raíz del proyecto)
 
 Creo el Maven
 
-Creo el Main
+Creo el PSP_UA3_Ejemplo_5_urlCon_2
 
 
 Out of Time :(
