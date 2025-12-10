@@ -1,0 +1,38 @@
+package Nuevo;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+class BufferEventos {
+    private final Queue<String> buffer = new LinkedList<>(); 
+    private final int limite;
+
+    public BufferEventos(int limite) {
+        this.limite = limite;
+    }
+
+    public synchronized void producir(String evento) throws InterruptedException {
+        while (buffer.size() == limite) {
+            System.out.println("[BUFFER LLENO] Eleven espera, no puede cerrar más portales…");
+            wait();
+        }
+
+        buffer.add(evento);
+        System.out.println("Eleven genera un evento: " + evento);
+
+        notifyAll(); // Notifica que hay algo para consumir
+    }
+
+    public synchronized String consumir() throws InterruptedException {
+        while (buffer.isEmpty()) {
+            System.out.println("[BUFFER VACÍO] El Laboratorio espera, no hay eventos…");
+            wait();
+        }
+
+        String evento = buffer.poll();
+        System.out.println("Laboratorio procesa evento: " + evento);
+
+        notifyAll(); // Notifica que puede seguir produciendo lo uso tambien porque lo pedia el ejercicio
+        return evento;
+    }
+}
