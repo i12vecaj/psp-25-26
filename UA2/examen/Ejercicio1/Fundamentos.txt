@@ -1,0 +1,81 @@
+1. Explica la diferencia entre los métodos start() y run() en un hilo.
+Pon un ejemplo breve donde se vea la diferencia.
+
+La diferencia principal es que cuando ejecutas un run() estas provocando una programacion secuencial, porque esta indicando que el hilo que vaya a entrar entre y termine justo en ese momento, y cuando ejecutas un start() lo que haces es lanzar todos los hilos par que se ejecuten y sería una programación concurrente.
+
+Si quiero hacer 3 hilos y que cada uno imprima algo por pantalla(por ejemplo:h) y además que se ejecute 2 veces cada uno, cuando lo hago con run(), lo que va a aparecer por pantalla es: hilo1: h hilo1: h hilo2: h hilo2: h.... y asi con el hilo3, entonces aqui se ve que es una programación secuencial, ya que cada hilo entra y termina en su momento
+
+Y con el ejemplo de antes, si lo hacemos con start() se veria asi: hilo1: h hilo2: h hilo1: h hilo3: h...., se vería asi porque lanzamos los 3 hilos a la vez y se van a ir ejecutando según la prioridad y recursos que tengan
+
+
+2. ¿Qué es una condición de carrera?
+Describe qué la provoca y menciona una técnica para evitarla.
+
+La condición de carrera es cuando varias hilos se pelean por los recursos, lo provoca cuando no hay un control de qué hilo se ejecuta.
+
+La técnica para evitar esta condición de carrera sería colocar synchronized en los métodos los cuales van a modificar algun producto que van a modificar todos
+
+3. ¿Qué es el modelo Productor–Consumidor?
+Indica qué problema resuelve y en qué casos se utiliza.
+
+Es un modelo el cual tenemos por un lado un productor que es el que crea el producto, y por otro lado esta un consumidor, es el que va a recoger ese producto creado por el productor y lo va a consumir, entre estos dos conceptos, se encuentra el bufer, que es el que va a ayudar a conectar estas dos clases
+
+4. Observa el siguiente código y responde:
+
+Thread t = new Thread(() -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println("A");
+    }
+});
+
+t.start();
+
+System.out.println(t.isAlive());
+
+a) ¿Qué puede imprimir isAlive()?
+Imprime true, si se ha ejecutado o false, si no se ha ejecutado
+b) ¿Por qué el resultado puede variar de una ejecución a otra?
+
+5. ¿Para qué sirve el método yield()?
+Explica por qué no garantiza orden de ejecución entre hilos.
+
+El método yield(), lo que hace es ceder el turno a otro hilo, es decir le cede los recursos a otro hilo para que otro ejecute, no garantiza el orden ya que una vez cedido el turno, ya depende de la prioridad y depende de quien tenga esos recursos entra antes o no
+
+6. ¿Qué hace el método interrupt() en un hilo?
+Indica cómo debería reaccionar un hilo bien programado cuando recibe una interrupción.
+
+El metodo interrumpt(), lo que hace es interrumpir un hilo que esta dormido o en espera, y lo que hace es saltar con una excepcion, reaccionaría saltando con una excepción
+
+7. ¿Qué significa que un método sea synchronized?
+Indica cómo afecta a la ejecución cuando varios hilos intentan acceder al mismo recurso.
+
+Significa que cuando hay varios hilos lanzados, el metodo que lleve synschronized, indica que solo puede entrar un hilo y no permite que otro entre y robe ningún recurso, ni pueda modificar nada. Esto afecta de tal forma que si por ejemplo se quiere llevar la cuenta de algo, un hilo pueda modificar ese recurso, y cuando entre otro hilo el recurso que modifique sea el que ha actualizado anteriormente el otro hilo
+
+8. Explica la diferencia entre sleep() e interrupt().
+Indica qué ocurre cuando interrumpimos un hilo que está durmiendo.
+
+Por un lado, sleep(), lo que hace es dormir al hilo durante x tiempo, y cuando se pase ese tiempo el hilo podría seguir funcionando. Por otro lado, lo que hace interrupt() sería itnerrumpir un hilo que esta en espera como puede ser un sleep() o un wait()
+
+9. Dado el siguiente código, indica si produce o no una condición de carrera y por qué:
+
+class Contador {
+    public int valor = 0;
+}
+
+Contador c = new Contador();
+
+Thread t1 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+Thread t2 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+
+t1.start();
+t2.start();
+
+Sí se crearía una condición de carrera ya que los dos hilos creados utilizan la variable c, es decir los dos estan queriendo cambiar valores, y no hay ningún modo que regulen que un hilo lo cambie y lo que ha cambiado este modificado para el otro hilo que vaya a entrar. Entonces estan los dos cambiando un mismo recurso y llega un momento que los dos cambian los mismo sin ser modificador
+
+10. Describe qué es la prioridad de un hilo (setPriority()) y cómo afecta realmente a la ejecución.
+
+¿Es una garantía de orden? ¿Por qué puede comportarse de forma diferente según el sistema operativo?
+
+La prioridad en un hilo, es la forma de indicarle a ese hilo que necesita que se ejecute antes por orden de prioridad, afecta en la ejecución ya que cuando haces un setPriority()(sería para cambiar la prioridad del hilo) lo que provocas es que el sistema le de los recursos antes para que pueda ejecutarse antes. 
+
+Garantiza que se ejecute antes, se comporta diferente según el sistema operativo porque según uno u otro esta mejor optimizado y da unos recursos u otros para cada hilo
