@@ -1,0 +1,99 @@
+1. Explica la diferencia entre los métodos start() y run() en un hilo.
+Pon un ejemplo breve donde se vea la diferencia.
+
+- start() lo que hace es crear un nuevo hilo, mientras que run() lo que hace es correr ese hilo.
+- Ejemplo:
+
+Thread t = new Thread(() -> System.out.println("Hilo: " + Thread.currentThread().getName()));
+t.start(); // imprime: Hilo: Thread-0   (probablemente)
+t.run();   // imprime: Hilo: main       (se ejecuta en el hilo actual)
+
+2. ¿Qué es una condición de carrera?
+Describe qué la provoca y menciona una técnica para evitarla.
+
+
+-Situación en la que el resultado del programa depende del intercalado (orden) de operaciones entre hilos que acceden y modifican datos compartidos sin la sincronización adecuada.
+
+3. ¿Qué es el modelo Productor–Consumidor?
+Indica qué problema resuelve y en qué casos se utiliza.
+
+- Significado: Patrón donde uno o varios productores generan datos/elementos y uno o varios consumidores los procesan, normalmente comunicándose a través de un buffer o cola compartida.
+
+-Problema que resuelve: Desacopla la tasa de producción y consumo y coordina acceso a un buffer limitado (evita pérdidas o sobre-escrituras), gestionando bloqueos cuando el buffer está lleno o vacío.
+
+-Cuándo se usa: Procesamiento en background, sistemas de mensajería, logging asíncrono, workers pool. En Java se suele usar Blocking  que maneja bloqueo y señalización automáticamente.
+
+4. Observa el siguiente código y responde:
+
+Thread t = new Thread(() -> {
+    for (int i = 0; i < 5; i++) {
+        System.out.println("A");
+    }
+});
+
+t.start();
+
+System.out.println(t.isAlive());
+
+a) ¿Qué puede imprimir isAlive()?
+
+ Puede imprimir true o false.
+
+   
+b) ¿Por qué el resultado puede variar de una ejecución a otra?
+La ejecución concurrente y la planificación del Sistema operativo hacen que el resultado no sea determinista entre ejecuciones.
+
+
+5. ¿Para qué sirve el método yield()?
+Explica por qué no garantiza orden de ejecución entre hilos.
+
+ - Thread.yield() sugiere al programa que el hilo actual está dispuesto a ceder su turno a otros hilos del mismo (o mayor) prioridad.
+ - El comportamiento depende de la implementación y la plataforma, por eso no establece un orden entre hilos ni garantiza que otro hilo se ejecute.
+
+
+6. ¿Qué hace el método interrupt() en un hilo?
+Indica cómo debería reaccionar un hilo bien programado cuando recibe una interrupción.
+
+- Marca el hilo como interrumpido (flag de interrupción). Si el hilo está bloqueado en wait(), sleep() o join(), estas llamadas lanzan InterruptedException y el flag se limpia.
+-  Detectar la interrupción (capturar InterruptedException o comprobar Thread.currentThread().isInterrupted() / Thread.interrupted()), realizar limpieza necesaria y terminar de forma ordenada (o reenviar la interrupción si no puede detenerse). No ignorar silenciosamente la interrupción.
+
+7. ¿Qué significa que un método sea synchronized?
+Indica cómo afecta a la ejecución cuando varios hilos intentan acceder al mismo recurso.
+
+- Significado: El método adquiere  del objeto (si es instancia) o de la clase (si es static) antes de ejecutarse, solo un hilo puede acceder a la vez.
+- Cómo afecta con varios hilos: Si varios hilos intentan ejecutar métodos sincronizados que comparten el mismo, los demás hilos esperan hasta que sea liberado. Esto garantiza exclusión mutua pero puede causar contención y bloquear la concurrencia si se sincroniza en bloques demasiado grandes.
+
+8. Explica la diferencia entre sleep() e interrupt().
+Indica qué ocurre cuando interrumpimos un hilo que está durmiendo.
+
+- sleep(long): Pausa el hilo actual por el tiempo indicado (timed wait).
+- interrupt(): Señala la intención de interrumpir el hilo (marca flag). Si el hilo está en sleep, wait o join, se lanzará InterruptedException en ese hilo.
+- Cuando interrumpimos un hilo que está durmiendo sleep() termina y el hilo recibe un InterruptedException, el flag de interrupción se limpia al lanzarse la excepción. El hilo debe capturar la excepción y decidir terminar o continuar.
+
+9. Dado el siguiente código, indica si produce o no una condición de carrera y por qué:
+
+class Contador {
+    public int valor = 0;
+}
+
+Contador c = new Contador();
+
+Thread t1 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+Thread t2 = new Thread(() -> { for(int i = 0; i < 1000; i++) c.valor++; });
+
+t1.start();
+t2.start();
+
+- Sí, se produce.
+- Porque la operación c.valor++ no es atómica; implica leer valor, sumar 1 y escribirlo. 
+Si ambos hilos intercalan esas operaciones, algunas incrementos se pierden y el resultado final puede ser menor que 2000.
+
+
+10. Describe qué es la prioridad de un hilo (setPriority()) y cómo afecta realmente a la ejecución.
+
+¿Es una garantía de orden? ¿Por qué puede comportarse de forma diferente según el sistema operativo?
+
+- Indica la prioridad relativa del hilo al programa.
+- Puede influir en el orden en que el programa concede CPU (hilos de mayor prioridad suelen ser favorecidos), pero no es una garantía. 
+- No. No garantiza ejecución determinística ni orden estricto.
+- Puede comportarse de forma distinta entre plataformas porque el mapeo de prioridades sistema operativo varía.
