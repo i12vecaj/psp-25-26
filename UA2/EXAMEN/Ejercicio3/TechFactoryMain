@@ -1,0 +1,53 @@
+package Nuevo;
+
+public class TechFactoryMain {
+    public static void main(String[] args) throws InterruptedException {
+        ModuloTrabajo modA = new ModuloTrabajo("A");
+        ModuloTrabajo modB = new ModuloTrabajo("B");
+        ModuloTrabajo modC = new ModuloTrabajo("C");
+
+        // Le indico las prioridades
+        modA.setPriority(Thread.MAX_PRIORITY);    // alta
+        modB.setPriority(Thread.NORM_PRIORITY);   // media
+        modC.setPriority(Thread.MIN_PRIORITY);    // baja
+
+        // Para arrancar hilos
+        modA.start();
+        modB.start();
+        modC.start();
+
+        // Comprobación inicial de estado vivo
+        System.out.println("Estado vivo A: " + modA.isAlive());
+        System.out.println("Estado vivo B: " + modB.isAlive());
+        System.out.println("Estado vivo C: " + modC.isAlive());
+
+        // Para hacer la espera de 1.5 segundos y luego interrumpir B
+        Thread.sleep(1500);
+        System.out.println("Interrumpiendo Módulo B...");
+        modB.interrupt();
+
+        // Aqui lo que hago es esperar a que terminen y mostrar su estado tras finalizar, tambien para comprobar si estan en ejecución
+        modA.join();
+        System.out.println("Módulo A finalizado. Estado vivo: " + modA.isAlive());
+
+        modB.join();
+        System.out.println("Módulo B finalizado. Estado vivo: " + modB.isAlive());
+
+        modC.join();
+        System.out.println("Módulo C finalizado. Estado vivo: " + modC.isAlive());
+
+        // Y esto es solo para mostrar toString() de los módulos
+        System.out.println(modA);
+        System.out.println(modB);
+        System.out.println(modC);
+
+        /*
+         Observaciones (4-5 líneas):
+         - La prioridad sugiere al scheduler(es un planificador, en la maquina virtual de java[JVM]) qué hilos favorecer, pero no garantiza orden determinista.
+         - `yield()` pide ceder la CPU; puede permitir que otros hilos se ejecuten, aunque no siempre es visible.
+         - Si un hilo es interrumpido durante `sleep()`, se lanza InterruptedException y podemos finalizarlo.
+         - La planificación final depende tanto de la JVM como del sistema operativo, por eso los resultados varían.
+         - Y por último, no tarda mucho en procesarlo, incluso teniendo que interrumpirlo 1,5 segundos.
+        */
+    }
+}
