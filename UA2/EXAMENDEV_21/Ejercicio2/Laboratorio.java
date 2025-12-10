@@ -45,7 +45,6 @@ class Evento {
     private static final String[] TIPOS_EVENTOS = {
         "Demogorgon detectado",
         "Portal inestable",
-        "Mind Flayer cercano",
         "Anomalía en el Upside Down",
         "Energía dimensional elevada"
     };
@@ -85,7 +84,7 @@ class BufferCompartido {
     public synchronized void agregarEvento(Evento evento, String nombreProductor) {
         while (eventos.size() >= tamañoMaximo) {
             try {
-                System.out.println("⏳ [" + nombreProductor + "] Buffer lleno. Esperando espacio...");
+                System.out.println(" [" + nombreProductor + "] Buffer lleno. Esperando espacio...");
                 mostrarEstado();
                 wait();
             } catch (InterruptedException e) {
@@ -95,7 +94,7 @@ class BufferCompartido {
         }
 
         eventos.add(evento);
-        System.out.println("✨ [" + nombreProductor + "] Generó: " + evento);
+        System.out.println("[" + nombreProductor + "] Generó: " + evento);
         mostrarEstado();
         
         notifyAll();
@@ -105,7 +104,7 @@ class BufferCompartido {
         // Si el buffer está vacío, el consumidor debe esperar
         while (eventos.isEmpty()) {
             try {
-                System.out.println("⏳ [" + nombreConsumidor + "] Buffer vacío. Esperando eventos...");
+                System.out.println("[" + nombreConsumidor + "] Buffer vacío. Esperando eventos...");
                 mostrarEstado();
                 wait();
             } catch (InterruptedException e) {
@@ -116,7 +115,7 @@ class BufferCompartido {
         }
 
         Evento evento = eventos.remove(0);
-        System.out.println("🔬 [" + nombreConsumidor + "] Procesando: " + evento);
+        System.out.println("[" + nombreConsumidor + "] Procesando: " + evento);
         mostrarEstado();
         
         notifyAll();
@@ -124,7 +123,7 @@ class BufferCompartido {
     }
 
     private void mostrarEstado() {
-        System.out.println("📊 [Buffer] Eventos en buffer: " + eventos.size() + "/" + tamañoMaximo);
+        System.out.println("[Buffer] Eventos en buffer: " + eventos.size() + "/" + tamañoMaximo);
     }
 }
 
@@ -153,7 +152,7 @@ class Eleven extends Thread {
                 int espera = 100 + rnd.nextInt(400);
                 Thread.sleep(espera);
             }
-            System.out.println("\n✅ [Eleven] Todos los portales cerrados. Total: " + totalEventos);
+            System.out.println("\n [Eleven] Todos los portales cerrados. Total: " + totalEventos);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.err.println("[Eleven] Interrumpida durante la producción.");
@@ -187,10 +186,10 @@ class LaboratorioHawkins extends Thread {
                     Thread.sleep(procesamientoMs);
                     
                     eventosProcessados++;
-                    System.out.println("✅ [LaboratorioHawkins] Evento procesado en " + procesamientoMs + "ms. Total: " + eventosProcessados + "/" + totalEventos);
+                    System.out.println(" [LaboratorioHawkins] Evento procesado en " + procesamientoMs + "ms. Total: " + eventosProcessados + "/" + totalEventos);
                 }
             }
-            System.out.println("\n🎯 [LaboratorioHawkins] Todos los eventos analizados. Total: " + eventosProcessados);
+            System.out.println("\n [LaboratorioHawkins] Todos los eventos analizados. Total: " + eventosProcessados);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.err.println("[LaboratorioHawkins] Interrumpido durante el análisis.");
