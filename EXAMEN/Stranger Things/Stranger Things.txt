@@ -1,0 +1,34 @@
+Productor / Consumidor – “Stranger Things”
+
+En Hawkins, el Laboratorio está analizando criaturas del Upside Down.
+Para ello, debes implementar el patrón Productor/Consumidor:
+
+El Productor será Eleven, que usa sus poderes para cerrar portales que se abren aleatoriamente.
+
+Cada vez que cierra uno, genera un “evento” (por ejemplo: Demogorgon detectado, Portal inestable, etc.) y lo deposita en un tipoEvento compartido.
+
+El Consumidor será el Laboratorio de Hawkins, que recoge estos eventos del tipoEvento y los procesa.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Requisitos
+
+Crea un tipoEvento limitado (por ejemplo, de tamaño 5).
+
+Implementa las clases Productor y Consumidor, cada una como un hilo.
+
+Usa wait(), notify() o notifyAll() para gestionar:
+
+El productor espera si el tipoEvento está lleno.
+
+El consumidor espera si el tipoEvento está vacío.
+
+Muestra por pantalla los mensajes clave:
+
+Eleven genera un evento.
+El Laboratorio procesa un evento.
+Esperas por tipoEvento lleno/vacío.
+
+El programa debe finalizar después de producir y consumir un número determinado de eventos (por ejemplo, 20).
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
