@@ -18,7 +18,7 @@ Soluciona que que el productor no produzca cuando el buffer esta lleno, que el c
 
 
 4. Observa el siguiente código y responde:
-
+    
 Thread t = new Thread(() -> {
     for (int i = 0; i < 5; i++) {
         System.out.println("A");
