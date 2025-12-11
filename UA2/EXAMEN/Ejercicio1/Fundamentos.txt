@@ -1,3 +1,10 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Respuestas claras y ordenadas; buena comprensión general de la sincronización, condición de carrera y prioridad de hilos; explicación correcta del modelo Productor–Consumidor en lo esencial; identificación acertada del riesgo en el código de Contador.
+Áreas de mejora: start() vs run() explicado de forma imprecisa (start no “carga e inicializa el contenido dentro del hilo”; run no “crea otro hilo”); isAlive(): no imprime “5 veces True”; interrupt() no “para por completo el proceso”; falta explicar que interrupt marca el flag y puede despertar un hilo bloqueado; sleep() no “pone en marcha” un proceso sino que suspende el hilo actual; varias definiciones necesitan mayor precisión técnica; faltan ejemplos en algunas preguntas.
+Recomendaciones: Repasar la semántica real de start(), run(), sleep(), interrupt() y el ciclo de vida de un hilo; practicar ejemplos de isAlive() y estados; reforzar el concepto de interrupción cooperativa; aclarar cómo funciona yield() y por qué no garantiza orden; ajustar las explicaciones a terminología más rigurosa.
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
