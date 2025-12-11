@@ -1,3 +1,23 @@
+/**
+Feedback JD - 11/12/2025
+
+Fortalezas:
+- Buena comprensión general de start() vs run() y synchronized.
+- Identificación correcta de condiciones de carrera.
+- Reconocimiento conceptual de productor-consumidor y prioridades de hilos.
+
+Áreas de mejora:
+- Explicaciones de yield(), interrupt() y sleep() imprecisas.
+- Falta detalle en la aplicación práctica de wait()/notify() en productor-consumidor.
+- Prioridad de hilos explicada de manera parcial, sin relación clara con el SO.
+
+Recomendaciones:
+- Aclarar funcionamiento y diferencias de yield(), interrupt() y sleep().
+- Implementar coordinación real con wait()/notify() en productor-consumidor.
+- Mejorar precisión en el uso y efecto de setPriority() según el sistema operativo.
+**/
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
