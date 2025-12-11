@@ -1,3 +1,12 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Buen esfuerzo explicativo con tus palabras, tratando de tocar los conceptos clave; comprensión básica de synchronized, yield() y condición de carrera.
+Áreas de mejora: uso de wait()/notify() no del todo bien planteado; Productor–Consumidor descrito de forma confusa; interrupt() y sleep() mal interpretados.
+Recomendaciones: Revisar el ciclo real de un hilo y cómo funciona la concurrencia en Java; practicar ejemplos concretos de sincronización con wait/notify; estudiar el comportamiento real de interrupt(), sleep() e isAlive() para evitar confusiones.
+**/
+
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 El método run(), es para la concurrencia en secuencial
 El método start() es para con concurencia en paralelo
