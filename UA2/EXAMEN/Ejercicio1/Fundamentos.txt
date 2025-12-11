@@ -1,3 +1,10 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Respuestas completas y bien estructuradas; buena comprensión general de Productor–Consumidor e identificación correcta de condición de carrera; esfuerzo por razonar cada punto con tus palabras.
+Áreas de mejora: Varias definiciones son incorrectas o imprecisas (run() no ejecuta hilos secuenciales, interrupt() no detiene un hilo, synchronized no da “visibilidad al resto de hilos”, sleep vs interrupt incompleto); falta rigor técnico en conceptos de concurrencia; algunas explicaciones son demasiado narrativas y poco exactas.
+Recomendaciones: Reforzar la diferencia real entre start() y run(); revisar el funcionamiento de interrupt() y la correcta reacción de un hilo; estudiar visibilidad de memoria y exclusión mutua en synchronized; mejorar precisión técnica evitando metáforas confusas; entrenar con ejemplos de código que ilustren planificación, atomicidad y sincronización.
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
