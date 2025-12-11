@@ -1,3 +1,11 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Buen intento de explicación con tus palabras; comprensión básica de start()/run(), sleep(), interrupt() y prioridad de hilos; esfuerzo por razonar cada respuesta.
+Áreas de mejora: Uso incorrecto de conceptos clave (wait/notify como solución universal, prioridad 1–10 invertida, synchronized mal explicado); definiciones imprecisas y ejemplos poco técnicos; confusión importante en Productor–Consumidor y condición de carrera. La carpeta no se llama exactamente como se indica en el enunciado de la actividad.
+Recomendaciones: Reforzar fundamentos de concurrencia, practicar con pequeños ejemplos en Java, y ajustar la terminología técnica para evitar errores conceptuales.
+**/
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
