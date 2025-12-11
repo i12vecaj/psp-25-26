@@ -1,3 +1,10 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Respuestas claras y estructuradas; buena identificación de la condición de carrera; explicación correcta del modelo Productor–Consumidor en su forma básica; comprensión adecuada de synchronized y de la prioridad de hilos.
+Áreas de mejora: La explicación de start() vs run() es incorrecta (start no “asegura que no se inicien varios hilos a la vez”, run no ejecuta “varios hilos al mismo tiempo”); interrupt() está mal entendido (no detiene hilos permanentemente, solo marca el flag y puede despertar a un hilo bloqueado); falta completar varias respuestas (isAlive b; qué ocurre al interrumpir sleep); setPriority() no garantiza ejecución en orden ni que se “ejecute antes”; uso confuso de notify()/notifyAll() en el contexto de interrupciones.
+Recomendaciones: Revisar la semántica real de start(), run(), sleep(), interrupt() y los estados del hilo; profundizar en el patrón de interrupción y en cómo manejar correctamente InterruptedException; reforzar el concepto de planificación de hilos y atomicidad; completar siempre las respuestas con los matices técnicos esenciales.
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
