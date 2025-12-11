@@ -1,3 +1,11 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Respuestas claras en concurrencia básica; buena comprensión de condiciones de carrera e interrupciones; ejemplos adecuados y bien enfocados.
+Áreas de mejora: Explicación incorrecta de start()/run(); comparaciones imprecisas en el patrón Productor–Consumidor; algunas respuestas demasiado vagas o redundantes.
+Recomendaciones: Reforzar el concepto de creación real de hilos con start(), revisar la coordinación productor–consumidor, y ajustar las definiciones para que sean más precisas y técnicas.
+**/
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo. Pues uno es secuencial y el otro recurrente.
 Pon un ejemplo breve donde se vea la diferencia.
 
