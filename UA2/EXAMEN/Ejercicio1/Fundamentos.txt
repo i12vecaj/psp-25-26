@@ -1,3 +1,20 @@
+/** 
+Feedback JD - 11/12/2025
+
+Motivos:
+Demuestras comprensión sólida de los conceptos clave (start/run, condiciones de carrera, synchronized, sleep/interrupt, productor–consumidor). Las explicaciones son claras, correctamente orientadas y sin errores graves. Manejas bien ejemplos y justificas adecuadamente los comportamientos no deterministas.
+
+Puntos fuertes:
+Explicación muy precisa de interrupt() y sleep(); buena diferenciación start/run; uso correcto del término “no atómico” en valor++; descripción adecuada del planificador e isAlive().
+
+Puntos a mejorar:
+El ejemplo de Productor–Consumidor podría ser más conciso; la redacción en algún punto es algo redundante; faltaría mencionar explícitamente que interrupt() solo “solicita” detener, no obliga; podrías añadir matices sobre cuándo el SO ignora yield().
+
+Comentario final:
+Excelente nivel para examen Elena. Solo queda pulir detalles finos y compactar algunas explicaciones para máxima claridad. Estoy encantado con tu solución.
+
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
