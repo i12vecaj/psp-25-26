@@ -1,3 +1,10 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Explicación correcta y clara de start() vs run(); uso apropiado del ejemplo; buena definición de condición de carrera; descripción sólida del modelo Productor–Consumidor; respuestas más precisas y técnicas que en versiones anteriores.
+Áreas de mejora: Algunos conceptos aún necesitan precisión (interrupt() no “detiene” un hilo, solo marca el flag; sleep no se “detiene”, solo bloquea temporalmente; falta mencionar atomicidad y visibilidad en synchronized); la explicación sobre control de flujo en condiciones de carrera es algo dispersa; la respuesta de isAlive() es incompleta (faltó justificar en el apartado b). El archivo se llama "fundamentos.txt" no "Fundamentos.txt".
+Recomendaciones: Reforzar el comportamiento real de interrupt(), especialmente su flag y el patrón de interrupción; revisar la parte de sincronización y visibilidad de memoria; detallar mejor efectos de wait/notify/notifyAll; seguir apoyándote en ejemplos de código para afianzar conceptos.
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
