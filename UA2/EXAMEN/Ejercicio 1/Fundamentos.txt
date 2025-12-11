@@ -1,3 +1,11 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Buen esfuerzo explicando conceptos con tus palabras; respuestas ordenadas; aciertos claros en yield(), synchronized y condición de carrera; isAlive() razonado correctamente.
+Áreas de mejora: Diferencia start()/run() incorrecta; Productor–Consumidor explicado sin buffer limitado; wait/notify citado como solución indebida para condiciones de carrera; comprensión incompleta de interrupt(); varios ejemplos faltan o son poco técnicos.
+Recomendaciones: Repasar el ciclo real de start()/run(), estudiar interrupt() y estados del hilo, y practicar Productor–Consumidor con buffer y sincronización adecuada para consolidar concurrencia.
+**/
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
