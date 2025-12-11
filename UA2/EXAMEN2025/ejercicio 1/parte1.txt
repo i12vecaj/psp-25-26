@@ -1,3 +1,13 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Buen dominio general de los conceptos básicos de concurrencia; explicaciones claras en Productor–Consumidor, yield(), interrupt() y condición de carrera; estructura de respuestas cuidada y ejemplos razonados.
+Áreas de mejora: La explicación de start() vs run() es poco precisa y el ejemplo no muestra concurrencia real; definición de condición de carrera algo confusa; algunos matices técnicos incompletos (isAlive(), prioridad de hilos, comportamiento detallado de interrupt()); documentación con frases redundantes o poco técnicas.
+Recomendaciones: Añadir ejemplos de código que contrasten ejecución concurrente vs secuencial; depurar las definiciones usando terminología propia de concurrencia; reforzar conocimientos sobre planificación de hilos, atomicidad e interrupciones; ajustar el estilo hacia explicaciones más técnicas y menos narrativas. Formato de entrega carpeta y fichero mal establecidos.
+**/
+
+// Nota: 6.5 / 10
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
