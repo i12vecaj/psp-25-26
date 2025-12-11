@@ -1,3 +1,11 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Respuestas completas y con buena intención de describir cada concepto; identificación correcta de la condición de carrera; explicación razonable de synchronized; modelo Productor–Consumidor descrito con sus elementos clave.
+Áreas de mejora: start() vs run() explicado de forma incorrecta (start no “ejecuta desde una clase que controla el hilo” y run no “lo inicia”); condición de carrera no “bloquea” procesos por sí misma; el modelo Productor–Consumidor no evita condiciones de carrera por sí solo, depende del uso de wait/notify; isAlive() no depende de “estar suspendido”; yield() no “cede el recurso”; interrupt() no “interrumpe para ejecutar la tarea correspondiente”; sleep() e interrupt() descritos de forma imprecisa; prioridad de hilos: no se garantiza mayor tiempo de CPU ni mejora de eficiencia. La organización del repo es un poco desastrosa en tu rama: no cumple lo que comentamos para el examen.
+Recomendaciones: Revisar el ciclo de vida de un hilo, especialmente start(), run(), sleep(), interrupt() y estados; reforzar la definición de condición de carrera y su prevención real; estudiar el comportamiento de yield() y la planificación del sistema; revisar cómo funciona la prioridad en distintas JVM; usar ejemplos cortos para afianzar cada concepto.
+**/
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 la diferencia está en que el metodo starr() ejecuta el hilo desde una clase que controla dicho hilo,
