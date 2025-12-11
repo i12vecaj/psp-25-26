@@ -1,3 +1,10 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Respuestas claras; comprensión general de hilos, synchronized y Productor–Consumidor; buena intuición sobre isAlive() y yield().
+Áreas de mejora: start() vs run() explicado de forma imprecisa; interrupt() y sleep() mal interpretados; prioridad de hilos presentada como garantía cuando no lo es; falta de ejemplos técnicos; varias respuestas incompletas o demasiado vagas.
+Recomendaciones: Revisar el ciclo completo de vida de un hilo; practicar ejemplos con interrupciones y sincronización; precisar el lenguaje técnico y evitar explicaciones ambiguas.
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 El método start() inicia el hilo de forma independiente al resto, es decir autogestionado, y el run() lanza el hilo como si fuese programación concurrente. Un ejemplo claro es que si lanzamos un start() este se gestiona de forma autónoma, y en el caso de run() es como si llamásemos al método directamente.
