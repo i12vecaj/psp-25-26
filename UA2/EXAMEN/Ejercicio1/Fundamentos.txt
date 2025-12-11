@@ -1,3 +1,11 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Excelente precisión técnica; explicaciones claras y completas; ejemplos adecuados; dominio de interrupciones, sincronización y estados de hilo.
+Áreas de mejora: Citar explícitamente una técnica concreta en la condición de carrera; pequeño lapsus al mencionar BlockingQueue; algún detalle menor en la redacción.
+Recomendaciones: Mantener el nivel técnico y ajustar pequeños matices terminológicos para respuestas impecables.
+**/
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
