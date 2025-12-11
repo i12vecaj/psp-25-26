@@ -1,3 +1,10 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Buena comprensión general de conceptos de hilos, synchronized, Productor–Consumidor y condición de carrera; ejemplos conceptuales claros; lenguaje comprensible y estructurado.
+Áreas de mejora: Falta de ejemplo de código concreto para start() vs run(); pregunta 4(b) sin responder; algunas explicaciones imprecisas sobre interrupt() y prioridad de hilos; confusión en la interpretación de ejecución concurrente y secuencial. Estructura de carpeta y nombrado de ficheros EXAMEN.
+Recomendaciones: Añadir ejemplos de código mínimos que demuestren la diferencia entre start() y run(); completar todas las preguntas, incluyendo 4(b); reforzar detalles técnicos de interrupt() y setPriority(); cuidar precisión en la terminología de concurrencia.
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
