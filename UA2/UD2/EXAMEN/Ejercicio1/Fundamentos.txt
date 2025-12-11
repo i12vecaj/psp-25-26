@@ -1,3 +1,11 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Mejoría notable en la precisión de varias definiciones; explicaciones más claras y ordenadas; aciertos en isAlive(), yield() y condición de carrera; buen resumen del bloqueo con synchronized.
+Áreas de mejora: La diferencia start()/run() sigue incompleta y sin ejemplo; Productor–Consumidor explicado sin colas ni límites de buffer; interrupt() mal entendido (no “mata” hilos); sleep() marcado como waiting cuando realmente es TIMED_WAITING; prioridad explicada de forma demasiado simple. Nombre de carpeta de entrega.
+Recomendaciones: Añadir ejemplos breves donde se piden; revisar estados de un hilo en Java; estudiar interrupt(), wait/notify y Productor–Consumidor con buffer limitado para dominar concurrencia.
+**/
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
