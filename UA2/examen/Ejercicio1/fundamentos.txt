@@ -1,3 +1,10 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Buen entendimiento de conceptos de hilos, condiciones de carrera, synchronized y modelo Productor–Consumidor; explicaciones claras y lenguaje comprensible; se completaron todas las preguntas principales.
+Áreas de mejora: Algunos conceptos técnicos están imprecisos o confusos (por ejemplo, interrupt() no hace que un hilo siga durmiendo, sleep() e interrupt() se describen incorrectamente; setPriority() y yield() necesitan mayor precisión técnica); ejemplos de código podrían ser más concretos; algunas explicaciones pueden simplificarse para evitar confusión. Directorio "EXAMEN" no creado correctamente.
+Recomendaciones: Reforzar la explicación de cómo funciona interrupt() con sleep() y wait(); precisar el efecto real de setPriority() y yield() según el planificador y el SO; añadir ejemplos prácticos mínimos para start() vs run(); revisar terminología de ejecución concurrente vs secuencial para mayor claridad.
+**/
+
 Pablo Rodriguez Casado | 10/12/2025
 
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
