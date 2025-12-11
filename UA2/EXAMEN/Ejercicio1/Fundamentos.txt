@@ -1,3 +1,11 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Explicaciones claras; buena comprensión de synchronized, Productor–Consumidor y condición de carrera; uso correcto de términos técnicos; respuestas en general bien estructuradas.
+Áreas de mejora: Falta el ejemplo requerido en start()/run(); pregunta 4(b) sin responder; matices incompletos en interrupt() y en el efecto real de sleep(); algunas respuestas demasiado genéricas.
+Recomendaciones: Completar siempre todas las preguntas, practicar start()/run() con ejemplos breves, y revisar el comportamiento preciso de interrupt() para afianzar conceptos de concurrencia.
+**/
+
+
 Ejercicio 1
 Alberto Nieto Lozano
 
