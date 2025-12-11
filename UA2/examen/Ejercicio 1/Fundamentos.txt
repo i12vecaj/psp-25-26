@@ -1,3 +1,26 @@
+Feedback JD – 11/12/2025
+
+Fortalezas:
+• Reconoce que start() crea concurrencia y run() se ejecuta en el hilo actual.
+• Identifica correctamente la función de synchronized, wait() y notifyAll() en Productor–Consumidor.
+• Explica con cierta claridad yield(), interrupt() y sleep().
+• Entiende que isAlive() depende del estado del hilo.
+
+Áreas de mejora:
+• Explicación de start() y run() algo confusa: start() no garantiza ejecución simultánea exacta (“paralela”) y run() no ejecuta hilos secuencialmente de manera automática; se ejecuta en el hilo actual.
+• Condición de carrera mal evaluada: en el ejemplo dado sí se accede al mismo recurso si la instancia de Contador fuera compartida.
+• Interrupt() y sleep(): la descripción no es precisa, interrupt() no “detiene completamente” un hilo, lanza InterruptedException si está dormido, bloqueado o esperando.
+• Prioridad de hilos: la descripción de la ejecución no es correcta, el valor de prioridad es solo una sugerencia para el planificador de hilos y no garantiza orden.
+• Algunos errores de terminología y sintaxis, p. ej., “interrumpir completamente hasta que se vuelva a iniciar” no es correcto.
+
+Recomendaciones:
+• Clarificar la diferencia real entre start() y run() con ejemplos de concurrencia correcta.
+• Definir correctamente la condición de carrera y mostrar un ejemplo donde dos hilos comparten un recurso.
+• Reforzar el comportamiento de interrupt(), sleep() y yield() con ejemplos prácticos.
+• Aclarar que setPriority() es solo una sugerencia, no garantiza orden, y que el SO puede variar su comportamiento.
+
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 
