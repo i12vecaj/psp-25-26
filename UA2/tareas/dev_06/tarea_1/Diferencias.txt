@@ -1,0 +1,15 @@
+FR1:
+Se crean 5 hilos que incrementan una variable compartida 1000 veces cada uno.
+Sin sincronización, se producen condiciones de carrera, y el valor final del contador suele ser menor a 5000.
+
+FR2:
+Se añade sincronización con synchronized, evitando accesos simultáneos.
+El resultado pasa a ser siempre 5000, garantizando la consistencia.
+
+FR2 (Runnable):
+Mismo funcionamiento que FR2, pero usando la interfaz Runnable.
+El resultado es el mismo; solo cambia la forma de crear los hilos.
+
+Conclusión:
+Sin sincronización → resultado incorrecto.
+Con sincronización → resultado correcto y seguro.
