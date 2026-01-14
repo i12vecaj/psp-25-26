@@ -69,7 +69,7 @@ Por favor, leed el documento [INSTRUCCIONES_ENTREGAS.md](..\INSTRUCCIONES_ENTREG
 Crea un programa en Java que admita desde la línea de comandos una URL y visualice información sobre esta. Modifica el programa para que admita continuamente nuevas IP o URL y muestre la información hasta que el usuario inserte "localhost".
 
 ```
-Fecha de Entrega: xx/xx/2025
+Fecha de Entrega: 14/01/2026
 ```
 
 ### **Tarea 2 - Programación de Sockets 2**
@@ -80,7 +80,7 @@ Realiza un programa servidor TCP que acepte dos clientes.  Muestra por cada clie
 Crea también el programa cliente que se conecte a dicho servidor.  Muestra los puertos locales y remotos a los que está conectado su socket y la dirección IP de la máquina remota a la que se conecta.
 
 ```
-Fecha de Entrega: xx/xx/2025
+Fecha de Entrega: 14/01/2026
 ```
 ### **Tarea 3 - Programación de Sockets 3**
 ##### **Criterios a), f), g), h)**
@@ -88,7 +88,7 @@ Fecha de Entrega: xx/xx/2025
 Crea un cliente que pida un mensaje al usuario por pantalla y lo mande al servidor. El servidor deberá recibir el mensaje, convertirlo todo a mayúsculas y devolvérselo al cliente, que lo imprimirá por pantalla.
 
 ```
-Fecha de Entrega: xx/xx/2025
+Fecha de Entrega: xx/xx/2026
 ```
 
 ### **Tarea 4 - Programación de Sockets 4**
@@ -99,7 +99,7 @@ Crea un programa cliente usando sockets UDP que envíe el texto escrito desde la
 Deberás establecer un tiempo de espera de varios segundos para que el método receive() del cliente se bloquee. Controlas las excepciones de IO e indica si los paquetes se han perdido. Haz varias pruebas de la aplicación sin ejecutar el servidor y ejecutando varios clientes a la vez.
 
 ```
-Fecha de Entrega: xx/xx/2025
+Fecha de Entrega: xx/xx/2026
 ```
 
 ### **Tarea 5 - Programación de Sockets 5**
@@ -112,7 +112,7 @@ Después, envía este objeto a un proceso servidor para que calcule el cuadrado 
 Deberás controlar todos los errores posibles (que el servidor no esté iniciado, que se produzcan excepciones o cortes abruptos del cliente o servidor, que el número introducido por pantalla por el clientea sea menor que 0, etcétera).
 
 ```
-Fecha de Entrega: xx/xx/2025
+Fecha de Entrega: xx/xx/2026
 ```
 
 ### **Actividad Evaluable UA3 - Programacion de Comunicaciones en Red**
@@ -122,14 +122,14 @@ Enunciado disponible en [actividad/README.md](actividad/README.md)
 *¡¡ Preparad Presentación para el día 29 !!*
 
 ```
-Fecha de Examen: 05/02/2025 - Fecha Defensa: xx/xx/2025
+Fecha de Examen: 05/02/2025 - Fecha Defensa: xx/xx/2026
 ```
 
 
 ### **Examen UA3 - Programacion de Comunicaciones en Red**
 ##### **Criterios a), b), c), d), e) f), g) y h)**
 ```
-Fecha de Examen: xx/xx/2025
+Fecha de Examen: xx/xx/2026
 ```
 
 ## Recursos
