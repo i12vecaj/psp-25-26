@@ -1,3 +1,10 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Buen entendimiento general de hilos y condiciones de carrera; identificación correcta de la necesidad de synchronized para evitar conflictos.
+Áreas de mejora: Confusión en la explicación de start() vs run() y sleep() vs interrupt(); yield() y prioridad de hilos necesitan mayor precisión; respuestas incompletas en algunas preguntas (p. ej., isAlive() y motivo de variación).
+Recomendaciones: Revisar conceptos de concurrencia y métodos de control de hilos (yield(), interrupt(), sleep()), y clarificar diferencias entre ejecución secuencial y concurrente.
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 Básicamente la diferencia más notoria es que el método start() lanza el hilo y hasta que no acabe su el proceso del que se este encargando no deja al siguiente entrar en acción, 
