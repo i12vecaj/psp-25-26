@@ -1,3 +1,11 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Conocimiento general de conceptos básicos de hilos, synchronized, Productor–Consumidor y yield(); respuestas concisas y claras.
+Áreas de mejora: Falta de precisión técnica en varias respuestas (start() vs run(), isAlive(), interrupt(), sleep(), condición de carrera); ejemplos prácticos ausentes; la pregunta 9 es incorrecta (sí se produce condición de carrera); explicaciones a veces confusas o incompletas; algunos conceptos de concurrencia mal interpretados. Examen / Examen la carpeta
+Recomendaciones: Revisar cuidadosamente la diferencia entre run() y start() con ejemplos de código; corregir la interpretación de condición de carrera; reforzar el comportamiento de interrupt(), sleep() y prioridad de hilos; utilizar terminología más precisa y ejemplos prácticos.
+**/
+
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 - run(): es un metodo normal
