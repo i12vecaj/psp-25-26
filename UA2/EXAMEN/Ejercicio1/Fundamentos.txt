@@ -1,3 +1,27 @@
+/**
+Feedback JD – 11/12/2025
+
+Fortalezas:
+• Buena intención al responder de forma breve y directa.
+• Identificación correcta de la condición de carrera en el ejercicio 9.
+• Explicación acertada de que la prioridad no garantiza orden.
+
+Áreas de mejora:
+• start() y run(): la respuesta está invertida. start() crea ejecución concurrente en un hilo nuevo; run() ejecuta en el hilo actual.
+• Condición de carrera: no "indica cuándo un hilo empieza y acaba". Es un problema, no un mecanismo. Tampoco "permite acceder sin problemas".
+• Productor–Consumidor: no es igual que cliente-servidor. Trabaja con un buffer compartido, wait/notify y sincronización.
+• isAlive(): no tiene que ver con “hilos secuenciales”, sino con el tiempo que tarde t en terminar.
+• yield(): no es el procesador quien “permite”, sino una sugerencia al scheduler.
+• interrupt(): no muestra nada. Marca el hilo como interrumpido o lanza InterruptedException si está bloqueado.
+• sleep() vs interrupt(): interrumpir un hilo dormido no lo “cancela solo”, lanza una InterruptedException.
+• synchronized: no es “que se sincronizan”, es que se obtiene un candado (lock) que permite acceso exclusivo.
+• Priorización: no indica “hilos más importantes”, solo una *sugerencia* al scheduler, y en muchas JVM apenas tiene efecto.
+
+Recomendaciones:
+Revisar el ciclo de vida de un hilo y los estados BLOCKED, RUNNABLE, TIMED_WAITING; repasar start(), run(), sleep(), interrupt(), wait/notify y locks; revisar el patrón Productor–Consumidor real con buffer limitado.
+
+**/
+
 1. Explica la diferencia entre los métodos start() y run() en un hilo.
 Pon un ejemplo breve donde se vea la diferencia.
 start, ejecuta los hilos de forma secuencial
