@@ -117,8 +117,8 @@ Fecha de Entrega: xx/xx/2026
 
 ### **Actividad Evaluable UA3 - Socket & Dragons*
 ##### **Criterios a), b), c), d), e) f), g) y h)**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fw8dQIEuRfs?si=HBJxox7uPCHL6Sde" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+[![Demo del sistema](https://img.youtube.com/vi/fw8dQIEuRfs/0.jpg)](https://www.youtube.com/watch?v=fw8dQIEuRfs)
 
 
 *¡¡ Preparad Presentación para el día 28 Enero 2026 !!*
