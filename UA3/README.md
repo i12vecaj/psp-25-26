@@ -115,14 +115,16 @@ Deberás controlar todos los errores posibles (que el servidor no esté iniciado
 Fecha de Entrega: xx/xx/2026
 ```
 
-### **Actividad Evaluable UA3 - Programacion de Comunicaciones en Red**
+### **Actividad Evaluable UA3 - Socket & Dragons*
 ##### **Criterios a), b), c), d), e) f), g) y h)**
-Enunciado disponible en [actividad/README.md](actividad/README.md)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fw8dQIEuRfs?si=HBJxox7uPCHL6Sde" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-*¡¡ Preparad Presentación para el día 29 !!*
+
+
+*¡¡ Preparad Presentación para el día 28 Enero 2026 !!*
 
 ```
-Fecha de Examen: 05/02/2025 - Fecha Defensa: xx/xx/2026
+Fecha de Examen: 28/01/2026
 ```
 
 
