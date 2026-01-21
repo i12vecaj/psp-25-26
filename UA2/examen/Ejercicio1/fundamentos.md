@@ -1,3 +1,11 @@
+/**
+Feedback JD - 11/12/2025
+Fortalezas: Buen esfuerzo explicando los conceptos en tus palabras; identificas correctamente la condición de carrera y el propósito general de synchronized; comprensión básica de isAlive(), yield() e interrupt().
+Áreas de mejora: Diferencia start()/run() completamente invertida; confusión importante en Productor–Consumidor; imprecisiones graves en sleep()/interrupt(); explicaciones de sincronización poco técnicas; ejemplos incorrectos de ejecución concurrente. Formato de entrega .md / carpeta examen no "EXAMEN".
+Recomendaciones: Revisar a fondo la semántica real de start() y run(), practicar ejemplos sencillos de concurrencia en Java, y reforzar el uso correcto de terminología técnica para evitar errores conceptuales en examen.
+**/
+
+
 ###### 1\. Explica la diferencia entre los métodos start() y run() en un hilo.
 
 ###### Pon un ejemplo breve donde se vea la diferencia.
