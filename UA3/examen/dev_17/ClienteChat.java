@@ -36,7 +36,8 @@ public class ClienteChat implements Runnable {
 		String texto = "";
 		while (repetir) {
 			try {
-				texto = "test"; /* RELLENAR */
+				texto = "test"; /* RELLENAR */ //he puesto texto aleatorio
+				
 				System.out.println(texto);
 
 			} catch (IOException e) {
