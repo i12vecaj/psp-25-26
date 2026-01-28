@@ -1,0 +1,91 @@
+import java.io.*;
+import java.net.*;
+
+public class HiloServidorChatOriginal extends Thread {
+	DataInputStream fentrada;
+	Socket socket = null;
+	ComunHilosCorregida comun;
+
+	public HiloServidorChatOriginal(Socket s, ComunHilosCorregida comun) {
+		this.socket = s;
+		this.comun = comun;
+		try {
+			// CREO FLUJO DE entrada para leer los mensajes
+			fentrada = new DataInputStream(socket.getInputStream());
+		} catch (IOException e) {
+			System.out.println("ERROR DE E/S");
+			e.printStackTrace();
+		}
+	}// ..
+
+	public void run() {
+		System.out.println("NUMERO DE CONEXIONES ACTUALES: " + comun.getACTUALES());
+
+		// NADA MAS CONECTARSE LE ENVIO TODOS LOS MENSAJES
+		String texto = comun.getMensajes();
+		EnviarMensajesaTodos(texto);
+
+		while (true) {
+			String cadena = "";
+			try {
+				cadena = fentrada.readUTF();
+				if (cadena.trim().equals("*")) {// EL CLIENTE SE DESCONECTA
+					comun.setACTUALES(comun.getACTUALES() - 1);
+					System.out.println("NUMERO DE CONEXIONES ACTUALES: " + comun.getACTUALES());
+				}
+
+				comun.setUltimo(cadena);
+				EnviarMensajesaTodos(comun.getUltimo());
+
+			} catch (Exception e) {// EL CLIENTE SE DESCONECTA A LO BRUTO Ctrl+C o similar
+				comun.setACTUALES(comun.getACTUALES() - 1);
+				System.out.println("NUMERO DE CONEXIONES ACTUALES: " + comun.getACTUALES());
+				System.out.println("ERROR: " + e.getMessage());
+				break;
+			}
+		} // fin while
+
+		// se cierra el socket del cliente
+		try {
+			socket.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}// run
+
+	// ENVIA LOS MENSAJES DEL CHAT A LOS CLIENTES
+	private void EnviarMensajesaTodos(String texto) {
+		int i;
+		// recorremos tabla de sockets para enviarles los mensajes
+		for (i = 0; i < comun.getCONEXIONES(); i++) {
+			Socket s1 = comun.getElementoTabla(i);
+			if (s1 != null && !s1.isClosed()) {
+				try {
+					DataOutputStream fsalida = new DataOutputStream(s1.getOutputStream());
+					fsalida.writeUTF(texto);
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		} // for
+
+	}// EnviarMensajesaTodos
+
+}// ..HiloServidorChat
+/*Línea 14: fentrada = new DataInputStream(socket.getInputStream());
+
+Obtiene el flujo de entrada del socket para leer mensajes del cliente
+Línea 41: comun.setACTUALES(comun.getACTUALES() - 1);
+
+Decrementa el número de conexiones actuales cuando el cliente se desconecta abruptamente
+Línea 58: private void EnviarMensajesaTodos(String texto)
+
+Parámetro String texto para enviar a todos los clientes conectados
+Funcionalidad:
+
+Recibe mensajes de clientes mediante DataInputStream
+Envía el historial de chat a nuevos clientes al conectarse
+Difunde mensajes a todos los clientes conectados
+Detecta desconexiones normales (asterisco "*") y abruptas (excepciones)
+Mantiene actualizado el contador de conexiones actuales */
