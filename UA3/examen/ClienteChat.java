@@ -36,7 +36,8 @@ public class ClienteChat implements Runnable {
 		String texto = "";
 		while (repetir) {
 			try {
-				texto = fentrada.readUTF();
+				texto = fentrada.readUTF();/* Aqui e puesto fentrada.readUTF porque lo que tiene que hacer es recoger los datos de entrada y como fentrada es un 
+				dataInputStream es porque entran datos del servidor */
 				System.out.println(texto);
 
 			} catch (IOException e) {
@@ -70,7 +71,7 @@ public class ClienteChat implements Runnable {
 
 		try {
 			s = new Socket("localhost", puerto);
-			cliente = new ClienteChat(s, nombre);
+			cliente = new ClienteChat(s, nombre);/* pongo el new CLienteChat por que se tiene que crear un nuveo ClienteChat para poder crear el hilo  */
 			new Thread(cliente).start();
 
 		} catch (IOException e) {
@@ -79,7 +80,7 @@ public class ClienteChat implements Runnable {
 
 		while(repetir)
 		{
-			String texto = bufferedReader.readLine();
+			String texto = bufferedReader.readLine();/*A qui e puesto el bufferedReader.readLine porque se tiene que recoger el texto que el cliente a introducido en la consola */
 			if(texto.length()>0)
 			{
 				if(texto.equals("*"))
