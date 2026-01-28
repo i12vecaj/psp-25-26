@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ![lope_logo](https://www.ceslopedevega.com/wp-content/uploads/2020/03/pruebalogo.svg_.png)
 
 # UA3 - Examen 1 -Creación de un Char con TCP
@@ -8,6 +9,17 @@
 # UA3 - Examen 1 -Creación de un Chat con TCP
 ## 28/01/2026
 >>>>>>> f7d67bb (Update README.md)
+=======
+# UA3 - Examen 1 -Creación de un Chat con TCP
+## 28/01/2026
+=======
+![lope_logo](https://www.ceslopedevega.com/wp-content/uploads/2020/03/pruebalogo.svg_.png)
+
+# UA3 - Examen 1 -Creación de un Char con TCP
+
+## 11/01/2023
+>>>>>>> 10783b3 (Añadir solución examen UA3)
+>>>>>>> 020e2ac (Añadir solución examen UA3)
 
 Una situiación típica de un servidor que atiende a múltiples clientes es un servidor de [CHAT](https://es.wikipedia.org/wiki/Chat).
 
@@ -123,8 +135,16 @@ Si queremos ejecutar clientes y servidores en diferentes máquinas es necesario 
 
 - Bibliografía Recomendada:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - **Programación de servicios y procesos - Técnico Superior en DAM.** _Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7._
 =======
 
   - **Programación de servicios y procesos - Técnico Superior en DAM.** *Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7.*
 >>>>>>> f7d67bb (Update README.md)
+=======
+
+  - **Programación de servicios y procesos - Técnico Superior en DAM.** *Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7.*
+=======
+  - **Programación de servicios y procesos - Técnico Superior en DAM.** _Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7._
+>>>>>>> 10783b3 (Añadir solución examen UA3)
+>>>>>>> 020e2ac (Añadir solución examen UA3)
