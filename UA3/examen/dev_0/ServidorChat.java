@@ -16,6 +16,7 @@ public class ServidorChat
         ComunHilos comun = new ComunHilos(MAXIMO, 0, 0, tabla);
 
         while (comun.getCONEXIONES() < MAXIMO) {
+            //Aceptamos conexiones mientras no se supere el maximo establecido
             Socket socket = new Socket(); // Se cierra en el HiloServidor
             socket = servidor.accept(); // esperando cliente
 
@@ -24,6 +25,7 @@ public class ServidorChat
             comun.setCONEXIONES(comun.getCONEXIONES() + 1);
 
             HiloServidorChat hilo = new HiloServidorChat(socket, comun);
+            //Inicializamos el hilo
             hilo.start();
         }
         servidor.close();
