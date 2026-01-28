@@ -13,7 +13,7 @@ public class ServidorChat
 		System.out.println("Servidor iniciado...");
 
 		Socket tabla[] = new Socket[MAXIMO]; //para controlar las conexiones
-		ComunHilos comun = new ComunHilos(MAXIMO, 5, 5, tabla); //este es el objeto comun q comparten todos los hilos, y lo unico que he hecho ha sido poner el new ComunHilos
+		ComunHilos comun = new ComunHilos(MAXIMO, 0, 0, tabla); //este es el objeto comun q comparten todos los hilos, y lo unico que he hecho ha sido poner el new ComunHilos
 
 		while (comun.getCONEXIONES() < MAXIMO) {
 			Socket socket = new Socket(); // Se cierra en el HiloServidor

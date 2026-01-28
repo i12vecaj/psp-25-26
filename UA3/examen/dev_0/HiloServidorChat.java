@@ -73,3 +73,5 @@ public class HiloServidorChat extends Thread {
 	}// EnviarMensajesaTodos
 
 }// ..HiloServidorChat
+
+//He llegado a saber que el mecanismo de cliente funciona de manera anomala, ya que no puedo abrir varios clientes en la misma maquina, pero el servidor funciona correctamente y acepta conexiones y envía mensajes a los clientes conectados, pero cuando sales de un cliente no te deja abrir otro, pero no he podido solucionar ese problema.
