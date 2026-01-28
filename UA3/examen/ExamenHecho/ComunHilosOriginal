@@ -1,0 +1,62 @@
+import java.net.Socket;
+
+public class ComunHilosOriginal {
+	 int CONEXIONES; //NUMERO DE CONEXIONES TOTALES, OCUPADAS EN EL ARRAY
+	 int ACTUALES;   //NUMERO DE CONEXIONES ACTUALES
+	 int MAXIMO;     //MAXIMO DE CONEXIONES PERMITIDAS
+	 Socket tabla[] = new Socket[MAXIMO];// SOCKETS CONECTADOS
+	 String mensajes; //MENSAJES DEL CHAT
+	 String ultimo; //ULTIMO MENSAJE DEL CHAT
+
+	public ComunHilosOriginal(int maximo, int actuales, int conexiones, Socket[] tabla) {
+		MAXIMO = maximo;
+		ACTUALES = actuales;
+		CONEXIONES = conexiones;
+		this.tabla = tabla;
+		mensajes="";
+		ultimo="";
+	}
+
+	public ComunHilosOriginal() { super(); }
+
+     public int getMAXIMO() { return MAXIMO;	}
+	public void setMAXIMO(int maximo) { MAXIMO = maximo;}
+
+
+	public int getCONEXIONES() { return CONEXIONES;	}
+	public synchronized void  setCONEXIONES(int conexiones) {
+		CONEXIONES = conexiones;
+	}
+
+	public String getMensajes() { return mensajes; }
+	public synchronized void setMensajes(String mensajes) {
+		this.mensajes = mensajes;
+	}
+
+	public String getUltimo() { return ultimo; }
+	public synchronized void setUltimo(String ultimo) {
+		this.ultimo = ultimo;
+		this.setMensajes(this.getMensajes() + ultimo + "\n");
+	}
+
+	public int getACTUALES() { return ACTUALES; }
+	public synchronized void setACTUALES(int actuales) {
+		ACTUALES = actuales;
+	}
+
+	public synchronized void addTabla(Socket s, int i) {
+		tabla[i] = s;
+	}
+	public Socket getElementoTabla(int i) { return tabla[i]; }
+
+}//ComunHilos
+/*Inicialización del array: Se separa la declaración Socket tabla[]; de la inicialización, que ahora ocurre en los constructores
+Constructor adicional: Añadido ComunHilosCorregida(int maximo) para inicializar correctamente el array con el tamaño máximo
+Inicialización de atributos: El nuevo constructor inicializa todos los atributos adecuadamente: CONEXIONES=0, ACTUALES=0, mensajes="", ultimo=""
+Validación de índices: Métodos addTabla() y getElementoTabla() ahora validan que el índice esté dentro del rango permitido
+Atributos según especificación:
+
+CONEXIONES: número total de conexiones (índice para llenar el array)
+ACTUALES: clientes conectados actualmente (inicial 0)
+tabla[]: almacena los sockets de clientes
+mensajes: historial de conversación del chat */
