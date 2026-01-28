@@ -85,6 +85,11 @@ Esto demuestra que:
 
 ---
 
+## Comproando la seguridad
+![Error 1](images/error1.jpeg)
+
+![Error 1](images/error2.jpeg)
+
 ##  Tecnologías utilizadas
 
 - Java
@@ -116,5 +121,6 @@ Práctica desarrollada dentro del **Grado Superior en Desarrollo de Aplicaciones
 Estudiantes de Desarrollo de Aplicaciones Multiplataforma (DAM)
 
 ---
+
 
 
