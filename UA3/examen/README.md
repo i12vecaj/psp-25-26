@@ -117,4 +117,4 @@ Si queremos ejecutar clientes y servidores en diferentes máquinas es necesario 
 ## Referencias
 
 - Bibliografía Recomendada:
-  - # **Programación de servicios y procesos - Técnico Superior en DAM.** _Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7._
+  - **Programación de servicios y procesos - Técnico Superior en DAM.** _Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7._
