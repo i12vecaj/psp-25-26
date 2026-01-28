@@ -36,7 +36,7 @@ public class ClienteChat implements Runnable {
 		String texto = "";
 		while (repetir) {
 			try {
-				texto = /* RELLENAR */
+				texto = fentrada.readUTF(); //el cliente espera mensajes del servidor, y lo que he hecho es poner el flujo de entrada
 				System.out.println(texto);
 
 			} catch (IOException e) {
@@ -70,7 +70,7 @@ public class ClienteChat implements Runnable {
 
 		try {
 			s = new Socket("localhost", puerto);
-			cliente = /* RELLENAR */
+			cliente = new ClienteChat(s, nombre); //crea el cliente e inicia el socket, y lo he hecho creando un nuevo objeto cliente y pasando el socket y el nombre
 			new Thread(cliente).start();
 
 		} catch (IOException e) {
@@ -79,10 +79,10 @@ public class ClienteChat implements Runnable {
 
 		while(repetir)
 		{
-			String texto = /* RELLENAR */
+			String texto = bufferedReader.readLine(); // leer mensaje que el cliente quiere enviar, escrito por consola, y lo he hecho usando bufferedReader
 			if(texto.length()>0)
 			{
-				if(texto.equals("*"))
+				if(texto.equals("salir"))// el cliente quiere salir del chat, y lo he cambiado a salir para que quede mas claro
 				{
 					repetir = false;
 					texto = " > Abandona el Chat ... " + nombre;

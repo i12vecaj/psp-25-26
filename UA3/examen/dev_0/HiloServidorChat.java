@@ -11,7 +11,7 @@ public class HiloServidorChat extends Thread {
 		this.comun = comun;
 		try {
 			// CREO FLUJO DE entrada para leer los mensajes
-			fentrada = new DataInputStream(/* RELLENAR */);
+			fentrada = new DataInputStream(socket.getInputStream()); // aqui lo que se hace es obtener el flujo de entrada del socket, y lo he hecho con un DataInputStream
 		} catch (IOException e) {
 			System.out.println("ERROR DE E/S");
 			e.printStackTrace();
@@ -38,7 +38,7 @@ public class HiloServidorChat extends Thread {
 				EnviarMensajesaTodos(comun.getUltimo());
 
 			} catch (Exception e) {// EL CLIENTE SE DESCONECTA A LO BRUTO Ctrl+C o similar
-				comun.setACTUALES(/* RELLENAR */);
+				comun.setACTUALES(comun.getACTUALES() - 1); // aqui lo que hago es quitar una conexión actual porque el cliente se ha desconectado, aunque haya saltado la excepción de que lo ha hecho a lo bruto
 				System.out.println("NUMERO DE CONEXIONES ACTUALES: " + comun.getACTUALES());
 				System.out.println("ERROR: " + e.getMessage());
 				break;
@@ -55,7 +55,7 @@ public class HiloServidorChat extends Thread {
 	}// run
 
 	// ENVIA LOS MENSAJES DEL CHAT A LOS CLIENTES
-	private void EnviarMensajesaTodos(/* RELLENAR */) {
+	private void EnviarMensajesaTodos(String texto){ // texto a enviar, lo que recibe la funcion es el ultimo mensaje, asi que lo que he hecho es pasarle una variable de tipo string, para que envie ese mensaje a todos los clientes conectados
 		int i;
 		// recorremos tabla de sockets para enviarles los mensajes
 		for (i = 0; i < comun.getCONEXIONES(); i++) {
