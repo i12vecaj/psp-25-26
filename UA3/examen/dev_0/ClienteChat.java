@@ -36,7 +36,7 @@ public class ClienteChat implements Runnable {
 		String texto = "";
 		while (repetir) {
 			try {
-				texto = /* RELLENAR */
+				texto = fentrada.readUTF(); //el texto que quiero que entre aqui es el que introduce el usuario al constructor de la clase ClienteChat
 				System.out.println(texto);
 
 			} catch (IOException e) {
@@ -70,7 +70,7 @@ public class ClienteChat implements Runnable {
 
 		try {
 			s = new Socket("localhost", puerto);
-			cliente = /* RELLENAR */
+			cliente = new ClienteChat(s, nombre); //he creado un objeto ClienteChat relacionando el socket con el nombre del cliente
 			new Thread(cliente).start();
 
 		} catch (IOException e) {
@@ -79,7 +79,8 @@ public class ClienteChat implements Runnable {
 
 		while(repetir)
 		{
-			String texto = /* RELLENAR */
+			String texto = bufferedReader.readLine();; //Necesito un objeto bufferedReader para leer lo que entra por aqui
+			//aqui quiero que reciba el texto que escribe el usuario por consola para ver si escribe un *
 			if(texto.length()>0)
 			{
 				if(texto.equals("*"))
