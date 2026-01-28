@@ -11,7 +11,10 @@ public class HiloServidorChat extends Thread {
 		this.comun = comun;
 		try {
 			// CREO FLUJO DE entrada para leer los mensajes
-			fentrada = new DataInputStream(/* RELLENAR */);
+
+		//4º EJERCICIO//
+
+			fentrada = new DataInputStream(socket.getInputStream());//RESPUESTA: con socket.getInputStream() conseguimos que el flujo empiece a leer desde el socket.
 		} catch (IOException e) {
 			System.out.println("ERROR DE E/S");
 			e.printStackTrace();
@@ -38,7 +41,10 @@ public class HiloServidorChat extends Thread {
 				EnviarMensajesaTodos(comun.getUltimo());
 
 			} catch (Exception e) {// EL CLIENTE SE DESCONECTA A LO BRUTO Ctrl+C o similar
-				comun.setACTUALES(/* RELLENAR */);
+
+				//5º EJERCICIO//
+
+				comun.setACTUALES(comun.getACTUALES() - 1); //RESPUESTA: si el cliente se desconeta de manera forzada, con el -1 decrementamos el numero de conexiones actuales.
 				System.out.println("NUMERO DE CONEXIONES ACTUALES: " + comun.getACTUALES());
 				System.out.println("ERROR: " + e.getMessage());
 				break;
@@ -55,7 +61,10 @@ public class HiloServidorChat extends Thread {
 	}// run
 
 	// ENVIA LOS MENSAJES DEL CHAT A LOS CLIENTES
-	private void EnviarMensajesaTodos(/* RELLENAR */) {
+
+	//6º EJERCICIO//
+
+	private void EnviarMensajesaTodos(String texto) { //RESPUESTA: este metodo envia el mensaje a todos los clientes que esten conectados.
 		int i;
 		// recorremos tabla de sockets para enviarles los mensajes
 		for (i = 0; i < comun.getCONEXIONES(); i++) {

@@ -21,7 +21,7 @@ public class ClienteChat implements Runnable {
 		socket = s;
 		this.nombre = nombre;
 		try {
-			fentrada = new DataInputStream(socket.getInputStream());
+			fentrada = new DataInputStream(socket.getInputStream()); //usamos este para el primero RELLENA
 			fsalida = new DataOutputStream(socket.getOutputStream());
 			String texto = " > Entra en el Chat ... " + nombre;
 			fsalida.writeUTF(texto);
@@ -36,7 +36,10 @@ public class ClienteChat implements Runnable {
 		String texto = "";
 		while (repetir) {
 			try {
-				texto = /* RELLENAR */
+
+				//1º EJERCICIO//
+
+				texto = fentrada.readUTF(); //RESPUESTA: Con este logramos leer lo que nos envía el servidor.
 				System.out.println(texto);
 
 			} catch (IOException e) {
@@ -70,7 +73,10 @@ public class ClienteChat implements Runnable {
 
 		try {
 			s = new Socket("localhost", puerto);
-			cliente = /* RELLENAR */
+
+			//2º EJERCICIO//
+
+			cliente = new ClienteChat(s, nombre); //RESPUESTA: rellenmos con new ClienteChat para crear el cliente.
 			new Thread(cliente).start();
 
 		} catch (IOException e) {
@@ -79,7 +85,9 @@ public class ClienteChat implements Runnable {
 
 		while(repetir)
 		{
-			String texto = /* RELLENAR */
+			//3º EJERCICIO//
+
+			String texto = bufferedReader.readLine(); //RESPUESTA: elbufferedReader nos permite leer lo que el usuario escribe por consola.
 			if(texto.length()>0)
 			{
 				if(texto.equals("*"))
