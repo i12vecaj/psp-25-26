@@ -36,6 +36,7 @@ public class ClienteChat implements Runnable {
         String texto = "";
         while (repetir) {
             try {
+                //Recogemos el mensaje
                 texto = fentrada.readUTF();
                         System.out.println(texto);
 
@@ -79,7 +80,7 @@ public class ClienteChat implements Runnable {
 
         while(repetir)
         {
-
+            //Vamos a ir recogiendo todos los mensajes para ir mostrandolos despues
             String texto = bufferedReader.readLine();
             if(texto.length()>0)
             {
