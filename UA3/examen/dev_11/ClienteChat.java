@@ -4,8 +4,15 @@
  *		Mª Jesús Ramos Martín. Editorial Garceta. 2ª Edición. 2018. ISBN: 978-84-1728-931-7. *
  */
 
-import java.io.*;
-import java.net.*;
+ // EXPLICACIÓN PERSONAL: Como el socket utiliza flujos de datos (DataInputStream), usamos readUTF porque el servidor está enviando cadenas
+// de texto (Strings). Esto se ejecuta en el hilo run() para no bloquear la escritura de mensajes en el main.
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
 
 public class ClienteChat implements Runnable {
 	Socket socket = null;
@@ -36,7 +43,7 @@ public class ClienteChat implements Runnable {
 		String texto = "";
 		while (repetir) {
 			try {
-				texto = /* RELLENAR */
+				texto = fentrada.readUTF(); // Leer lo que envía el servidor
 				System.out.println(texto);
 
 			} catch (IOException e) {
@@ -70,17 +77,17 @@ public class ClienteChat implements Runnable {
 
 		try {
 			s = new Socket("localhost", puerto);
-			cliente = /* RELLENAR */
-			new Thread(cliente).start();
+			cliente = new ClienteChat(s, nombre); // Instancio el objeto Runnable (ClienteChat)
+			new Thread(cliente).start(); // Aquí ya se lanza el hilo que lo escucha (run)
 
 		} catch (IOException e) {
 			System.out.println("IMPOSIBLE CONECTAR CON EL SERVIDOR\n" + e.getMessage());
 		}
 
-		while(repetir)
+		while(repetir) // Aquí se hace el bucle principal para escribir (Main Thread)
 		{
-			String texto = /* RELLENAR */
-			if(texto.length()>0)
+			String texto = bufferedReader.readLine(); // Para leer del teclado del usuario
+			if(texto != null && texto.length()>0) // Lo he añadido para que sea más seguro
 			{
 				if(texto.equals("*"))
 				{

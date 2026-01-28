@@ -1,5 +1,7 @@
-import java.io.*;
-import java.net.*;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
 
 public class HiloServidorChat extends Thread {
 	DataInputStream fentrada;
@@ -11,7 +13,7 @@ public class HiloServidorChat extends Thread {
 		this.comun = comun;
 		try {
 			// CREO FLUJO DE entrada para leer los mensajes
-			fentrada = new DataInputStream(/* RELLENAR */);
+			fentrada = new DataInputStream(socket.getInputStream()); // Obtengo el flujo de entrada del socket
 		} catch (IOException e) {
 			System.out.println("ERROR DE E/S");
 			e.printStackTrace();
@@ -31,6 +33,9 @@ public class HiloServidorChat extends Thread {
 				cadena = fentrada.readUTF();
 				if (cadena.trim().equals("*")) {// EL CLIENTE SE DESCONECTA
 					comun.setACTUALES(comun.getACTUALES() - 1);
+					// Aquí se ve el ciclo de vida TCP:
+					// Si el cliente cierra forzosamente (corte de luz, error, ctrl+C), el flujo lanza una IOException. Si no decrementamos ACTUALES
+					// en el catch, el servidor seguiría pensando que ese usuario ocupa un hueco, y eventualmente se llenaría y nadie más podría entrar.
 					System.out.println("NUMERO DE CONEXIONES ACTUALES: " + comun.getACTUALES());
 				}
 
@@ -38,7 +43,7 @@ public class HiloServidorChat extends Thread {
 				EnviarMensajesaTodos(comun.getUltimo());
 
 			} catch (Exception e) {// EL CLIENTE SE DESCONECTA A LO BRUTO Ctrl+C o similar
-				comun.setACTUALES(/* RELLENAR */);
+				comun.setACTUALES(comun.getACTUALES() -1); // Decrementar contador si hay error brusco
 				System.out.println("NUMERO DE CONEXIONES ACTUALES: " + comun.getACTUALES());
 				System.out.println("ERROR: " + e.getMessage());
 				break;
@@ -55,7 +60,7 @@ public class HiloServidorChat extends Thread {
 	}// run
 
 	// ENVIA LOS MENSAJES DEL CHAT A LOS CLIENTES
-	private void EnviarMensajesaTodos(/* RELLENAR */) {
+	private void EnviarMensajesaTodos(String texto) { // Defino el parámetro que necesita, texto
 		int i;
 		// recorremos tabla de sockets para enviarles los mensajes
 		for (i = 0; i < comun.getCONEXIONES(); i++) {
