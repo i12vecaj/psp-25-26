@@ -5,7 +5,15 @@ public class Ejemplo1CypherRSA {
 	public static void main(String args[]) {
 
 		try {
-			// SE CREA EL PAR DE CLAVES
+			/* Aquí ocurre lo fundamental:
+			Se crea un generador de claves RSA
+			Se indica el tamaño de la clave (1024 bits)
+			Se generan dos claves matemáticamente relacionadas
+			
+			🎓 Aclaración importante:
+			La clave pública no permite obtener la privada
+			La seguridad se basa en la dificultad de factorizar números grandes*/
+			
 			KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
 			keyGen.initialize (1024);
 			KeyPair par = keyGen.generateKeyPair();
