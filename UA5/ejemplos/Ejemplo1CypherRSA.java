@@ -36,12 +36,12 @@ public class Ejemplo1CypherRSA {
 			Cipher c = Cipher.getInstance("RSA/ECB/PKCS1Padding");
 			c.init(Cipher.ENCRYPT_MODE, clavepub);
 
-			// CIFRAMOS TEXTO
+			// Todo mensaje, antes de cifrarse, se convierte en bytes.
 			byte textoPlano[] = "Esto es un Texto Plano".getBytes();
 			byte textoCifrado[] = c.doFinal(textoPlano);
 			System.out.println("Encriptado: "+ new String(textoCifrado));
 
-		    // DESCIFRAMOS TEXTO
+		    // DESCIFRAMOS TEXTO: si alguien no tiene la clave privada no puede descrifrar el mensaje
 			c.init(Cipher.DECRYPT_MODE, clavepriv);
 			byte desencriptado[] = c.doFinal(textoCifrado);
 			System.out.println("Desencriptado: "+ new String(desencriptado));
