@@ -20,6 +20,19 @@ public class Ejemplo1CypherRSA {
 			PrivateKey clavepriv = par.getPrivate();
 			PublicKey clavepub = par.getPublic();
 
+
+			/**
+			📌 Esto indica:
+				Algoritmo: RSA
+				Relleno: PKCS#1 Padding (necesario para que RSA funcione)
+				Modo: cifrado
+				
+			🎓 Nota:
+				El “ECB” aquí no es el ECB de AES
+				RSA no trabaja por bloques como los cifrados simétricos
+
+				**/
+			
 			Cipher c = Cipher.getInstance("RSA/ECB/PKCS1Padding");
 			c.init(Cipher.ENCRYPT_MODE, clavepub);
 
