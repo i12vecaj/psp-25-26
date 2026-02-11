@@ -99,7 +99,7 @@ Utilizando el *framework* creado con las prácticas de la UA4 (API), añade la f
 }
 ```
 ```
-Fecha de Entrega: xx/xx/2026
+Fecha de Entrega: 11/02/2026
 ```
 
 
