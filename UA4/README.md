@@ -115,7 +115,7 @@ Fecha de Entrega: xx/xx/2026 - 14:45
 - Las 9 primeras se corresponden con la parte de buscar a las personas con nombre y la última es para buscar la persona por ID.
 - El miércoles os daré unos minutos para explicar de nuevo el proceso y que actualicéis el código en el repositorio y pasaré a ejecutar los tests y presentéis/defendáis el código planteado, problemas, etc.
 - [Postman API Tests Documentation](https://documenter.getpostman.com/view/25845189/2s935vmLQc)
-- [Postman API Tests EXPORT](https://github.com/Lope-de-Vega-Test/psp-22-23/blob/main/UA4/tareas/dev_0/tarea_2/2_dam_psp_ua4_tarea_2.postman_collection.json)
+- [Postman API Tests EXPORT](https://github.com/i12vecaj/psp-25-26/blob/main/UA4/tareas/dev_0/tarea_2/2_dam_psp_ua4_tarea_2.postman_collection.json)
 
 
 ### **Tarea 3 (T3) - Servicios en Red (III): Code Refactoring**
@@ -198,7 +198,7 @@ Fecha de Entrega: xx/03/2026
 
 ## Recursos
 
-- [Repositorio Asignatura](https://github.com/daniteleco/psp-22-23)
+- [Repositorio Asignatura
 - Apuntes del Profesorado //TODO
 - [Presentación Generación de Servicios en Red (I)](https://docs.google.com/presentation/d/e/2PACX-1vStejrBe5G2aUIB9myXg05S8Mg3TXgsAk0q1QVjzDTYUqPY7clejikwhocUblM0GGlK7cBYtfWJkhoY/pub?start=false&loop=false&delayms=60000)
 - [Presentación Generación de Servicios en Red (II)](https://docs.google.com/presentation/d/e/2PACX-1vRYHckWhMqkAlDn3qv9MXf9hyoie-8bkhtUuVgiu4_TOHC0MxECXGZQvcLOJvu7rzrfuqtF_bV2Pusw/pub?start=false&loop=false&delayms=60000&slide=id.p)
@@ -208,6 +208,3 @@ Fecha de Entrega: xx/03/2026
 ## Autor
 
 Creado por José David Vela Castro / [Daniel Pérez Rodríguez](https://twitter.com/daniteleco) e inspirado en el trabajo de [José Luis González Sánchez](https://github.com/joseluisgs/ProgServiciosProcesos-00-2021-2022)
-
-## Contacto
-- Email: [dperez@ceslopedevega.com](mailto:dperez@ceslopedevega.com)
