@@ -75,7 +75,7 @@ Fecha de Entrega: xx/xx/2026 - 14:45
 ### **Tarea 2 (T2) - Servicios en Red (II)**
 ##### **Criterios a), b), c), d) e), f), g), h)**
 
-Analiza el código planteado en [UA4\tareas\dev_0\tarea_2](https://github.com/Lope-de-Vega-Test/psp-22-23/tree/main/UA4/tareas/dev_0/tarea_2)
+Analiza el código planteado en [UA4\tareas\dev_0\tarea_2](https://github.com/i12vecaj/psp-25-26/tree/main/UA4/tareas/dev_0/tarea_2)
 
 Una vez tengas tu primera API básica completa aumenta su funcionalidad permitiendo que la API:
 
