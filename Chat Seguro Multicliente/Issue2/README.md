@@ -15,3 +15,7 @@ Desarrollar un servidor TCP que gestione múltiples clientes simultáneamente me
 - Documentación breve en README.
 
 ### 📅 Fecha de entrega: 2025
+
+<img width="1042" height="362" alt="image" src="https://github.com/user-attachments/assets/0bdeadb1-0bd2-4114-b58d-adb3e825fd30" />
+<img width="1023" height="197" alt="image" src="https://github.com/user-attachments/assets/928a4b11-d726-4206-ad40-1dc5db99948b" />
+
