@@ -99,7 +99,7 @@ Utilizando el *framework* creado con las prácticas de la UA4 (API), añade la f
 }
 ```
 ```
-Fecha de Entrega: 11/02/2026
+Fecha de Entrega: 18/02/2026
 ```
 
 
@@ -110,7 +110,7 @@ Esta práctica es sencilla, basta con ejecutar el pequeño [MANUAL](https://ryct
 Estas claves generadas y guardadas pueden utilizarse en los ejemplos.
 
 ```
-Fecha de Entrega: xx/xx/2026
+Fecha de Entrega: 18/02/2026
 ```
 
 
