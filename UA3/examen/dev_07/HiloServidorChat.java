@@ -11,7 +11,7 @@ public class HiloServidorChat extends Thread {
 		this.comun = comun;
 		try {
 			// CREO FLUJO DE entrada para leer los mensajes
-			fentrada = new DataInputStream(socket.getInputStream()); // flujo de entrada para leer mensajes
+			fentrada = new DataInputStream(socket.getInputStream()); //flujo de entrada para leer mensajes
 		} catch (IOException e) {
 			System.out.println("ERROR DE E/S");
 			e.printStackTrace();
