@@ -71,7 +71,7 @@ public class ClienteChat implements Runnable {
 
 		try {
 			s = new Socket("localhost", puerto);
-			cliente =  /* RELLENAR */
+			cliente =  s./* RELLENAR */
 			new Thread(cliente).start();
 
 		} catch (IOException e) {
