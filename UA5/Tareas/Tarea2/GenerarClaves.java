@@ -12,14 +12,15 @@ import java.util.logging.Level;
 
 /**
  * Programa para generar un par de claves públicas y privadas en Java
- * Basado en: https://ryctabo.wordpress.com/2018/02/04/generating-public-and-private-keys-in-java/
+ * Basado en:
+ * https://ryctabo.wordpress.com/2018/02/04/generating-public-and-private-keys-in-java/
  */
 public class GenerarClaves {
     private static final Logger LOG = Logger.getLogger(GenerarClaves.class.getName());
 
     public static void main(String[] args) {
         System.out.println("=== Generador de Claves Públicas y Privadas ===\n");
-        
+
         try {
             // 1. Generar el par de claves
             System.out.println("1. Generando par de claves RSA (1024 bits)...");
@@ -27,27 +28,27 @@ public class GenerarClaves {
             PublicKey publicKey = keyPair.getPublic();
             PrivateKey privateKey = keyPair.getPrivate();
             System.out.println("   ✓ Par de claves generado exitosamente\n");
-            
+
             // 2. Guardar en archivos de texto plano
             System.out.println("2. Guardando claves en archivo de texto plano...");
             guardarClavePrivadaTexto("clavePrivada.txt", privateKey);
             guardarClavePublicaTexto("clavePublica.txt", publicKey);
             System.out.println("   ✓ Claves guardadas en texto plano\n");
-            
+
             // 3. Guardar en archivos binarios
             System.out.println("3. Guardando claves en archivos binarios...");
             guardarClavePrivadaBinario("clavePrivada.bin", privateKey);
             guardarClavePublicaBinario("clavePublica.bin", publicKey);
             System.out.println("   ✓ Claves guardadas en archivos binarios\n");
-            
+
             // 4. Mostrar formatos
             System.out.println("4. Formatos de las claves:");
             System.out.println("   - Formato de clave pública: " + publicKey.getFormat());
             System.out.println("   - Formato de clave privada: " + privateKey.getFormat());
             System.out.println();
-            
+
             System.out.println("=== Proceso completado exitosamente ===");
-            
+
         } catch (NoSuchAlgorithmException e) {
             LOG.log(Level.SEVERE, "Algoritmo RSA no disponible", e);
             e.printStackTrace();
@@ -59,6 +60,7 @@ public class GenerarClaves {
 
     /**
      * Genera un par de claves públicas y privadas usando el algoritmo RSA
+     * 
      * @return KeyPair con las claves pública y privada
      * @throws NoSuchAlgorithmException si el algoritmo RSA no está disponible
      */
@@ -70,7 +72,8 @@ public class GenerarClaves {
 
     /**
      * Guarda la clave privada en un archivo de texto plano (Base64)
-     * @param fileName nombre del archivo
+     * 
+     * @param fileName   nombre del archivo
      * @param privateKey clave privada a guardar
      * @throws IOException si hay error al escribir el archivo
      */
@@ -89,7 +92,8 @@ public class GenerarClaves {
 
     /**
      * Guarda la clave pública en un archivo de texto plano (Base64)
-     * @param fileName nombre del archivo
+     * 
+     * @param fileName  nombre del archivo
      * @param publicKey clave pública a guardar
      * @throws IOException si hay error al escribir el archivo
      */
@@ -108,7 +112,8 @@ public class GenerarClaves {
 
     /**
      * Guarda la clave privada en un archivo binario
-     * @param fileName nombre del archivo
+     * 
+     * @param fileName   nombre del archivo
      * @param privateKey clave privada a guardar
      * @throws IOException si hay error al escribir el archivo
      */
@@ -121,7 +126,8 @@ public class GenerarClaves {
 
     /**
      * Guarda la clave pública en un archivo binario
-     * @param fileName nombre del archivo
+     * 
+     * @param fileName  nombre del archivo
      * @param publicKey clave pública a guardar
      * @throws IOException si hay error al escribir el archivo
      */
