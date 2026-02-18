@@ -1,0 +1,43 @@
+/*********************************************************************
+
+Fecha de corrección: 30 Octubre 2025
+Profesor: JD
+
+Comentarios:
+
+a) Has comprendido que varios procesos modificando el mismo archivo pueden generar problemas. La explicación es lógica, pero falta vocabulario técnico y mencionar mecanismos de sincronización o bloqueo.
+
+b) No la respondes, pero era una trampa: bien por no caer en ella.
+
+c) Reconoces que compartir una variable global puede causar problemas, pero no propones soluciones técnicas concretas como synchronized, Lock o variables atómicas.
+
+d) Los ejemplos de paralela y distribuida muestran cierta comprensión, aunque algo confusos. La concurrente no está clara, faltando definición y ejemplos precisos.
+
+Comentario general:
+Tienes razonamiento propio y ejemplos prácticos, pero necesitas reforzar la terminología técnica y profundizar en la teoría de sincronización, concurrencia y modelos de ejecución.
+
+**********************************************************************/
+
+
+a)
+Ambos procesos interactuan con el mismo archivo, seguramente cambiandolo en el proceso,
+y el proceso 1 no tiene en cuenta lo que hace el proceso 2 por lo que ambos trabajan no con lo que ellos mismos modifican del archivo,
+si no tambien con lo que ha modificado el proceso que se haya ejecutado antes, pudiendo crear varios problemas de ejecucion, funcionalidad y proposito original de los procesos.
+se podria arreglar si ambos procesos no interactuan con el mismo archivo, sino con copias del mismo si fuera necesario.
+
+b)
+Lo siento, no se que es un hilo Daemon.
+
+c)
+Podrian llegar a producirse problemas de comportamiento en el programa por la ejecucion y modificacion de los hilos con la variable global,
+No se como arreglarlo con los metodos pedidos. en todo caso pondria distintas condiciones o restricciones a los hilos para que se ejecuten
+e interactuen segun el estado de dicha variable global.
+
+d)
+La paralela es cuando ambas ejecuciones se realizan simultaneamente, siendo una un "cargando partida" en un videojuego,
+mientras que la otra te pone una barra de progreso que dice "Loading...". 
+
+la distribuida haria lo mismo que la paralela, pero con la diferencia de que no se ejecutan en el mismo pc, sino que estan conectadas mediante una red.
+supongo que esta es mas ideal para trabajos en un departamento donde varios empleados interactuan con el codigo simultaneamente.
+
+La concurrente ahora mismo no caigo que es.
