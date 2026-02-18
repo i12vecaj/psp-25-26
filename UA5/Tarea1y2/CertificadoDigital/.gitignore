@@ -1,0 +1,55 @@
+# -----------------------------
+# IDE / Editor
+# -----------------------------
+.vscode/
+.idea/
+*.iml
+
+# -----------------------------
+# OS files
+# -----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -----------------------------
+# Java / Maven / Gradle
+# -----------------------------
+**/target/
+**/build/
+**/out/
+**/.classpath
+**/.project
+**/.settings/
+
+# Maven wrapper cache jar (se descarga solo)
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+hs_err_pid*
+
+# -----------------------------
+# Secrets / keys / certs
+# -----------------------------
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.pem
+*.der
+*.crt
+*.cer
+*.csr
+*.key
+
+# Generated key folders used in these activities
+/keys/
+**/keys/
+
+# -----------------------------
+# Optional: temporary files
+# -----------------------------
+*.tmp
+*.temp
+*~
