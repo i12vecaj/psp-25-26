@@ -66,6 +66,11 @@ El servidor incluye una zona de simulación donde:
 - El mensaje se recibe, pero se descarta intencionadamente
 - Se imita el comportamiento real de redes UDP
 
+## Hackeando UDP
+![hacker](imagenes/error1.jpg)
+
+![hacker](imagenes/error2.jpg)
+
 Esto demuestra que:
 - UDP **no garantiza entrega**
 - UDP **no reintenta**
