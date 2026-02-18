@@ -10,11 +10,6 @@ import java.util.Base64;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
-/**
- * Programa para generar un par de claves públicas y privadas en Java
- * Basado en:
- * https://ryctabo.wordpress.com/2018/02/04/generating-public-and-private-keys-in-java/
- */
 public class GenerarClaves {
     private static final Logger LOG = Logger.getLogger(GenerarClaves.class.getName());
 
@@ -59,7 +54,6 @@ public class GenerarClaves {
     }
 
     /**
-     * Genera un par de claves públicas y privadas usando el algoritmo RSA
      * 
      * @return KeyPair con las claves pública y privada
      * @throws NoSuchAlgorithmException si el algoritmo RSA no está disponible
@@ -71,7 +65,6 @@ public class GenerarClaves {
     }
 
     /**
-     * Guarda la clave privada en un archivo de texto plano (Base64)
      * 
      * @param fileName   nombre del archivo
      * @param privateKey clave privada a guardar
@@ -91,7 +84,6 @@ public class GenerarClaves {
     }
 
     /**
-     * Guarda la clave pública en un archivo de texto plano (Base64)
      * 
      * @param fileName  nombre del archivo
      * @param publicKey clave pública a guardar
@@ -111,7 +103,6 @@ public class GenerarClaves {
     }
 
     /**
-     * Guarda la clave privada en un archivo binario
      * 
      * @param fileName   nombre del archivo
      * @param privateKey clave privada a guardar
@@ -125,7 +116,6 @@ public class GenerarClaves {
     }
 
     /**
-     * Guarda la clave pública en un archivo binario
      * 
      * @param fileName  nombre del archivo
      * @param publicKey clave pública a guardar
