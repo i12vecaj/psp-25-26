@@ -55,8 +55,6 @@
 
 ## 5. Herramientas en Java:
 
-Aquí tienes el código Markdown correspondiente a la tabla sobre las herramientas de seguridad de Java descritas en el vídeo:
-
 | Tecnología / API | Descripción / Función                                                                                                                             |
 | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **JCA / JCE**    | Librerías **criptográficas**. Proporcionan las herramientas necesarias para cifrar datos y realizar firmas digitales.                             |

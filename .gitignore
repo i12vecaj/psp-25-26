@@ -54,3 +54,6 @@ nb-configuration.xml
 release.properties
 pom.xml.releaseBackup
 pom.xml.tag
+
+# UA5 tarea 2 - claves generadas (no subir al repositorio)
+UA5/tareas/dev_11/tarea_2/keys/
