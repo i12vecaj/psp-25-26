@@ -70,7 +70,7 @@ Explica brevemente cada una.
 
 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
 
-### Pregunta 1.2 (por hacer)
+### Pregunta 1.2
 
 Reescribe el fragmento vulnerable aplicando programación segura,
 incluyendo:
