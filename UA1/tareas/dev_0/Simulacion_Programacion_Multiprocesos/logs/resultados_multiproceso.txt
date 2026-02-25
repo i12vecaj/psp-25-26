@@ -1,0 +1,18 @@
+----- RESULTADOS DE EJECUCIÓN -----
+Tiempo secuencial: 316 ms
+Tiempo paralelo: 123 ms
+Diferencia: 193 ms
+-----------------------------------
+
+----- RESULTADOS DE EJECUCIÓN -----
+Tiempo secuencial: 12839 ms
+Tiempo paralelo: 3199 ms
+Diferencia: 9640 ms
+-----------------------------------
+
+----- RESULTADOS DE EJECUCIÓN -----
+Tiempo secuencial: 12309 ms
+Tiempo paralelo: 3233 ms
+Diferencia: 9076 ms
+-----------------------------------
+

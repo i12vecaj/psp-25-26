@@ -36,7 +36,7 @@ public class ClienteChat implements Runnable {
 		String texto = "";
 		while (repetir) {
 			try {
-				texto = /* RELLENAR */
+				texto = fentrada.readUTF();// Guardo el mensaje en la variable texto(Alejandro Cordoba)
 				System.out.println(texto);
 
 			} catch (IOException e) {
@@ -57,7 +57,7 @@ public class ClienteChat implements Runnable {
 	public static void main(String args[]) throws IOException {
 		int puerto = 44444;
 		Socket s = null;
-		BufferedReader bufferedReader = new BufferedReader (new InputStreamReader(System.in));
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		boolean repetir = true;
 		System.out.print("Introduce tu nombre o nick: ");
 		ClienteChat cliente = null;
@@ -70,20 +70,17 @@ public class ClienteChat implements Runnable {
 
 		try {
 			s = new Socket("localhost", puerto);
-			cliente = /* RELLENAR */
+			cliente = new ClienteChat(s, nombre);
 			new Thread(cliente).start();
 
 		} catch (IOException e) {
 			System.out.println("IMPOSIBLE CONECTAR CON EL SERVIDOR\n" + e.getMessage());
 		}
 
-		while(repetir)
-		{
-			String texto = /* RELLENAR */
-			if(texto.length()>0)
-			{
-				if(texto.equals("*"))
-				{
+		while (repetir) {
+			String texto = bufferedReader.readLine(); // Aqui se lee el mensaje de teclado(Alejandro Cordoba)
+			if (texto.length() > 0) {
+				if (texto.equals("*")) {
 					repetir = false;
 					texto = " > Abandona el Chat ... " + nombre;
 					try {
@@ -92,17 +89,12 @@ public class ClienteChat implements Runnable {
 					} catch (IOException e1) {
 						e1.printStackTrace();
 					}
-				}
-				else
-				{
+				} else {
 					texto = nombre + " > " + texto;
 
-					try
-					{
+					try {
 						cliente.fsalida.writeUTF(texto);
-					}
-					catch (IOException e1)
-					{
+					} catch (IOException e1) {
 						e1.printStackTrace();
 					}
 				}
