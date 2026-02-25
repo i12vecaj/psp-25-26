@@ -112,6 +112,7 @@ Responde a las siguientes preguntas:
 
 Explica qué es una vulnerabilidad de tipo SQL Injection y cómo se
 previene en Java.
+
 Básicamente una SQL Injection es una forma de introducir una consulta SQL como texto plano en una web o aplicación con el fin de robar información de una base de datos.
 Securizando la conexión a la base de datos o de la forma que la aplicación le manda las consultas a la base de datos
 
@@ -142,8 +143,11 @@ Indica si las siguientes afirmaciones son verdaderas o falsas y
 justifica:
 
 a) PreparedStatement evita SQL Injection\ VERDADERO
+
 b) RSA es criptografía simétrica\ FALSO
+
 c) La clave privada puede compartirse públicamente\ FALSE
+
 d) Un certificado digital contiene una clave pública VERDADERO
 
 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
@@ -170,6 +174,7 @@ System.out.println(publicKey);
 ### Pregunta 3.1
 
 Explica qué es un certificado digital y para qué se utiliza.
+
 Vincula una persona con una clave pública, y lo valida una tercera parte.
 Por ejemplo para la firma Digital de documentos, o trámites administrativos online.
 
@@ -230,6 +235,7 @@ básicamente aqui el algoritmo RSA se va a encagar de generar la claves.
 Indica qué clave se utiliza para:
 
 a) Cifrar un mensaje confidencial\ Pública
+
 b) Firmar digitalmente Privada
 
 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
