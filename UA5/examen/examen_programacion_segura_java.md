@@ -146,7 +146,7 @@ a) PreparedStatement evita SQL Injection\ VERDADERO
 
 b) RSA es criptografía simétrica\ FALSO
 
-c) La clave privada puede compartirse públicamente\ FALSE
+c) La clave privada puede compartirse públicamente\ FALSO
 
 d) Un certificado digital contiene una clave pública VERDADERO
 
