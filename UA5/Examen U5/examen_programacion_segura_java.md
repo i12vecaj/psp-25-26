@@ -117,12 +117,12 @@ a)  PreparedStatement evita SQL Injection\
 //falso
 
 b)  RSA es criptografía simétrica\
-//
+//Verdadero
 
 c)  La clave privada puede compartirse públicamente\
 //falso
 d)  Un certificado digital contiene una clave pública
-//
+//Verdadero
 
 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
 
@@ -159,7 +159,7 @@ Explica qué es un certificado digital y para qué se utiliza.
 
 Menciona al menos 3 elementos.
 
-//Una identidad, un codigo publico y un codigo privado.
+//Version, Nº de serie, algoritmo de firma
 
 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
 
@@ -167,9 +167,9 @@ Menciona al menos 3 elementos.
 
 Explica la diferencia entre:
 
--   KeyStore\ 
--   clave pública\ 
--   clave privada
+-   KeyStore\ Es la llave que interactua con el certificado digital, comprobando si tiene o no acceso.
+-   clave pública\ Es la clave que se necesita para acceder a los servicios.
+-   clave privada\ Es la clave que debe tener tanto quien ofrece el acceso a servicios como el certificado digital, acreditando que realmente tiene acceso a esos servicios.
 
 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
 
@@ -191,14 +191,16 @@ PrivateKey priv = pair.getPrivate();
 
 ¿Qué tipo de criptografía utiliza RSA? Explica brevemente cómo funciona.
 
+//Genera aleatoriamente una clave que permite el acceso a un servicio, pero que es de un solo uso, lo que impide que se pueda reutilizar una vez usada.
+
 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
 
 ### Pregunta 4.2
 
 Indica qué clave se utiliza para:
 
-a)  Cifrar un mensaje confidencial\
-b)  Firmar digitalmente
+a)  Cifrar un mensaje confidencial\ JSSE
+b)  Firmar digitalmente\ JCA/JCE
 
 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
 
