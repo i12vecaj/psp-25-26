@@ -213,7 +213,7 @@ Identificador de algoritmo, periodo de validez y una clave pública del usuario
 
 Explica la diferencia entre:
 
--   KeyStore\ 
+-   KeyStore\ Contenedor de claves y certificados
 -   clave pública\ La clave pública es un tipo de clave conocida por todos que se usa en la encriptación asimetrica para poder mandar mensajes 
 -   clave privada/ la clave privada es solo conocida por los interesados en el mensaje, manteniendose encriptado para todos aquellos que no tengan dicha clave
 
